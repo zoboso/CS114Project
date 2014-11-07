@@ -17,7 +17,7 @@ public:
 		: x{ xStart }, y{ yStart }, tilenum{ TileNumber }, orientation{position}
 	{
 		fstream myFile;
-		myFile.open("level" + to_string(level) + ".txt");
+		myFile.open("level" + to_string(tilenum) + ".txt");
 		
 		myFile.close();
 	}

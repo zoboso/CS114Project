@@ -9,6 +9,7 @@ class Entity
 	int x;
 	int y;
 	int team;
+	bool hasActed;
 	bool canAtk;
 	bool traversable;
 	bool player;
@@ -20,6 +21,7 @@ public:
 	int getatk();
 	int getx();
 	int gety();
+	void update();
 	void sethhp(int);
 	void setatk(int);
 	void setx(int);

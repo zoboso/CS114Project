@@ -23,6 +23,19 @@ using namespace std;
 	{
 		return this->y;
 	}
+	void update()
+	{
+		/*
+			first check canAtk
+			Second check player
+		if door
+			door test
+			draw
+			player control
+		else
+		enemy AI*/
+
+	}
 	void Entity::sethhp(int a)
 	{
 		this->hp = a;

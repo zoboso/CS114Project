@@ -12,7 +12,6 @@ class Entity
 	bool canAtk;
 	bool traversable;
 	bool player;
-	bool enemy;
 	bool haskey;
 	bool door;
 public:

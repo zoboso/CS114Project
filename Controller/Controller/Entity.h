@@ -8,6 +8,8 @@ class Entity
 	int atk;
 	int x;
 	int y;
+	int team;
+	bool canAtk;
 	bool traversable;
 	bool player;
 	bool enemy;

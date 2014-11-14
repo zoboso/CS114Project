@@ -63,22 +63,41 @@ using namespace std;
 	{
 		int a = this->getx;
 		int b = this->gety;
-		if (a>=1)
+		if (a >= 1 && vec[a - 1][b].traversable==true)//checks to make sure it will stay in the play area and is traverable
 		{
-			vec[a - 1][b] = vec[a][b];
+			vec[a - 1][b] = vec[a][b];//updates location in array
+			this->setx(a - 1);//updates location for object
 		}
 
 		
 	}
 	void Entity::movedown(vector< vector<Entity> > &vec)
 	{
-
+		int a = this->getx;
+		int b = this->gety;
+		if (a >= 1 && vec[a + 1][b].traversable == true)//checks to make sure it will stay in the play area and is traverable
+		{
+			vec[a + 1][b] = vec[a][b];//updates location in array
+			this->setx(a + 1);//updates location for object
+		}
 	}
 	void Entity::moveleft(vector< vector<Entity> > &vec)
 	{
-
+		int a = this->getx;
+		int b = this->gety;
+		if (a >= 1 && vec[a][b-1].traversable == true)//checks to make sure it will stay in the play area and is traverable
+		{
+			vec[a][b-1] = vec[a][b];//updates location in array
+			this->sety(b-1);//updates location for object
+		}
 	}
 	void Entity::moveright(vector< vector<Entity> > &vec)
 	{
-
+		int a = this->getx;
+		int b = this->gety;
+		if (a >= 1 && vec[a][b + 1].traversable == true)//checks to make sure it will stay in the play area and is traverable
+		{
+			vec[a][b + 1] = vec[a][b];//updates location in array
+			this->sety(b + 1);//updates location for object
+		}
 	}

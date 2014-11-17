@@ -1,0 +1,64 @@
+﻿Build started 11/17/2014 1:20:32 PM.
+     1>Project "K:\CS114\Github\CS114Project\Controller\Controller\Controller.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Entity.cpp
+         Entity.cpp
+     1>k:\cs114\github\cs114project\controller\controller\entity.h(29): error C2061: syntax error : identifier 'vector'
+     1>k:\cs114\github\cs114project\controller\controller\entity.h(30): error C2061: syntax error : identifier 'vector'
+     1>k:\cs114\github\cs114project\controller\controller\entity.h(31): error C2061: syntax error : identifier 'vector'
+     1>k:\cs114\github\cs114project\controller\controller\entity.h(32): error C2061: syntax error : identifier 'vector'
+     1>k:\cs114\github\cs114project\controller\controller\entity.cpp(39): error C2065: 'door' : undeclared identifier
+     1>k:\cs114\github\cs114project\controller\controller\entity.cpp(39): warning C4805: '==' : unsafe mix of type 'unknown-type' and type 'bool' in operation
+     1>k:\cs114\github\cs114project\controller\controller\entity.cpp(69): error C2511: 'void Entity::moveup(std::vector<std::vector<Entity,std::allocator<_Ty>>,std::allocator<std::vector<_Ty,std::allocator<_Ty>>>> &)' : overloaded member function not found in 'Entity'
+                 with
+                 [
+                     _Ty=Entity
+                 ]
+                 k:\cs114\github\cs114project\controller\controller\entity.h(6) : see declaration of 'Entity'
+     1>k:\cs114\github\cs114project\controller\controller\entity.cpp(70): error C2671: 'Entity::moveup' : static member functions do not have 'this' pointers
+     1>k:\cs114\github\cs114project\controller\controller\entity.cpp(70): error C2227: left of '->getx' must point to class/struct/union/generic type
+     1>k:\cs114\github\cs114project\controller\controller\entity.cpp(71): error C2671: 'Entity::moveup' : static member functions do not have 'this' pointers
+     1>k:\cs114\github\cs114project\controller\controller\entity.cpp(71): error C2227: left of '->gety' must point to class/struct/union/generic type
+     1>k:\cs114\github\cs114project\controller\controller\entity.cpp(75): error C2671: 'Entity::moveup' : static member functions do not have 'this' pointers
+     1>k:\cs114\github\cs114project\controller\controller\entity.cpp(75): error C2227: left of '->setx' must point to class/struct/union/generic type
+     1>k:\cs114\github\cs114project\controller\controller\entity.cpp(81): error C2511: 'void Entity::movedown(std::vector<std::vector<Entity,std::allocator<_Ty>>,std::allocator<std::vector<_Ty,std::allocator<_Ty>>>> &)' : overloaded member function not found in 'Entity'
+                 with
+                 [
+                     _Ty=Entity
+                 ]
+                 k:\cs114\github\cs114project\controller\controller\entity.h(6) : see declaration of 'Entity'
+     1>k:\cs114\github\cs114project\controller\controller\entity.cpp(82): error C2671: 'Entity::movedown' : static member functions do not have 'this' pointers
+     1>k:\cs114\github\cs114project\controller\controller\entity.cpp(82): error C2227: left of '->getx' must point to class/struct/union/generic type
+     1>k:\cs114\github\cs114project\controller\controller\entity.cpp(83): error C2671: 'Entity::movedown' : static member functions do not have 'this' pointers
+     1>k:\cs114\github\cs114project\controller\controller\entity.cpp(83): error C2227: left of '->gety' must point to class/struct/union/generic type
+     1>k:\cs114\github\cs114project\controller\controller\entity.cpp(87): error C2671: 'Entity::movedown' : static member functions do not have 'this' pointers
+     1>k:\cs114\github\cs114project\controller\controller\entity.cpp(87): error C2227: left of '->setx' must point to class/struct/union/generic type
+     1>k:\cs114\github\cs114project\controller\controller\entity.cpp(91): error C2511: 'void Entity::moveleft(std::vector<std::vector<Entity,std::allocator<_Ty>>,std::allocator<std::vector<_Ty,std::allocator<_Ty>>>> &)' : overloaded member function not found in 'Entity'
+                 with
+                 [
+                     _Ty=Entity
+                 ]
+                 k:\cs114\github\cs114project\controller\controller\entity.h(6) : see declaration of 'Entity'
+     1>k:\cs114\github\cs114project\controller\controller\entity.cpp(92): error C2671: 'Entity::moveleft' : static member functions do not have 'this' pointers
+     1>k:\cs114\github\cs114project\controller\controller\entity.cpp(92): error C2227: left of '->getx' must point to class/struct/union/generic type
+     1>k:\cs114\github\cs114project\controller\controller\entity.cpp(93): error C2671: 'Entity::moveleft' : static member functions do not have 'this' pointers
+     1>k:\cs114\github\cs114project\controller\controller\entity.cpp(93): error C2227: left of '->gety' must point to class/struct/union/generic type
+     1>k:\cs114\github\cs114project\controller\controller\entity.cpp(97): error C2671: 'Entity::moveleft' : static member functions do not have 'this' pointers
+     1>k:\cs114\github\cs114project\controller\controller\entity.cpp(97): error C2227: left of '->sety' must point to class/struct/union/generic type
+     1>k:\cs114\github\cs114project\controller\controller\entity.cpp(101): error C2511: 'void Entity::moveright(std::vector<std::vector<Entity,std::allocator<_Ty>>,std::allocator<std::vector<_Ty,std::allocator<_Ty>>>> &)' : overloaded member function not found in 'Entity'
+                 with
+                 [
+                     _Ty=Entity
+                 ]
+                 k:\cs114\github\cs114project\controller\controller\entity.h(6) : see declaration of 'Entity'
+     1>k:\cs114\github\cs114project\controller\controller\entity.cpp(102): error C2671: 'Entity::moveright' : static member functions do not have 'this' pointers
+     1>k:\cs114\github\cs114project\controller\controller\entity.cpp(102): error C2227: left of '->getx' must point to class/struct/union/generic type
+     1>k:\cs114\github\cs114project\controller\controller\entity.cpp(103): error C2671: 'Entity::moveright' : static member functions do not have 'this' pointers
+     1>k:\cs114\github\cs114project\controller\controller\entity.cpp(103): error C2227: left of '->gety' must point to class/struct/union/generic type
+     1>k:\cs114\github\cs114project\controller\controller\entity.cpp(107): error C2671: 'Entity::moveright' : static member functions do not have 'this' pointers
+     1>k:\cs114\github\cs114project\controller\controller\entity.cpp(107): error C2227: left of '->sety' must point to class/struct/union/generic type
+     1>Done Building Project "K:\CS114\Github\CS114Project\Controller\Controller\Controller.vcxproj" (Build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:01.15

@@ -23,18 +23,23 @@ using namespace std;
 	{
 		return this->y;
 	}
-	void update()
+	void Entity::update()
 	{
 		/*
 			first check canAtk
 			Second check player
-		if door
+			if door
 			door test
 			draw
 			player control
-		else
-		enemy AI*/
+			else
+			enemy AI*/
 
+			if ((door == true) && (haskey == true))
+			{
+				// load level code
+				// break
+			}
 	}
 	void Entity::sethhp(int a)
 	{
@@ -63,10 +68,10 @@ using namespace std;
 	{
 		int a = this->getx;
 		int b = this->gety;
-		if (a >= 1 && vec[a - 1][b].traversable==true)//checks to make sure it will stay in the play area and is traverable
+		if (a >= 1 && vec[a - 1][b].traversable == true) //checks to make sure it will stay in the play area and is traverable
 		{
-			vec[a - 1][b] = vec[a][b];//updates location in array
-			this->setx(a - 1);//updates location for object
+			vec[a - 1][b] = vec[a][b]; //updates location in array
+			this->setx(a - 1); //updates location for object
 		}
 
 		
@@ -75,29 +80,29 @@ using namespace std;
 	{
 		int a = this->getx;
 		int b = this->gety;
-		if (a >= 1 && vec[a + 1][b].traversable == true)//checks to make sure it will stay in the play area and is traverable
+		if (a >= 1 && vec[a + 1][b].traversable == true) //checks to make sure it will stay in the play area and is traverable
 		{
-			vec[a + 1][b] = vec[a][b];//updates location in array
-			this->setx(a + 1);//updates location for object
+			vec[a + 1][b] = vec[a][b]; //updates location in array
+			this->setx(a + 1); //updates location for object
 		}
 	}
 	void Entity::moveleft(vector< vector<Entity> > &vec)
 	{
 		int a = this->getx;
 		int b = this->gety;
-		if (a >= 1 && vec[a][b-1].traversable == true)//checks to make sure it will stay in the play area and is traverable
+		if (a >= 1 && vec[a][b-1].traversable == true) //checks to make sure it will stay in the play area and is traverable
 		{
-			vec[a][b-1] = vec[a][b];//updates location in array
-			this->sety(b-1);//updates location for object
+			vec[a][b-1] = vec[a][b]; //updates location in array
+			this->sety(b-1); //updates location for object
 		}
 	}
 	void Entity::moveright(vector< vector<Entity> > &vec)
 	{
 		int a = this->getx;
 		int b = this->gety;
-		if (a >= 1 && vec[a][b + 1].traversable == true)//checks to make sure it will stay in the play area and is traverable
+		if (a >= 1 && vec[a][b + 1].traversable == true) //checks to make sure it will stay in the play area and is traverable
 		{
-			vec[a][b + 1] = vec[a][b];//updates location in array
-			this->sety(b + 1);//updates location for object
+			vec[a][b + 1] = vec[a][b]; //updates location in array
+			this->sety(b + 1); //updates location for object
 		}
 	}

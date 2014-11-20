@@ -27,9 +27,12 @@ void input(std::vector< std::vector<Entity>> &cell, int level){
 	myFile.open("level" + to_string(level) + ".txt");
 	string line;
 	int row = 0;
+	std::vector< std::vector<Entity>> output;
 	while (getline(myFile, line)){
+		std::vector<Entity> vectorColumn;
 		for (int column = 0; column < line.length(); column++){
 			char square = line[column];
+			Entity unit ;
 			switch (square){	
 			case ' ':
 				cout << ' ';

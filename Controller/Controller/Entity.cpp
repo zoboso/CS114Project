@@ -106,3 +106,17 @@ using namespace std;
 			this->sety(b + 1); //updates location for object
 		}
 	}
+	Entity::Entity(int h, int a, int cX, int cY, int t, bool hasA, bool canA, bool trav, bool p, bool hasK, bool d)
+	{
+		hp = h;
+		atk = a;
+		x = cX;
+		y = cY;
+		team = t;
+		hasActed = hasA;
+		canAtk = canA;
+		traversable = trav;
+		player = p;
+		haskey = hasK;
+		door = d;
+	}

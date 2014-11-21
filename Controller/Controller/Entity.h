@@ -17,6 +17,7 @@ class Entity
 	bool door;
 public:
 
+	Entity(int, int, int, int, int, bool, bool, bool, bool, bool, bool);
 	int gethp();
 	int getatk();
 	int getx();

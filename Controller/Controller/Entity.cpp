@@ -74,6 +74,17 @@ using namespace std;
 			this->setx(a - 1); //updates location for object
 		}
 
+		if (vec[a - 1][b].canAtk = true)//checks to see if entity is attackable
+		{
+			this->sethhp = (this->gethp - vec[a - 1][b].getatk);//sets new hp for player
+			vec[a - 1][b].sethhp = (vec[a - 1][b].gethp - this->getatk);//sets new hp for enemy
+			
+			if (vec[a - 1][b].gethp <= 0)// checks to see if enemy has died
+			{
+				vec[a - 1][b] = vec[a][b]; //updates location in array
+				this->setx(a - 1); //updates location for object
+			}
+		}
 		
 	}
 	void Entity::movedown(vector< vector<Entity> > &vec)
@@ -85,6 +96,19 @@ using namespace std;
 			vec[a + 1][b] = vec[a][b]; //updates location in array
 			this->setx(a + 1); //updates location for object
 		}
+
+		if (vec[a + 1][b].canAtk = true)//checks to see if entity is attackable
+		{
+			this->sethhp = (this->gethp - vec[a + 1][b].getatk);//sets new hp for player
+			vec[a + 1][b].sethhp = (vec[a + 1][b].gethp - this->getatk);//sets new hp for enemy
+
+			if (vec[a + 1][b].gethp <= 0)// checks to see if enemy has died
+			{
+				vec[a + 1][b] = vec[a][b]; //updates location in array
+				this->setx(a - 1); //updates location for object
+			}
+		}
+
 	}
 	void Entity::moveleft(vector< vector<Entity> > &vec)
 	{
@@ -95,6 +119,18 @@ using namespace std;
 			vec[a][b-1] = vec[a][b]; //updates location in array
 			this->sety(b-1); //updates location for object
 		}
+
+		if (vec[a][b-1].canAtk = true)//checks to see if entity is attackable
+		{
+			this->sethhp = (this->gethp - vec[a][b-1].getatk);//sets new hp for player
+			vec[a][b-1].sethhp = (vec[a][b-1].gethp - this->getatk);//sets new hp for enemy
+
+			if (vec[a][b-1].gethp <= 0)// checks to see if enemy has died
+			{
+				vec[a][b-1] = vec[a][b]; //updates location in array
+				this->sety(b - 1); //updates location for object
+			}
+		}
 	}
 	void Entity::moveright(vector< vector<Entity> > &vec)
 	{
@@ -104,6 +140,19 @@ using namespace std;
 		{
 			vec[a][b + 1] = vec[a][b]; //updates location in array
 			this->sety(b + 1); //updates location for object
+		}
+
+		if (vec[a][b + 1].canAtk = true)//checks to see if entity is attackable
+		{
+			this->sethhp = (this->gethp - vec[a][b + 1].getatk);//sets new hp for player
+			vec[a][b + 1].sethhp = (vec[a][b + 1].gethp - this->getatk);//sets new hp for enemy
+
+			if (vec[a][b + 1].gethp <= 0)// checks to see if enemy has died
+			{
+				vec[a][b + 1] = vec[a][b]; //updates location in array
+				this->sety(b + 1); //updates location for object
+			}
+
 		}
 	}
 	Entity::Entity(int h, int a, int cX, int cY, int t, bool hasA, bool canA, bool trav, bool p, bool hasK, bool d)

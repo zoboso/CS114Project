@@ -1,0 +1,4 @@
+Graphics^g;
+g = GameBox->CreateGraphics();
+Bitmap^player = gcnew Bitmap("K:\CS114\Github\CS114Project\Images\PlayerV2.PNG");
+g->DrawImage(player, 1, 1);

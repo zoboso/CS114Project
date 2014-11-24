@@ -8,7 +8,6 @@ class Entity
 	int atk;
 	int x;
 	int y;
-	int team;
 	bool hasActed;
 	bool canAtk;
 	bool traversable;
@@ -17,7 +16,7 @@ class Entity
 	bool door;
 public:
 
-	Entity(int, int, int, int, int, bool, bool, bool, bool, bool, bool);
+	Entity(int, int, int, int, bool, bool, bool, bool, bool, bool);
 	int gethp();
 	int getatk();
 	int getx();

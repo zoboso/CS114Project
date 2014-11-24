@@ -4,7 +4,19 @@
 
 using namespace std;
 
-
+Entity::Entity(int h, int a, int cX, int cY, bool hasA, bool canA, bool trav, bool p, bool hasK, bool d)
+{
+	hp = h;
+	atk = a;
+	x = cX;
+	y = cY;
+	hasActed = hasA;
+	canAtk = canA;
+	traversable = trav;
+	player = p;
+	haskey = hasK;
+	door = d;
+}
 	int Entity::gethp()
 	{
 		return this->hp;
@@ -76,14 +88,25 @@ using namespace std;
 
 		if (vec[a - 1][b].canAtk = true)//checks to see if entity is attackable
 		{
-			this->sethhp = (this->gethp - vec[a - 1][b].getatk);//sets new hp for player
-			vec[a - 1][b].sethhp = (vec[a - 1][b].gethp - this->getatk);//sets new hp for enemy
+			this->sethhp = (this->gethp - vec[a - 1][b].getatk);//sets new hp for object
+			vec[a - 1][b].sethhp = (vec[a - 1][b].gethp - this->getatk);//sets new hp for attacked object
 			
-			if (vec[a - 1][b].gethp <= 0)// checks to see if enemy has died
+			if (this->gethp <= 0)
 			{
-				vec[a - 1][b] = vec[a][b]; //updates location in array
-				this->setx(a - 1); //updates location for object
+				/*delete object*/
+				if (this->player = true)
+				{
+					/*display game over*/
+				}
+
+				else if (vec[a - 1][b].gethp <= 0)// checks to see if attacked object has died
+				{
+					vec[a - 1][b] = vec[a][b]; //updates location in array
+					vec[a][b] = Entity(1, 0, a, b, false, false, true, false, false, false);//replaces old location with blank tile
+					this->setx(a - 1); //updates location for object
+				}
 			}
+
 		}
 		
 	}
@@ -154,18 +177,4 @@ using namespace std;
 			}
 
 		}
-	}
-	Entity::Entity(int h, int a, int cX, int cY, int t, bool hasA, bool canA, bool trav, bool p, bool hasK, bool d)
-	{
-		hp = h;
-		atk = a;
-		x = cX;
-		y = cY;
-		team = t;
-		hasActed = hasA;
-		canAtk = canA;
-		traversable = trav;
-		player = p;
-		haskey = hasK;
-		door = d;
 	}

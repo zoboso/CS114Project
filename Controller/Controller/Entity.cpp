@@ -86,7 +86,7 @@ Entity::Entity(int h, int a, int cX, int cY, bool hasA, bool canA, bool trav, bo
 			this->setx(a - 1); //updates location for object
 		}
 
-		if (vec[a - 1][b].canAtk = true)//checks to see if entity is attackable
+		if (vec[a - 1][b].canAtk == true)//checks to see if entity is attackable
 		{
 			this->sethhp = (this->gethp - vec[a - 1][b].getatk);//sets new hp for object
 			vec[a - 1][b].sethhp = (vec[a - 1][b].gethp - this->getatk);//sets new hp for attacked object
@@ -94,7 +94,7 @@ Entity::Entity(int h, int a, int cX, int cY, bool hasA, bool canA, bool trav, bo
 			if (this->gethp <= 0)
 			{
 				/*delete object*/
-				if (this->player = true)
+				if (this->player == true)
 				{
 					/*display game over*/
 				}
@@ -108,6 +108,13 @@ Entity::Entity(int h, int a, int cX, int cY, bool hasA, bool canA, bool trav, bo
 			}
 
 		}
+		if (vec[a - 1][b].door == true)
+		{
+			if (this->player == true && this->haskey == true)
+			{
+				//level load
+			}
+		}
 		
 	}
 	void Entity::movedown(vector< vector<Entity> > &vec)
@@ -120,18 +127,35 @@ Entity::Entity(int h, int a, int cX, int cY, bool hasA, bool canA, bool trav, bo
 			this->setx(a + 1); //updates location for object
 		}
 
-		if (vec[a + 1][b].canAtk = true)//checks to see if entity is attackable
+		if (vec[a + 1][b].canAtk == true)//checks to see if entity is attackable
 		{
-			this->sethhp = (this->gethp - vec[a + 1][b].getatk);//sets new hp for player
-			vec[a + 1][b].sethhp = (vec[a + 1][b].gethp - this->getatk);//sets new hp for enemy
+			this->sethhp = (this->gethp - vec[a + 1][b].getatk);//sets new hp for object
+			vec[a + 1][b].sethhp = (vec[a + 1][b].gethp - this->getatk);//sets new hp for attacked object
 
-			if (vec[a + 1][b].gethp <= 0)// checks to see if enemy has died
+			if (this->gethp <= 0)
 			{
-				vec[a + 1][b] = vec[a][b]; //updates location in array
-				this->setx(a - 1); //updates location for object
+				/*delete object*/
+				if (this->player == true)
+				{
+					/*display game over*/
+				}
+
+				else if (vec[a + 1][b].gethp <= 0)// checks to see if attacked object has died
+				{
+					vec[a + 1][b] = vec[a][b]; //updates location in array
+					vec[a][b] = Entity(1, 0, a, b, false, false, true, false, false, false);//replaces old location with blank tile
+					this->setx(a + 1); //updates location for object
+				}
+			}
+
+		}
+		if (vec[a + 1][b].door == true)
+		{
+			if (this->player == true && this->haskey == true)
+			{
+				//level load
 			}
 		}
-
 	}
 	void Entity::moveleft(vector< vector<Entity> > &vec)
 	{
@@ -140,18 +164,36 @@ Entity::Entity(int h, int a, int cX, int cY, bool hasA, bool canA, bool trav, bo
 		if (a >= 1 && vec[a][b-1].traversable == true) //checks to make sure it will stay in the play area and is traverable
 		{
 			vec[a][b-1] = vec[a][b]; //updates location in array
-			this->sety(b-1); //updates location for object
+			this->sety(b - 1); //updates location for object
 		}
 
-		if (vec[a][b-1].canAtk = true)//checks to see if entity is attackable
+		if (vec[a][b-1].canAtk == true)//checks to see if entity is attackable
 		{
-			this->sethhp = (this->gethp - vec[a][b-1].getatk);//sets new hp for player
-			vec[a][b-1].sethhp = (vec[a][b-1].gethp - this->getatk);//sets new hp for enemy
+			this->sethhp = (this->gethp - vec[a][b-1].getatk);//sets new hp for object
+			vec[a][b-1].sethhp = (vec[a][b-1].gethp - this->getatk);//sets new hp for attacked object
 
-			if (vec[a][b-1].gethp <= 0)// checks to see if enemy has died
+			if (this->gethp <= 0)
 			{
-				vec[a][b-1] = vec[a][b]; //updates location in array
-				this->sety(b - 1); //updates location for object
+				/*delete object*/
+				if (this->player == true)
+				{
+					/*display game over*/
+				}
+
+				else if (vec[a][b-1].gethp <= 0)// checks to see if attacked object has died
+				{
+					vec[a][b-1] = vec[a][b]; //updates location in array
+					vec[a][b] = Entity(1, 0, a, b, false, false, true, false, false, false);//replaces old location with blank tile
+					this->sety(b - 1); //updates location for object
+				}
+			}
+
+		}
+		if (vec[a][b-1].door == true)
+		{
+			if (this->player == true && this->haskey == true)
+			{
+				//level load
 			}
 		}
 	}
@@ -159,22 +201,39 @@ Entity::Entity(int h, int a, int cX, int cY, bool hasA, bool canA, bool trav, bo
 	{
 		int a = this->getx;
 		int b = this->gety;
-		if (a >= 1 && vec[a][b + 1].traversable == true) //checks to make sure it will stay in the play area and is traverable
+		if (a >= 1 && vec[a][b+1].traversable == true) //checks to make sure it will stay in the play area and is traverable
 		{
-			vec[a][b + 1] = vec[a][b]; //updates location in array
-			this->sety(b + 1); //updates location for object
+			vec[a][b+1] = vec[a][b]; //updates location in array
+			this->sety(b+1); //updates location for object
 		}
 
-		if (vec[a][b + 1].canAtk = true)//checks to see if entity is attackable
+		if (vec[a][b+1].canAtk == true)//checks to see if entity is attackable
 		{
-			this->sethhp = (this->gethp - vec[a][b + 1].getatk);//sets new hp for player
-			vec[a][b + 1].sethhp = (vec[a][b + 1].gethp - this->getatk);//sets new hp for enemy
+			this->sethhp = (this->gethp - vec[a][b+1].getatk);//sets new hp for object
+			vec[a][b+1].sethhp = (vec[a][b+1].gethp - this->getatk);//sets new hp for attacked object
 
-			if (vec[a][b + 1].gethp <= 0)// checks to see if enemy has died
+			if (this->gethp <= 0)
 			{
-				vec[a][b + 1] = vec[a][b]; //updates location in array
-				this->sety(b + 1); //updates location for object
+				/*delete object*/
+				if (this->player == true)
+				{
+					/*display game over*/
+				}
+
+				else if (vec[a][b+1].gethp <= 0)// checks to see if attacked object has died
+				{
+					vec[a][b+1] = vec[a][b]; //updates location in array
+					vec[a][b] = Entity(1, 0, a, b, false, false, true, false, false, false);//replaces old location with blank tile
+					this->sety(b+1); //updates location for object
+				}
 			}
 
+		}
+		if (vec[a][b+1].door == true)
+		{
+			if (this->player == true && this->haskey == true)
+			{
+				//level load
+			}
 		}
 	}

@@ -4,18 +4,18 @@
 
 using namespace std;
 
-Entity::Entity(int h, int a, int cX, int cY, bool hasA, bool canA, bool trav, bool p, bool hasK, bool d)
+Entity::Entity(int h, int a, int cX, int cY, bool canA, bool trav, bool p, bool hasK, bool d, int AIAR)
 {
 	hp = h;
 	atk = a;
 	x = cX;
 	y = cY;
-	hasActed = hasA;
 	canAtk = canA;
 	traversable = trav;
 	player = p;
 	haskey = hasK;
 	door = d;
+	AIAggroRange = AIAR;
 }
 	int Entity::gethp()
 	{
@@ -37,6 +37,38 @@ Entity::Entity(int h, int a, int cX, int cY, bool hasA, bool canA, bool trav, bo
 	}
 	void Entity::update()
 	{
+		if (player){
+
+		}else{
+			//Enemy AI
+
+			// Need distance function
+
+			// iterate through array to get closest player
+
+			// if (player.distance < AIAggroRange)
+				//Aggroed
+					// if (deltaX > deltaY)
+						//change x
+					// else
+						// change y
+				// Fleeing
+					// if (deltaX > deltaY)
+						//change y
+					// else
+						// change x
+				// wander
+					// use srand
+			// else 
+				//Out of range
+					// do nothing
+				//wander
+					// use srand
+				
+
+			
+		}
+
 		/*
 			first check canAtk
 			Second check player

@@ -8,7 +8,7 @@ class Entity
 	int atk;
 	int x;
 	int y;
-	bool hasActed;
+	int AIAggroRange;
 	bool canAtk;
 	bool traversable;
 	bool player;

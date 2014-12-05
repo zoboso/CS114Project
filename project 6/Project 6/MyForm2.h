@@ -201,15 +201,18 @@ namespace Project6 {
 
 	}
 	private: System::Void panel1_Paint(System::Object^  sender, System::Windows::Forms::PaintEventArgs^  e) {
-				 g->DrawImage(player, px, py);
-				 g->DrawImage(enemy, ex * 35, ey * 35);
+				 //g->DrawImage(player, px, py);
+				 //g->DrawImage(enemy, ex * 35, ey * 35);
+				 
 	}
 private: System::Void button3_Click(System::Object^  sender, System::EventArgs^  e) {
 			 srand(time(NULL));
 			 int emove = rand() % 3 + 1;
+			 panel1->Refresh();
 
 			 if (px < 17)
 			 {
+				 
 				 px++;
 				 g->DrawImage(player, px * 35, py * 35);
 			 }	 
@@ -251,6 +254,7 @@ private: System::Void button3_Click(System::Object^  sender, System::EventArgs^ 
 private: System::Void button4_Click(System::Object^  sender, System::EventArgs^  e) {
 			 srand(time(NULL));
 			 int emove = rand() % 3 + 1;
+			 panel1->Refresh();
 
 			 if (py < 5)
 			 {
@@ -294,6 +298,7 @@ private: System::Void button4_Click(System::Object^  sender, System::EventArgs^ 
 private: System::Void button2_Click(System::Object^  sender, System::EventArgs^  e) {
 			 srand(time(NULL));
 			 int emove = rand() % 3 + 1;
+			 panel1->Refresh();
 
 			 if (px > 0)
 			 {
@@ -339,6 +344,7 @@ private: System::Void button2_Click(System::Object^  sender, System::EventArgs^ 
 private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
 			 srand(time(NULL));
 			 int emove = rand() % 3 + 1;
+			 panel1->Refresh();
 
 			 if (py > 0)
 			 {

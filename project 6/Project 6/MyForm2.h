@@ -60,6 +60,8 @@ namespace Project6 {
 	private: Bitmap^ view;
 	private: Bitmap^ enemy;
 	private: SoundPlayer^ musicplayer;
+	private: System::Windows::Forms::Label^  label1;
+
 
 	protected:
 
@@ -91,12 +93,13 @@ namespace Project6 {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(MyForm::typeid));
 			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->button2 = (gcnew System::Windows::Forms::Button());
 			this->button3 = (gcnew System::Windows::Forms::Button());
 			this->button4 = (gcnew System::Windows::Forms::Button());
 			this->panel1 = (gcnew System::Windows::Forms::Panel());
+			this->label1 = (gcnew System::Windows::Forms::Label());
+			this->panel1->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// button1
@@ -141,12 +144,23 @@ namespace Project6 {
 			// 
 			// panel1
 			// 
-//			this->panel1->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"panel1.BackgroundImage")));
+			this->panel1->Controls->Add(this->label1);
 			this->panel1->Location = System::Drawing::Point(12, 12);
 			this->panel1->Name = L"panel1";
 			this->panel1->Size = System::Drawing::Size(637, 212);
 			this->panel1->TabIndex = 4;
 			this->panel1->Paint += gcnew System::Windows::Forms::PaintEventHandler(this, &MyForm::panel1_Paint);
+			// 
+			// label1
+			// 
+			this->label1->AutoSize = true;
+			this->label1->Font = (gcnew System::Drawing::Font(L"Miramonte", 15.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label1->ForeColor = System::Drawing::Color::DarkRed;
+			this->label1->Location = System::Drawing::Point(290, 93);
+			this->label1->Name = L"label1";
+			this->label1->Size = System::Drawing::Size(0, 26);
+			this->label1->TabIndex = 0;
 			// 
 			// MyForm
 			// 
@@ -161,6 +175,8 @@ namespace Project6 {
 			this->Name = L"MyForm";
 			this->Text = L"MyForm";
 			this->Load += gcnew System::EventHandler(this, &MyForm::MyForm_Load);
+			this->panel1->ResumeLayout(false);
+			this->panel1->PerformLayout();
 			this->ResumeLayout(false);
 
 		}
@@ -171,7 +187,7 @@ namespace Project6 {
 		int ex = 16;
 		int ey = 4;
 		int ehealth = 1;
-		int phealth = 10;
+		int phealth = 2;
 		bool key = false;
 		
 		
@@ -289,6 +305,12 @@ private: System::Void button3_Click(System::Object^  sender, System::EventArgs^ 
 					g->DrawImage(player, px * 35, py * 35);
 				}
 
+				if (phealth == 0)
+				{
+					Refresh();
+					label1->Text = "DEAD";
+				}
+
 				if (py == 0 && px == 0 && key == true)
 				{
 					px = 0;
@@ -296,7 +318,6 @@ private: System::Void button3_Click(System::Object^  sender, System::EventArgs^ 
 					ex = 16;
 					ey = 4;
 					ehealth = 1;
-					phealth = 10;
 					key = false;
 
 					Refresh();
@@ -378,6 +399,12 @@ private: System::Void button4_Click(System::Object^  sender, System::EventArgs^ 
 				 g->DrawImage(player, px * 35, py * 35);
 			 }
 
+			 if (phealth == 0)
+			 {
+				 Refresh();
+				 label1->Text = "DEAD";
+			 }
+
 			 if (py == 0 && px == 0 && key == true)
 			 {
 				 px = 0;
@@ -385,7 +412,6 @@ private: System::Void button4_Click(System::Object^  sender, System::EventArgs^ 
 				 ex = 16;
 				 ey = 4;
 				 ehealth = 1;
-				 phealth = 10;
 				 key = false;
 
 				 Refresh();
@@ -466,6 +492,12 @@ private: System::Void button2_Click(System::Object^  sender, System::EventArgs^ 
 				 g->DrawImage(player, px * 35, py * 35);
 			 }
 
+			 if (phealth == 0)
+			 {
+				 Refresh();
+				 label1->Text = "DEAD";
+			 }
+
 			 if (py == 0 && px == 0 && key == true)
 			 {
 				 px = 0;
@@ -473,7 +505,6 @@ private: System::Void button2_Click(System::Object^  sender, System::EventArgs^ 
 				 ex = 16;
 				 ey = 4;
 				 ehealth = 1;
-				 phealth = 10;
 				 key = false;
 
 				 Refresh();
@@ -554,6 +585,12 @@ private: System::Void button1_Click(System::Object^  sender, System::EventArgs^ 
 				 g->DrawImage(player, px * 35, py * 35);
 			 }
 
+			 if (phealth == 0)
+			 {
+				 Refresh();
+				 label1->Text = "DEAD";
+			 }
+
 			 if (py == 0 && px == 0 && key == true)
 			 {
 				 px = 0;
@@ -561,7 +598,6 @@ private: System::Void button1_Click(System::Object^  sender, System::EventArgs^ 
 				 ex = 16;
 				 ey = 4;
 				 ehealth = 1;
-				 phealth = 10;
 				 key = false;
 
 				 Refresh();

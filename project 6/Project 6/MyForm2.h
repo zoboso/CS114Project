@@ -21,6 +21,7 @@ namespace Project6 {
 	using namespace System::Data;
 	using namespace System::Drawing;
 	using namespace std;
+	using namespace System;
 
 	/// <summary>
 	/// Summary for MyForm
@@ -197,11 +198,11 @@ namespace Project6 {
 	}
 	private: System::Void MyForm_Load(System::Object^  sender, System::EventArgs^  e) {
 				  g = panel1->CreateGraphics();
-				  player = gcnew Bitmap("K:/CS114/Github/CS114Project/Images/PlayerV2.png");
-				  enemy = gcnew Bitmap("K:/CS114/Github/CS114Project/Images/EnemyV1.png");
+				  player = gcnew Bitmap("K:/CS114/CS114Project/Images/PlayerV2.png");
+				  enemy = gcnew Bitmap("K:/CS114/CS114Project/Images/EnemyV1.png");
 
 				  musicplayer = gcnew System::Media::SoundPlayer();
-				  musicplayer->SoundLocation = "K:/CS114/Github/CS114Project/GuilesthemeWAV.wav";
+				  musicplayer->SoundLocation = "K:/CS114/CS114Project/GuilesthemeWAV.wav";
 				  musicplayer->Play(); 
 				  musicplayer->PlayLooping(); 
 

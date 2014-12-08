@@ -91,6 +91,7 @@ namespace Project6 {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(MyForm::typeid));
 			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->button2 = (gcnew System::Windows::Forms::Button());
 			this->button3 = (gcnew System::Windows::Forms::Button());
@@ -140,6 +141,7 @@ namespace Project6 {
 			// 
 			// panel1
 			// 
+//			this->panel1->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"panel1.BackgroundImage")));
 			this->panel1->Location = System::Drawing::Point(12, 12);
 			this->panel1->Name = L"panel1";
 			this->panel1->Size = System::Drawing::Size(637, 212);
@@ -168,6 +170,9 @@ namespace Project6 {
 		int py = 0;
 		int ex = 16;
 		int ey = 4;
+		int ehealth = 1;
+		int phealth = 10;
+		bool key = false;
 		
 		
 		
@@ -217,7 +222,6 @@ private: System::Void button3_Click(System::Object^  sender, System::EventArgs^ 
 
 			 if (px < 17)
 			 {
-				 
 				 px++;
 				 g->DrawImage(player, px * 35, py * 35);
 			 } 
@@ -227,39 +231,79 @@ private: System::Void button3_Click(System::Object^  sender, System::EventArgs^ 
 				switch (emove)
 				 {
 					 case 1:
-						 if (ey < 5)
+						 if (ehealth > 0 && phealth > 0)
 						 {
-							 ey++;
-							 g->DrawImage(enemy, ex * 35, ey * 35);
-						 } 
-						 else g->DrawImage(enemy, ex * 35, ey * 35);
-						 break;
+							 if (ey < 5)
+							 {
+								 ey++;
+								 g->DrawImage(enemy, ex * 35, ey * 35);
+							 }
+							 else g->DrawImage(enemy, ex * 35, ey * 35);
+							 break;
+						 }
 					 case 2:
-						 if (ex < 17)
+						 if (ehealth > 0 && phealth > 0)
 						 {
-							 ex++;
-							 g->DrawImage(enemy, ex * 35, ey * 35);
+							 if (ex < 17)
+							 {
+								 ex++;
+								 g->DrawImage(enemy, ex * 35, ey * 35);
+							 }
+							 else g->DrawImage(enemy, ex * 35, ey * 35);
+							 break;
 						 }
-						 else g->DrawImage(enemy, ex * 35, ey * 35);
-						 break;
 					 case 3:
-						 if (ey > 0)
+						 if (ehealth > 0 && phealth > 0)
 						 {
-							 ey--;
-							 g->DrawImage(enemy, ex * 35, ey * 35);
-						 } 
-						 else g->DrawImage(enemy, ex * 35, ey * 35);
-						 break;
-						 
-					 case 4:
-						 if (ex > 0)
-						 {
-							 ex--;
-							 g->DrawImage(enemy, ex * 35, ey * 35);
+							 if (ey > 0)
+							 {
+								 ey--;
+								 g->DrawImage(enemy, ex * 35, ey * 35);
+							 }
+							 else g->DrawImage(enemy, ex * 35, ey * 35);
+							 break;
 						 }
-						 else g->DrawImage(enemy, ex * 35, ey * 35);
-						 break;
-				 }	 
+					 case 4:
+						 if (ehealth > 0 && phealth > 0)
+						 {
+							 if (ex > 0)
+							 {
+								 ex--;
+								 g->DrawImage(enemy, ex * 35, ey * 35);
+							 }
+							 else g->DrawImage(enemy, ex * 35, ey * 35);
+							 break;
+						 }
+				 }	
+
+				if (ey == py && ex == px)
+				{
+					ehealth--;
+					phealth--;
+					key = true;
+				}
+
+				if (ehealth == 0)
+				{
+					Refresh();
+					g->DrawImage(player, px * 35, py * 35);
+				}
+
+				if (py == 0 && px == 0 && key == true)
+				{
+					px = 0;
+					py = 0;
+					ex = 16;
+					ey = 4;
+					ehealth = 1;
+					phealth = 10;
+					key = false;
+
+					Refresh();
+					g->DrawImage(player, px * 35, py * 35);
+					g->DrawImage(enemy, ex * 35, ey * 35);
+				}
+
 }
 private: System::Void button4_Click(System::Object^  sender, System::EventArgs^  e) {
 			 srand(time(NULL));
@@ -276,38 +320,77 @@ private: System::Void button4_Click(System::Object^  sender, System::EventArgs^ 
 			 switch (emove)
 			 {
 			 case 1:
-				 if (ey < 5)
+				 if (ehealth > 0 && phealth > 0)
 				 {
-					 ey++;
-					 g->DrawImage(enemy, ex * 35, ey * 35);
+					 if (ey < 5)
+					 {
+						 ey++;
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+					 else g->DrawImage(enemy, ex * 35, ey * 35);
+					 break;
 				 }
-				 else g->DrawImage(enemy, ex * 35, ey * 35);
-				 break;
 			 case 2:
-				 if (ex < 17)
+				 if (ehealth > 0 && phealth > 0)
 				 {
-					 ex++;
-					 g->DrawImage(enemy, ex * 35, ey * 35);
+					 if (ex < 17)
+					 {
+						 ex++;
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+					 else g->DrawImage(enemy, ex * 35, ey * 35);
+					 break;
 				 }
-				 else g->DrawImage(enemy, ex * 35, ey * 35);
-				 break;
 			 case 3:
-				 if (ey > 0)
+				 if (ehealth > 0 && phealth > 0)
 				 {
-					 ey--;
-					 g->DrawImage(enemy, ex * 35, ey * 35);
+					 if (ey > 0)
+					 {
+						 ey--;
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+					 else g->DrawImage(enemy, ex * 35, ey * 35);
+					 break;
 				 }
-				 else g->DrawImage(enemy, ex * 35, ey * 35);
-				 break;
-
 			 case 4:
-				 if (ex > 0)
+				 if (ehealth > 0 && phealth > 0)
 				 {
-					 ex--;
-					 g->DrawImage(enemy, ex * 35, ey * 35);
+					 if (ex > 0)
+					 {
+						 ex--;
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+					 else g->DrawImage(enemy, ex * 35, ey * 35);
+					 break;
 				 }
-				 else g->DrawImage(enemy, ex * 35, ey * 35);
-				 break;
+			 }
+
+			 if (ey == py && ex == px)
+			 {
+				 ehealth--;
+				 phealth--;
+				 key = true;
+			 }
+
+			 if (ehealth == 0)
+			 {
+				 Refresh();
+				 g->DrawImage(player, px * 35, py * 35);
+			 }
+
+			 if (py == 0 && px == 0 && key == true)
+			 {
+				 px = 0;
+				 py = 0;
+				 ex = 16;
+				 ey = 4;
+				 ehealth = 1;
+				 phealth = 10;
+				 key = false;
+
+				 Refresh();
+				 g->DrawImage(player, px * 35, py * 35);
+				 g->DrawImage(enemy, ex * 35, ey * 35);
 			 }
 }
 private: System::Void button2_Click(System::Object^  sender, System::EventArgs^  e) {
@@ -325,41 +408,78 @@ private: System::Void button2_Click(System::Object^  sender, System::EventArgs^ 
 			 switch (emove)
 			 {
 			 case 1:
-				 if (ey < 5)
+				 if (ehealth > 0 && phealth > 0)
 				 {
-					 ey++;
-					 g->DrawImage(enemy, ex * 35, ey * 35);
+					 if (ey < 5)
+					 {
+						 ey++;
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+					 else g->DrawImage(enemy, ex * 35, ey * 35);
+					 break;
 				 }
-				 else g->DrawImage(enemy, ex * 35, ey * 35);
-				 break;
 			 case 2:
-				 if (ex < 17)
+				 if (ehealth > 0 && phealth > 0)
 				 {
-					 ex++;
-					 g->DrawImage(enemy, ex * 35, ey * 35);
+					 if (ex < 17)
+					 {
+						 ex++;
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+					 else g->DrawImage(enemy, ex * 35, ey * 35);
+					 break;
 				 }
-				 else g->DrawImage(enemy, ex * 35, ey * 35);
-				 break;
 			 case 3:
-				 if (ey > 0)
+				 if (ehealth > 0 && phealth > 0)
 				 {
-					 ey--;
-					 g->DrawImage(enemy, ex * 35, ey * 35);
+					 if (ey > 0)
+					 {
+						 ey--;
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+					 else g->DrawImage(enemy, ex * 35, ey * 35);
+					 break;
 				 }
-				 else g->DrawImage(enemy, ex * 35, ey * 35);
-				 break;
-
 			 case 4:
-				 if (ex > 0)
+				 if (ehealth > 0 && phealth > 0)
 				 {
-					 ex--;
-					 g->DrawImage(enemy, ex * 35, ey * 35);
+					 if (ex > 0)
+					 {
+						 ex--;
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+					 else g->DrawImage(enemy, ex * 35, ey * 35);
+					 break;
 				 }
-				 else g->DrawImage(enemy, ex * 35, ey * 35);
-				 break;
 			 }
 
+			 if (ey == py && ex == px)
+			 {
+				 ehealth--;
+				 phealth--;
+				 key = true;
+			 }
 
+			 if (ehealth == 0)
+			 {
+				 Refresh();
+				 g->DrawImage(player, px * 35, py * 35);
+			 }
+
+			 if (py == 0 && px == 0 && key == true)
+			 {
+				 px = 0;
+				 py = 0;
+				 ex = 16;
+				 ey = 4;
+				 ehealth = 1;
+				 phealth = 10;
+				 key = false;
+
+				 Refresh();
+				 g->DrawImage(player, px * 35, py * 35);
+				 g->DrawImage(enemy, ex * 35, ey * 35);
+			 }
 }
 private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
 			 srand(time(NULL));
@@ -376,38 +496,77 @@ private: System::Void button1_Click(System::Object^  sender, System::EventArgs^ 
 			 switch (emove)
 			 {
 			 case 1:
-				 if (ey < 5)
+				 if (ehealth > 0 && phealth > 0)
 				 {
-					 ey++;
-					 g->DrawImage(enemy, ex * 35, ey * 35);
+					 if (ey < 5)
+					 {
+						 ey++;
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+					 else g->DrawImage(enemy, ex * 35, ey * 35);
+					 break;
 				 }
-				 else g->DrawImage(enemy, ex * 35, ey * 35);
-				 break;
 			 case 2:
-				 if (ex < 17)
+				 if (ehealth > 0 && phealth > 0)
 				 {
-					 ex++;
-					 g->DrawImage(enemy, ex * 35, ey * 35);
+					 if (ex < 17)
+					 {
+						 ex++;
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+					 else g->DrawImage(enemy, ex * 35, ey * 35);
+					 break;
 				 }
-				 else g->DrawImage(enemy, ex * 35, ey * 35);
-				 break;
 			 case 3:
-				 if (ey > 0)
+				 if (ehealth > 0 && phealth > 0)
 				 {
-					 ey--;
-					 g->DrawImage(enemy, ex * 35, ey * 35);
+					 if (ey > 0)
+					 {
+						 ey--;
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+					 else g->DrawImage(enemy, ex * 35, ey * 35);
+					 break;
 				 }
-				 else g->DrawImage(enemy, ex * 35, ey * 35);
-				 break;
-
 			 case 4:
-				 if (ex > 0)
+				 if (ehealth > 0 && phealth > 0)
 				 {
-					 ex--;
-					 g->DrawImage(enemy, ex * 35, ey * 35);
+					 if (ex > 0)
+					 {
+						 ex--;
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+					 else g->DrawImage(enemy, ex * 35, ey * 35);
+					 break;
 				 }
-				 else g->DrawImage(enemy, ex * 35, ey * 35);
-				 break;
+			 }
+
+			 if (ey == py && ex == px)
+			 {
+				 ehealth--;
+				 phealth--;
+				 key = true;
+			 }
+
+			 if (ehealth == 0)
+			 {
+				 Refresh();
+				 g->DrawImage(player, px * 35, py * 35);
+			 }
+
+			 if (py == 0 && px == 0 && key == true)
+			 {
+				 px = 0;
+				 py = 0;
+				 ex = 16;
+				 ey = 4;
+				 ehealth = 1;
+				 phealth = 10;
+				 key = false;
+
+				 Refresh();
+				 g->DrawImage(player, px * 35, py * 35);
+				 g->DrawImage(enemy, ex * 35, ey * 35);
 			 }
 }
 };

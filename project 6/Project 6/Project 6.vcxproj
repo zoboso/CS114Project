@@ -24,11 +24,18 @@
     <ClInclude Include="MyForm2.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="resource1.h" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="MyForm2.resx">
       <DependentUpon>MyForm2.h</DependentUpon>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Project6.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\..\Images\floor.png" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{F863E268-BA5C-402F-8208-A262C5137D9F}</ProjectGuid>

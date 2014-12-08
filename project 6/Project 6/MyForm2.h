@@ -15,6 +15,7 @@ namespace Project6 {
 
 	using namespace System;
 	using namespace System::ComponentModel;
+	using namespace System::Media;
 	using namespace System::Collections;
 	using namespace System::Windows::Forms;
 	using namespace System::Data;
@@ -57,7 +58,7 @@ namespace Project6 {
 	private: Bitmap^ player;
 	private: Bitmap^ view;
 	private: Bitmap^ enemy;
-
+	private: SoundPlayer^ musicplayer;
 
 	protected:
 
@@ -102,7 +103,7 @@ namespace Project6 {
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(75, 23);
 			this->button1->TabIndex = 0;
-			this->button1->Text = L"button1";
+			this->button1->Text = L"UP";
 			this->button1->UseVisualStyleBackColor = true;
 			this->button1->Click += gcnew System::EventHandler(this, &MyForm::button1_Click);
 			// 
@@ -112,7 +113,7 @@ namespace Project6 {
 			this->button2->Name = L"button2";
 			this->button2->Size = System::Drawing::Size(75, 23);
 			this->button2->TabIndex = 1;
-			this->button2->Text = L"button2";
+			this->button2->Text = L"LEFT";
 			this->button2->UseVisualStyleBackColor = true;
 			this->button2->Click += gcnew System::EventHandler(this, &MyForm::button2_Click);
 			// 
@@ -122,7 +123,7 @@ namespace Project6 {
 			this->button3->Name = L"button3";
 			this->button3->Size = System::Drawing::Size(75, 23);
 			this->button3->TabIndex = 2;
-			this->button3->Text = L"button3";
+			this->button3->Text = L"RIGHT";
 			this->button3->UseVisualStyleBackColor = true;
 			this->button3->Click += gcnew System::EventHandler(this, &MyForm::button3_Click);
 			// 
@@ -132,7 +133,7 @@ namespace Project6 {
 			this->button4->Name = L"button4";
 			this->button4->Size = System::Drawing::Size(75, 23);
 			this->button4->TabIndex = 3;
-			this->button4->Text = L"button4";
+			this->button4->Text = L"DOWN";
 			this->button4->UseVisualStyleBackColor = true;
 			this->button4->Click += gcnew System::EventHandler(this, &MyForm::button4_Click);
 			// 
@@ -168,6 +169,7 @@ namespace Project6 {
 		int ey = 4;
 		
 		
+		
 
 	private: System::Void guess_TextChanged(System::Object^  sender, System::EventArgs^  e) {
 	}
@@ -198,16 +200,18 @@ namespace Project6 {
 				  player = gcnew Bitmap("K:/CS114/Github/CS114Project/Images/PlayerV2.png");
 				  enemy = gcnew Bitmap("K:/CS114/Github/CS114Project/Images/EnemyV1.png");
 
+				  musicplayer = gcnew System::Media::SoundPlayer();
+				  musicplayer->SoundLocation = "K:/CS114/Github/CS114Project/GuilesthemeWAV.wav";
+				  musicplayer->Play(); 
+				  musicplayer->PlayLooping(); 
+
 
 	}
-	private: System::Void panel1_Paint(System::Object^  sender, System::Windows::Forms::PaintEventArgs^  e) {
-				 //g->DrawImage(player, px, py);
-				 //g->DrawImage(enemy, ex * 35, ey * 35);
-				 
+	private: System::Void panel1_Paint(System::Object^  sender, System::Windows::Forms::PaintEventArgs^  e) {		 
 	}
 private: System::Void button3_Click(System::Object^  sender, System::EventArgs^  e) {
 			 srand(time(NULL));
-			 int emove = rand() % 3 + 1;
+			 int emove = rand() % 4 + 1;
 			 panel1->Refresh();
 
 			 if (px < 17)
@@ -215,7 +219,8 @@ private: System::Void button3_Click(System::Object^  sender, System::EventArgs^ 
 				 
 				 px++;
 				 g->DrawImage(player, px * 35, py * 35);
-			 }	 
+			 } 
+			 else g->DrawImage(player, px * 35, py * 35);
 
 				 
 				switch (emove)
@@ -225,42 +230,47 @@ private: System::Void button3_Click(System::Object^  sender, System::EventArgs^ 
 						 {
 							 ey++;
 							 g->DrawImage(enemy, ex * 35, ey * 35);
-							 break;
-						 }
+						 } 
+						 else g->DrawImage(enemy, ex * 35, ey * 35);
+						 break;
 					 case 2:
 						 if (ex < 17)
 						 {
 							 ex++;
 							 g->DrawImage(enemy, ex * 35, ey * 35);
-							 break;
 						 }
+						 else g->DrawImage(enemy, ex * 35, ey * 35);
+						 break;
 					 case 3:
 						 if (ey > 0)
 						 {
 							 ey--;
 							 g->DrawImage(enemy, ex * 35, ey * 35);
-							 break;
-						 }
+						 } 
+						 else g->DrawImage(enemy, ex * 35, ey * 35);
+						 break;
 						 
 					 case 4:
 						 if (ex > 0)
 						 {
 							 ex--;
 							 g->DrawImage(enemy, ex * 35, ey * 35);
-							 break;
 						 }
+						 else g->DrawImage(enemy, ex * 35, ey * 35);
+						 break;
 				 }	 
 }
 private: System::Void button4_Click(System::Object^  sender, System::EventArgs^  e) {
 			 srand(time(NULL));
-			 int emove = rand() % 3 + 1;
+			 int emove = rand() % 4 + 1;
 			 panel1->Refresh();
 
 			 if (py < 5)
 			 {
 				 py++;
 				 g->DrawImage(player, px * 35, py * 35);
-			 }
+			 } 
+			 else g->DrawImage(player, px * 35, py * 35);
 
 			 switch (emove)
 			 {
@@ -269,42 +279,47 @@ private: System::Void button4_Click(System::Object^  sender, System::EventArgs^ 
 				 {
 					 ey++;
 					 g->DrawImage(enemy, ex * 35, ey * 35);
-					 break;
 				 }
+				 else g->DrawImage(enemy, ex * 35, ey * 35);
+				 break;
 			 case 2:
 				 if (ex < 17)
 				 {
 					 ex++;
 					 g->DrawImage(enemy, ex * 35, ey * 35);
-					 break;
 				 }
+				 else g->DrawImage(enemy, ex * 35, ey * 35);
+				 break;
 			 case 3:
 				 if (ey > 0)
 				 {
 					 ey--;
 					 g->DrawImage(enemy, ex * 35, ey * 35);
-					 break;
 				 }
+				 else g->DrawImage(enemy, ex * 35, ey * 35);
+				 break;
 
 			 case 4:
 				 if (ex > 0)
 				 {
 					 ex--;
 					 g->DrawImage(enemy, ex * 35, ey * 35);
-					 break;
 				 }
+				 else g->DrawImage(enemy, ex * 35, ey * 35);
+				 break;
 			 }
 }
 private: System::Void button2_Click(System::Object^  sender, System::EventArgs^  e) {
 			 srand(time(NULL));
-			 int emove = rand() % 3 + 1;
+			 int emove = rand() % 4 + 1;
 			 panel1->Refresh();
 
 			 if (px > 0)
 			 {
 				 px--;
 				 g->DrawImage(player, px * 35, py * 35);
-			 }
+			 } 
+			 else g->DrawImage(player, px * 35, py * 35);
 
 			 switch (emove)
 			 {
@@ -313,44 +328,49 @@ private: System::Void button2_Click(System::Object^  sender, System::EventArgs^ 
 				 {
 					 ey++;
 					 g->DrawImage(enemy, ex * 35, ey * 35);
-					 break;
 				 }
+				 else g->DrawImage(enemy, ex * 35, ey * 35);
+				 break;
 			 case 2:
 				 if (ex < 17)
 				 {
 					 ex++;
 					 g->DrawImage(enemy, ex * 35, ey * 35);
-					 break;
 				 }
+				 else g->DrawImage(enemy, ex * 35, ey * 35);
+				 break;
 			 case 3:
 				 if (ey > 0)
 				 {
 					 ey--;
 					 g->DrawImage(enemy, ex * 35, ey * 35);
-					 break;
 				 }
+				 else g->DrawImage(enemy, ex * 35, ey * 35);
+				 break;
 
 			 case 4:
 				 if (ex > 0)
 				 {
 					 ex--;
 					 g->DrawImage(enemy, ex * 35, ey * 35);
-					 break;
 				 }
+				 else g->DrawImage(enemy, ex * 35, ey * 35);
+				 break;
 			 }
 
 
 }
 private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
 			 srand(time(NULL));
-			 int emove = rand() % 3 + 1;
+			 int emove = rand() % 4 + 1;
 			 panel1->Refresh();
 
 			 if (py > 0)
 			 {
 				py--;
 				 g->DrawImage(player, px * 35, py * 35);
-			 }
+			 } 
+			 else g->DrawImage(player, px * 35, py * 35);
 
 			 switch (emove)
 			 {
@@ -359,30 +379,34 @@ private: System::Void button1_Click(System::Object^  sender, System::EventArgs^ 
 				 {
 					 ey++;
 					 g->DrawImage(enemy, ex * 35, ey * 35);
-					 break;
 				 }
+				 else g->DrawImage(enemy, ex * 35, ey * 35);
+				 break;
 			 case 2:
 				 if (ex < 17)
 				 {
 					 ex++;
 					 g->DrawImage(enemy, ex * 35, ey * 35);
-					 break;
 				 }
+				 else g->DrawImage(enemy, ex * 35, ey * 35);
+				 break;
 			 case 3:
 				 if (ey > 0)
 				 {
 					 ey--;
 					 g->DrawImage(enemy, ex * 35, ey * 35);
-					 break;
 				 }
+				 else g->DrawImage(enemy, ex * 35, ey * 35);
+				 break;
 
 			 case 4:
 				 if (ex > 0)
 				 {
 					 ex--;
 					 g->DrawImage(enemy, ex * 35, ey * 35);
-					 break;
 				 }
+				 else g->DrawImage(enemy, ex * 35, ey * 35);
+				 break;
 			 }
 }
 };

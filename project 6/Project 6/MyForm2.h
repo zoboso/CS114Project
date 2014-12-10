@@ -192,33 +192,6 @@ namespace Project6 {
 		int phealth = 2;
 		bool key = false;
 		
-		
-		
-
-	private: System::Void guess_TextChanged(System::Object^  sender, System::EventArgs^  e) {
-	}
-	private: System::Void check_Click(System::Object^  sender, System::EventArgs^  e) {
-	}
-	private: System::Void letter1_Click(System::Object^  sender, System::EventArgs^  e) {
-	}
-	private: System::Void letter2_Click(System::Object^  sender, System::EventArgs^  e) {
-	}
-	private: System::Void letter3_Click(System::Object^  sender, System::EventArgs^  e) {
-	}
-	private: System::Void letter4_Click(System::Object^  sender, System::EventArgs^  e) {
-	}
-	private: System::Void letter5_Click(System::Object^  sender, System::EventArgs^  e) {
-	}
-	private: System::Void letter6_Click(System::Object^  sender, System::EventArgs^  e) {
-	}
-	private: System::Void letter7_Click(System::Object^  sender, System::EventArgs^  e) {
-	}
-	private: System::Void letter8_Click(System::Object^  sender, System::EventArgs^  e) {
-	}
-	private: System::Void letter9_Click(System::Object^  sender, System::EventArgs^  e) {
-	}
-	private: System::Void label10_Click(System::Object^  sender, System::EventArgs^  e) {
-	}
 	private: System::Void MyForm_Load(System::Object^  sender, System::EventArgs^  e) {
 				  g = panel1->CreateGraphics();
 				  player = gcnew Bitmap("K:/CS114/CS114Project/Images/PlayerV2.png");
@@ -238,17 +211,19 @@ namespace Project6 {
 private: System::Void button3_Click(System::Object^  sender, System::EventArgs^  e) {
 			 srand(time(NULL));
 			 int emove = rand() % 4 + 1;
-			 panel1->Refresh();
+			 Refresh();
 
 			 g->DrawImage(door, 0 * 35, 0 * 35);
 			 g->DrawImage(wall, 1 * 35, 1 * 35);
-
-			 if (px < 17)
+			 if (phealth > 0)
 			 {
-				 px++;
-				 g->DrawImage(player, px * 35, py * 35);
-			 } 
-			 else g->DrawImage(player, px * 35, py * 35);
+				 if (px < 17)
+				 {
+					 px++;
+					 g->DrawImage(player, px * 35, py * 35);
+				 }
+				 else g->DrawImage(player, px * 35, py * 35);
+			 }
 
 				 
 				switch (emove)
@@ -317,6 +292,9 @@ private: System::Void button3_Click(System::Object^  sender, System::EventArgs^ 
 				if (phealth == 0)
 				{
 					Refresh();
+					g->DrawImage(door, 0 * 35, 0 * 35);
+					g->DrawImage(wall, 1 * 35, 1 * 35);
+					g->DrawImage(enemy, ex * 35, ey * 35);
 					label1->Text = "DEAD";
 				}
 
@@ -330,19 +308,21 @@ private: System::Void button3_Click(System::Object^  sender, System::EventArgs^ 
 					key = false;
 
 					Refresh();
-					g->DrawImage(player, px * 35, py * 35);
+
 					g->DrawImage(enemy, ex * 35, ey * 35);
-					g->DrawImage(door, 0 * 35, 0 * 35);
 					g->DrawImage(wall, 1 * 35, 1 * 35);
+					g->DrawImage(player, px * 35, py * 35);
+					g->DrawImage(door, 0 * 35, 0 * 35);
+
 				}
 
 				if (px == 1 && py == 1)
 				{
 					px--;
 					Refresh();
-					g->DrawImage(player, px * 35, py * 35);
 					g->DrawImage(door, 0 * 35, 0 * 35);
 					g->DrawImage(wall, 1 * 35, 1 * 35);
+					g->DrawImage(player, px * 35, py * 35);
 					if (ehealth > 0)
 					{
 						g->DrawImage(enemy, ex * 35, ey * 35);
@@ -353,17 +333,20 @@ private: System::Void button3_Click(System::Object^  sender, System::EventArgs^ 
 private: System::Void button4_Click(System::Object^  sender, System::EventArgs^  e) {
 			 srand(time(NULL));
 			 int emove = rand() % 4 + 1;
-			 panel1->Refresh();
+			 Refresh();
 
 			 g->DrawImage(door, 0 * 35, 0 * 35);
 			 g->DrawImage(wall, 1 * 35, 1 * 35);
 
-			 if (py < 5)
+			 if (phealth > 0)
 			 {
-				 py++;
-				 g->DrawImage(player, px * 35, py * 35);
-			 } 
-			 else g->DrawImage(player, px * 35, py * 35);
+				 if (py < 5)
+				 {
+					 py++;
+					 g->DrawImage(player, px * 35, py * 35);
+				 }
+				 else g->DrawImage(player, px * 35, py * 35);
+			 }
 
 			 switch (emove)
 			 {
@@ -423,14 +406,18 @@ private: System::Void button4_Click(System::Object^  sender, System::EventArgs^ 
 			 if (ehealth == 0)
 			 {
 				 Refresh();
-				 g->DrawImage(player, px * 35, py * 35);
+				 
 				 g->DrawImage(door, 0 * 35, 0 * 35);
 				 g->DrawImage(wall, 1 * 35, 1 * 35);
+				 g->DrawImage(player, px * 35, py * 35);
 			 }
 
 			 if (phealth == 0)
 			 {
 				 Refresh();
+				 g->DrawImage(door, 0 * 35, 0 * 35);
+				 g->DrawImage(wall, 1 * 35, 1 * 35);
+				 g->DrawImage(enemy, ex * 35, ey * 35);
 				 label1->Text = "DEAD";
 			 }
 
@@ -444,19 +431,21 @@ private: System::Void button4_Click(System::Object^  sender, System::EventArgs^ 
 				 key = false;
 
 				 Refresh();
-				 g->DrawImage(player, px * 35, py * 35);
+				 
 				 g->DrawImage(enemy, ex * 35, ey * 35);
-				 g->DrawImage(door, 0 * 35, 0 * 35);
 				 g->DrawImage(wall, 1 * 35, 1 * 35);
+				 g->DrawImage(player, px * 35, py * 35);
+				 g->DrawImage(door, 0 * 35, 0 * 35);
 			 }
 
 			 if (px == 1 && py == 1)
 			 {
 				 py--;
 				 Refresh();
-				 g->DrawImage(player, px * 35, py * 35);
+				 
 				 g->DrawImage(door, 0 * 35, 0 * 35);
 				 g->DrawImage(wall, 1 * 35, 1 * 35);
+				 g->DrawImage(player, px * 35, py * 35);
 
 				 if (ehealth > 0)
 				 {
@@ -467,17 +456,19 @@ private: System::Void button4_Click(System::Object^  sender, System::EventArgs^ 
 private: System::Void button2_Click(System::Object^  sender, System::EventArgs^  e) {
 			 srand(time(NULL));
 			 int emove = rand() % 4 + 1;
-			 panel1->Refresh();
+			 Refresh();
 
 			 g->DrawImage(door, 0 * 35, 0 * 35);
 			 g->DrawImage(wall, 1 * 35, 1 * 35);
-
-			 if (px > 0)
+			 if (phealth > 0)
 			 {
-				 px--;
-				 g->DrawImage(player, px * 35, py * 35);
-			 } 
-			 else g->DrawImage(player, px * 35, py * 35);
+				 if (px > 0)
+				 {
+					 px--;
+					 g->DrawImage(player, px * 35, py * 35);
+				 }
+				 else g->DrawImage(player, px * 35, py * 35);
+			 }
 
 			 switch (emove)
 			 {
@@ -537,14 +528,18 @@ private: System::Void button2_Click(System::Object^  sender, System::EventArgs^ 
 			 if (ehealth == 0)
 			 {
 				 Refresh();
-				 g->DrawImage(player, px * 35, py * 35);
+				 
 				 g->DrawImage(door, 0 * 35, 0 * 35);
 				 g->DrawImage(wall, 1 * 35, 1 * 35);
+				 g->DrawImage(player, px * 35, py * 35);
 			 }
 
 			 if (phealth == 0)
 			 {
 				 Refresh();
+				 g->DrawImage(door, 0 * 35, 0 * 35);
+				 g->DrawImage(wall, 1 * 35, 1 * 35);
+				 g->DrawImage(enemy, ex * 35, ey * 35);
 				 label1->Text = "DEAD";
 			 }
 
@@ -558,19 +553,22 @@ private: System::Void button2_Click(System::Object^  sender, System::EventArgs^ 
 				 key = false;
 
 				 Refresh();
-				 g->DrawImage(player, px * 35, py * 35);
+				 
 				 g->DrawImage(enemy, ex * 35, ey * 35);
-				 g->DrawImage(door, 0 * 35, 0 * 35);
+				;
 				 g->DrawImage(wall, 1 * 35, 1 * 35);
+				 g->DrawImage(player, px * 35, py * 35); 
+				 g->DrawImage(door, 0 * 35, 0 * 35);
 			 }
 
 			 if (px == 1 && py == 1)
 			 {
 				 px++;
 				 Refresh();
-				 g->DrawImage(player, px * 35, py * 35);
+				 
 				 g->DrawImage(door, 0 * 35, 0 * 35);
 				 g->DrawImage(wall, 1 * 35, 1 * 35);
+				 g->DrawImage(player, px * 35, py * 35);
 
 				 if (ehealth > 0)
 				 {
@@ -581,17 +579,19 @@ private: System::Void button2_Click(System::Object^  sender, System::EventArgs^ 
 private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
 			 srand(time(NULL));
 			 int emove = rand() % 4 + 1;
-			 panel1->Refresh();
+			 Refresh();
 
 			 g->DrawImage(door, 0 * 35, 0 * 35);
 			 g->DrawImage(wall, 1 * 35, 1 * 35);
-
-			 if (py > 0)
+			 if (phealth > 0)
 			 {
-				py--;
-				 g->DrawImage(player, px * 35, py * 35);
-			 } 
-			 else g->DrawImage(player, px * 35, py * 35);
+				 if (py > 0)
+				 {
+					 py--;
+					 g->DrawImage(player, px * 35, py * 35);
+				 }
+				 else g->DrawImage(player, px * 35, py * 35);
+			 }
 
 			 switch (emove)
 			 {
@@ -651,14 +651,18 @@ private: System::Void button1_Click(System::Object^  sender, System::EventArgs^ 
 			 if (ehealth == 0)
 			 {
 				 Refresh();
-				 g->DrawImage(player, px * 35, py * 35);
+				 
 				 g->DrawImage(door, 0 * 35, 0 * 35);
 				 g->DrawImage(wall, 1 * 35, 1 * 35);
+				 g->DrawImage(player, px * 35, py * 35);
 			 }
 
 			 if (phealth == 0)
 			 {
 				 Refresh();
+				 g->DrawImage(door, 0 * 35, 0 * 35);
+				 g->DrawImage(wall, 1 * 35, 1 * 35);
+				 g->DrawImage(enemy, ex * 35, ey * 35);
 				 label1->Text = "DEAD";
 			 }
 
@@ -672,18 +676,20 @@ private: System::Void button1_Click(System::Object^  sender, System::EventArgs^ 
 				 key = false;
 
 				 Refresh();
-				 g->DrawImage(player, px * 35, py * 35);
+				 
 				 g->DrawImage(enemy, ex * 35, ey * 35);
-				 g->DrawImage(door, 0 * 35, 0 * 35);
 				 g->DrawImage(wall, 1 * 35, 1 * 35);
+				 g->DrawImage(player, px * 35, py * 35);
+				 g->DrawImage(door, 0 * 35, 0 * 35);
 			 }
 			 if (px == 1 && py == 1)
 			 {
 				 py++;
 				 Refresh();
-				 g->DrawImage(player, px * 35, py * 35);
+				 
 				 g->DrawImage(door, 0 * 35, 0 * 35);
 				 g->DrawImage(wall, 1 * 35, 1 * 35);
+				 g->DrawImage(player, px * 35, py * 35);
 
 				 if (ehealth > 0)
 				 {

@@ -59,6 +59,8 @@ namespace Project6 {
 	private: Bitmap^ player;
 	private: Bitmap^ view;
 	private: Bitmap^ enemy;
+	private: Bitmap^ wall;
+	private: Bitmap^ door;
 	private: SoundPlayer^ musicplayer;
 	private: System::Windows::Forms::Label^  label1;
 
@@ -221,6 +223,8 @@ namespace Project6 {
 				  g = panel1->CreateGraphics();
 				  player = gcnew Bitmap("K:/CS114/CS114Project/Images/PlayerV2.png");
 				  enemy = gcnew Bitmap("K:/CS114/CS114Project/Images/EnemyV1.png");
+				  wall = gcnew Bitmap("K:/CS114/CS114Project/Images/wall.png");
+				  door = gcnew Bitmap("K:/CS114/CS114Project/Images/TrapDoor.png");
 
 				  musicplayer = gcnew System::Media::SoundPlayer();
 				  musicplayer->SoundLocation = "K:/CS114/CS114Project/GuilesthemeWAV.wav";
@@ -235,6 +239,9 @@ private: System::Void button3_Click(System::Object^  sender, System::EventArgs^ 
 			 srand(time(NULL));
 			 int emove = rand() % 4 + 1;
 			 panel1->Refresh();
+
+			 g->DrawImage(door, 0 * 35, 0 * 35);
+			 g->DrawImage(wall, 1 * 35, 1 * 35);
 
 			 if (px < 17)
 			 {
@@ -303,6 +310,8 @@ private: System::Void button3_Click(System::Object^  sender, System::EventArgs^ 
 				{
 					Refresh();
 					g->DrawImage(player, px * 35, py * 35);
+					g->DrawImage(door, 0 * 35, 0 * 35);
+					g->DrawImage(wall, 1 * 35, 1 * 35);
 				}
 
 				if (phealth == 0)
@@ -323,6 +332,21 @@ private: System::Void button3_Click(System::Object^  sender, System::EventArgs^ 
 					Refresh();
 					g->DrawImage(player, px * 35, py * 35);
 					g->DrawImage(enemy, ex * 35, ey * 35);
+					g->DrawImage(door, 0 * 35, 0 * 35);
+					g->DrawImage(wall, 1 * 35, 1 * 35);
+				}
+
+				if (px == 1 && py == 1)
+				{
+					px--;
+					Refresh();
+					g->DrawImage(player, px * 35, py * 35);
+					g->DrawImage(door, 0 * 35, 0 * 35);
+					g->DrawImage(wall, 1 * 35, 1 * 35);
+					if (ehealth > 0)
+					{
+						g->DrawImage(enemy, ex * 35, ey * 35);
+					}
 				}
 
 }
@@ -330,6 +354,9 @@ private: System::Void button4_Click(System::Object^  sender, System::EventArgs^ 
 			 srand(time(NULL));
 			 int emove = rand() % 4 + 1;
 			 panel1->Refresh();
+
+			 g->DrawImage(door, 0 * 35, 0 * 35);
+			 g->DrawImage(wall, 1 * 35, 1 * 35);
 
 			 if (py < 5)
 			 {
@@ -397,6 +424,8 @@ private: System::Void button4_Click(System::Object^  sender, System::EventArgs^ 
 			 {
 				 Refresh();
 				 g->DrawImage(player, px * 35, py * 35);
+				 g->DrawImage(door, 0 * 35, 0 * 35);
+				 g->DrawImage(wall, 1 * 35, 1 * 35);
 			 }
 
 			 if (phealth == 0)
@@ -417,12 +446,31 @@ private: System::Void button4_Click(System::Object^  sender, System::EventArgs^ 
 				 Refresh();
 				 g->DrawImage(player, px * 35, py * 35);
 				 g->DrawImage(enemy, ex * 35, ey * 35);
+				 g->DrawImage(door, 0 * 35, 0 * 35);
+				 g->DrawImage(wall, 1 * 35, 1 * 35);
+			 }
+
+			 if (px == 1 && py == 1)
+			 {
+				 py--;
+				 Refresh();
+				 g->DrawImage(player, px * 35, py * 35);
+				 g->DrawImage(door, 0 * 35, 0 * 35);
+				 g->DrawImage(wall, 1 * 35, 1 * 35);
+
+				 if (ehealth > 0)
+				 {
+					 g->DrawImage(enemy, ex * 35, ey * 35);
+				 }
 			 }
 }
 private: System::Void button2_Click(System::Object^  sender, System::EventArgs^  e) {
 			 srand(time(NULL));
 			 int emove = rand() % 4 + 1;
 			 panel1->Refresh();
+
+			 g->DrawImage(door, 0 * 35, 0 * 35);
+			 g->DrawImage(wall, 1 * 35, 1 * 35);
 
 			 if (px > 0)
 			 {
@@ -490,6 +538,8 @@ private: System::Void button2_Click(System::Object^  sender, System::EventArgs^ 
 			 {
 				 Refresh();
 				 g->DrawImage(player, px * 35, py * 35);
+				 g->DrawImage(door, 0 * 35, 0 * 35);
+				 g->DrawImage(wall, 1 * 35, 1 * 35);
 			 }
 
 			 if (phealth == 0)
@@ -510,12 +560,31 @@ private: System::Void button2_Click(System::Object^  sender, System::EventArgs^ 
 				 Refresh();
 				 g->DrawImage(player, px * 35, py * 35);
 				 g->DrawImage(enemy, ex * 35, ey * 35);
+				 g->DrawImage(door, 0 * 35, 0 * 35);
+				 g->DrawImage(wall, 1 * 35, 1 * 35);
+			 }
+
+			 if (px == 1 && py == 1)
+			 {
+				 px++;
+				 Refresh();
+				 g->DrawImage(player, px * 35, py * 35);
+				 g->DrawImage(door, 0 * 35, 0 * 35);
+				 g->DrawImage(wall, 1 * 35, 1 * 35);
+
+				 if (ehealth > 0)
+				 {
+					 g->DrawImage(enemy, ex * 35, ey * 35);
+				 }
 			 }
 }
 private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
 			 srand(time(NULL));
 			 int emove = rand() % 4 + 1;
 			 panel1->Refresh();
+
+			 g->DrawImage(door, 0 * 35, 0 * 35);
+			 g->DrawImage(wall, 1 * 35, 1 * 35);
 
 			 if (py > 0)
 			 {
@@ -583,6 +652,8 @@ private: System::Void button1_Click(System::Object^  sender, System::EventArgs^ 
 			 {
 				 Refresh();
 				 g->DrawImage(player, px * 35, py * 35);
+				 g->DrawImage(door, 0 * 35, 0 * 35);
+				 g->DrawImage(wall, 1 * 35, 1 * 35);
 			 }
 
 			 if (phealth == 0)
@@ -603,6 +674,21 @@ private: System::Void button1_Click(System::Object^  sender, System::EventArgs^ 
 				 Refresh();
 				 g->DrawImage(player, px * 35, py * 35);
 				 g->DrawImage(enemy, ex * 35, ey * 35);
+				 g->DrawImage(door, 0 * 35, 0 * 35);
+				 g->DrawImage(wall, 1 * 35, 1 * 35);
+			 }
+			 if (px == 1 && py == 1)
+			 {
+				 py++;
+				 Refresh();
+				 g->DrawImage(player, px * 35, py * 35);
+				 g->DrawImage(door, 0 * 35, 0 * 35);
+				 g->DrawImage(wall, 1 * 35, 1 * 35);
+
+				 if (ehealth > 0)
+				 {
+					 g->DrawImage(enemy, ex * 35, ey * 35);
+				 }
 			 }
 }
 };

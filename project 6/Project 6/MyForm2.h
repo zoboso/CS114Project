@@ -192,6 +192,2356 @@ namespace Project6 {
 		int phealth = 2;
 		bool key = false;
 		int level = 1;
+
+
+		void E1AILevel1()
+		{
+			srand(time(NULL));
+			int emove = rand() % 4 + 1;
+
+			switch (emove)
+			{
+			case 1:
+				if (ehealth > 0 && phealth > 0)
+				{
+					if (ey < 5)
+					{
+						ey++;
+						g->DrawImage(enemy, ex * 35, ey * 35);
+					}
+					else g->DrawImage(enemy, ex * 35, ey * 35);
+
+					if (ex == 7 && ey == 0)
+					{
+						ey--;
+						Refresh();
+						g->DrawImage(door, 0 * 35, 0 * 35);
+						drawWallLevel1();
+						g->DrawImage(player, px * 35, py * 35);
+						if (ehealth > 0)
+						{
+							g->DrawImage(enemy, ex * 35, ey * 35);
+						}
+					}
+
+					if (ex == 8 && ey == 0)
+					{
+						ey--;
+						Refresh();
+						g->DrawImage(door, 0 * 35, 0 * 35);
+						drawWallLevel1();
+						g->DrawImage(player, px * 35, py * 35);
+						if (ehealth > 0)
+						{
+							g->DrawImage(enemy, ex * 35, ey * 35);
+						}
+					}
+
+					if (ex == 7 && ey == 1)
+					{
+						ey--;
+						Refresh();
+						g->DrawImage(door, 0 * 35, 0 * 35);
+						drawWallLevel1();
+						g->DrawImage(player, px * 35, py * 35);
+						if (ehealth > 0)
+						{
+							g->DrawImage(enemy, ex * 35, ey * 35);
+						}
+					}
+
+					if (ex == 8 && ey == 1)
+					{
+						ey--;
+						Refresh();
+						g->DrawImage(door, 0 * 35, 0 * 35);
+						drawWallLevel1();
+						g->DrawImage(player, px * 35, py * 35);
+						if (ehealth > 0)
+						{
+							g->DrawImage(enemy, ex * 35, ey * 35);
+						}
+					}
+
+					if (ex == 1 && ey == 2)
+					{
+						ey--;
+						Refresh();
+						g->DrawImage(door, 0 * 35, 0 * 35);
+						drawWallLevel1();
+						g->DrawImage(player, px * 35, py * 35);
+						if (ehealth > 0)
+						{
+							g->DrawImage(enemy, ex * 35, ey * 35);
+						}
+					}
+
+					if (ex == 2 && ey == 2)
+					{
+						ey--;
+						Refresh();
+						g->DrawImage(door, 0 * 35, 0 * 35);
+						drawWallLevel1();
+						g->DrawImage(player, px * 35, py * 35);
+						if (ehealth > 0)
+						{
+							g->DrawImage(enemy, ex * 35, ey * 35);
+						}
+					}
+
+					if (ex == 3 && ey == 2)
+					{
+						ey--;
+						Refresh();
+						g->DrawImage(door, 0 * 35, 0 * 35);
+						drawWallLevel1();
+						g->DrawImage(player, px * 35, py * 35);
+						if (ehealth > 0)
+						{
+							g->DrawImage(enemy, ex * 35, ey * 35);
+						}
+					}
+
+					if (ex == 4 && ey == 2)
+					{
+						ey--;
+						Refresh();
+						g->DrawImage(door, 0 * 35, 0 * 35);
+						drawWallLevel1();
+						g->DrawImage(player, px * 35, py * 35);
+						if (ehealth > 0)
+						{
+							g->DrawImage(enemy, ex * 35, ey * 35);
+						}
+					}
+
+					if (ex == 5 && ey == 2)
+					{
+						ey--;
+						Refresh();
+						g->DrawImage(door, 0 * 35, 0 * 35);
+						drawWallLevel1();
+						g->DrawImage(player, px * 35, py * 35);
+						if (ehealth > 0)
+						{
+							g->DrawImage(enemy, ex * 35, ey * 35);
+						}
+					}
+
+					if (ex == 6 && ey == 2)
+					{
+						ey--;
+						Refresh();
+						g->DrawImage(door, 0 * 35, 0 * 35);
+						drawWallLevel1();
+						g->DrawImage(player, px * 35, py * 35);
+						if (ehealth > 0)
+						{
+							g->DrawImage(enemy, ex * 35, ey * 35);
+						}
+					}
+
+					if (ex == 7 && ey == 2)
+					{
+						ey--;
+						Refresh();
+						g->DrawImage(door, 0 * 35, 0 * 35);
+						drawWallLevel1();
+						g->DrawImage(player, px * 35, py * 35);
+						if (ehealth > 0)
+						{
+							g->DrawImage(enemy, ex * 35, ey * 35);
+						}
+					}
+
+					if (ex == 8 && ey == 2)
+					{
+						ey--;
+						Refresh();
+						g->DrawImage(door, 0 * 35, 0 * 35);
+						drawWallLevel1();
+						g->DrawImage(player, px * 35, py * 35);
+						if (ehealth > 0)
+						{
+							g->DrawImage(enemy, ex * 35, ey * 35);
+						}
+					}
+
+					if (ex == 9 && ey == 2)
+					{
+						ey--;
+						Refresh();
+						g->DrawImage(door, 0 * 35, 0 * 35);
+						drawWallLevel1();
+						g->DrawImage(player, px * 35, py * 35);
+						if (ehealth > 0)
+						{
+							g->DrawImage(enemy, ex * 35, ey * 35);
+						}
+					}
+
+					if (ex == 10 && ey == 2)
+					{
+						ey--;
+						Refresh();
+						g->DrawImage(door, 0 * 35, 0 * 35);
+						drawWallLevel1();
+						g->DrawImage(player, px * 35, py * 35);
+						if (ehealth > 0)
+						{
+							g->DrawImage(enemy, ex * 35, ey * 35);
+						}
+					}
+
+					if (ex == 11 && ey == 2)
+					{
+						ey--;
+						Refresh();
+						g->DrawImage(door, 0 * 35, 0 * 35);
+						drawWallLevel1();
+						g->DrawImage(player, px * 35, py * 35);
+						if (ehealth > 0)
+						{
+							g->DrawImage(enemy, ex * 35, ey * 35);
+						}
+					}
+
+					if (ex == 12 && ey == 2)
+					{
+						ey--;
+						Refresh();
+						g->DrawImage(door, 0 * 35, 0 * 35);
+						drawWallLevel1();
+						g->DrawImage(player, px * 35, py * 35);
+						if (ehealth > 0)
+						{
+							g->DrawImage(enemy, ex * 35, ey * 35);
+						}
+					}
+
+					if (ex == 13 && ey == 2)
+					{
+						ey--;
+						Refresh();
+						g->DrawImage(door, 0 * 35, 0 * 35);
+						drawWallLevel1();
+						g->DrawImage(player, px * 35, py * 35);
+						if (ehealth > 0)
+						{
+							g->DrawImage(enemy, ex * 35, ey * 35);
+						}
+					}
+
+					if (ex == 14 && ey == 2)
+					{
+						ey--;
+						Refresh();
+						g->DrawImage(door, 0 * 35, 0 * 35);
+						drawWallLevel1();
+						g->DrawImage(player, px * 35, py * 35);
+						if (ehealth > 0)
+						{
+							g->DrawImage(enemy, ex * 35, ey * 35);
+						}
+					}
+
+					if (ex == 7 && ey == 3)
+					{
+						ey--;
+						Refresh();
+						g->DrawImage(door, 0 * 35, 0 * 35);
+						drawWallLevel1();
+						g->DrawImage(player, px * 35, py * 35);
+						if (ehealth > 0)
+						{
+							g->DrawImage(enemy, ex * 35, ey * 35);
+						}
+					}
+
+					if (ex == 8 && ey == 3)
+					{
+						ey--;
+						Refresh();
+						g->DrawImage(door, 0 * 35, 0 * 35);
+						drawWallLevel1();
+						g->DrawImage(player, px * 35, py * 35);
+						if (ehealth > 0)
+						{
+							g->DrawImage(enemy, ex * 35, ey * 35);
+						}
+					}
+					break;
+				}
+			case 2:
+				if (ehealth > 0 && phealth > 0)
+				{
+					if (ex < 17)
+					{
+						ex++;
+						g->DrawImage(enemy, ex * 35, ey * 35);
+					}
+					else g->DrawImage(enemy, ex * 35, ey * 35);
+
+					if (ex == 7 && ey == 0)
+					{
+						ex--;
+						Refresh();
+						g->DrawImage(door, 0 * 35, 0 * 35);
+						drawWallLevel1();
+						g->DrawImage(player, px * 35, py * 35);
+						if (ehealth > 0)
+						{
+							g->DrawImage(enemy, ex * 35, ey * 35);
+						}
+					}
+
+					if (ex == 8 && ey == 0)
+					{
+						ex--;
+						Refresh();
+						g->DrawImage(door, 0 * 35, 0 * 35);
+						drawWallLevel1();
+						g->DrawImage(player, px * 35, py * 35);
+						if (ehealth > 0)
+						{
+							g->DrawImage(enemy, ex * 35, ey * 35);
+						}
+					}
+
+					if (ex == 7 && ey == 1)
+					{
+						ex--;
+						Refresh();
+						g->DrawImage(door, 0 * 35, 0 * 35);
+						drawWallLevel1();
+						g->DrawImage(player, px * 35, py * 35);
+						if (ehealth > 0)
+						{
+							g->DrawImage(enemy, ex * 35, ey * 35);
+						}
+					}
+
+					if (ex == 8 && ey == 1)
+					{
+						ex--;
+						Refresh();
+						g->DrawImage(door, 0 * 35, 0 * 35);
+						drawWallLevel1();
+						g->DrawImage(player, px * 35, py * 35);
+						if (ehealth > 0)
+						{
+							g->DrawImage(enemy, ex * 35, ey * 35);
+						}
+					}
+
+					if (ex == 1 && ey == 2)
+					{
+						ex--;
+						Refresh();
+						g->DrawImage(door, 0 * 35, 0 * 35);
+						drawWallLevel1();
+						g->DrawImage(player, px * 35, py * 35);
+						if (ehealth > 0)
+						{
+							g->DrawImage(enemy, ex * 35, ey * 35);
+						}
+					}
+
+					if (ex == 2 && ey == 2)
+					{
+						ex--;
+						Refresh();
+						g->DrawImage(door, 0 * 35, 0 * 35);
+						drawWallLevel1();
+						g->DrawImage(player, px * 35, py * 35);
+						if (ehealth > 0)
+						{
+							g->DrawImage(enemy, ex * 35, ey * 35);
+						}
+					}
+
+					if (ex == 3 && ey == 2)
+					{
+						ex--;
+						Refresh();
+						g->DrawImage(door, 0 * 35, 0 * 35);
+						drawWallLevel1();
+						g->DrawImage(player, px * 35, py * 35);
+						if (ehealth > 0)
+						{
+							g->DrawImage(enemy, ex * 35, ey * 35);
+						}
+					}
+
+					if (ex == 4 && ey == 2)
+					{
+						ex--;
+						Refresh();
+						g->DrawImage(door, 0 * 35, 0 * 35);
+						drawWallLevel1();
+						g->DrawImage(player, px * 35, py * 35);
+						if (ehealth > 0)
+						{
+							g->DrawImage(enemy, ex * 35, ey * 35);
+						}
+					}
+
+					if (ex == 5 && ey == 2)
+					{
+						ex--;
+						Refresh();
+						g->DrawImage(door, 0 * 35, 0 * 35);
+						drawWallLevel1();
+						g->DrawImage(player, px * 35, py * 35);
+						if (ehealth > 0)
+						{
+							g->DrawImage(enemy, ex * 35, ey * 35);
+						}
+					}
+
+					if (ex == 6 && ey == 2)
+					{
+						ex--;
+						Refresh();
+						g->DrawImage(door, 0 * 35, 0 * 35);
+						drawWallLevel1();
+						g->DrawImage(player, px * 35, py * 35);
+						if (ehealth > 0)
+						{
+							g->DrawImage(enemy, ex * 35, ey * 35);
+						}
+					}
+
+					if (ex == 7 && ey == 2)
+					{
+						ex--;
+						Refresh();
+						g->DrawImage(door, 0 * 35, 0 * 35);
+						drawWallLevel1();
+						g->DrawImage(player, px * 35, py * 35);
+						if (ehealth > 0)
+						{
+							g->DrawImage(enemy, ex * 35, ey * 35);
+						}
+					}
+
+					if (ex == 8 && ey == 2)
+					{
+						ex--;
+						Refresh();
+						g->DrawImage(door, 0 * 35, 0 * 35);
+						drawWallLevel1();
+						g->DrawImage(player, px * 35, py * 35);
+						if (ehealth > 0)
+						{
+							g->DrawImage(enemy, ex * 35, ey * 35);
+						}
+					}
+
+					if (ex == 9 && ey == 2)
+					{
+						ex--;
+						Refresh();
+						g->DrawImage(door, 0 * 35, 0 * 35);
+						drawWallLevel1();
+						g->DrawImage(player, px * 35, py * 35);
+						if (ehealth > 0)
+						{
+							g->DrawImage(enemy, ex * 35, ey * 35);
+						}
+					}
+
+					if (ex == 10 && ey == 2)
+					{
+						ex--;
+						Refresh();
+						g->DrawImage(door, 0 * 35, 0 * 35);
+						drawWallLevel1();
+						g->DrawImage(player, px * 35, py * 35);
+						if (ehealth > 0)
+						{
+							g->DrawImage(enemy, ex * 35, ey * 35);
+						}
+					}
+
+					if (ex == 11 && ey == 2)
+					{
+						ex--;
+						Refresh();
+						g->DrawImage(door, 0 * 35, 0 * 35);
+						drawWallLevel1();
+						g->DrawImage(player, px * 35, py * 35);
+						if (ehealth > 0)
+						{
+							g->DrawImage(enemy, ex * 35, ey * 35);
+						}
+					}
+
+					if (ex == 12 && ey == 2)
+					{
+						ex--;
+						Refresh();
+						g->DrawImage(door, 0 * 35, 0 * 35);
+						drawWallLevel1();
+						g->DrawImage(player, px * 35, py * 35);
+						if (ehealth > 0)
+						{
+							g->DrawImage(enemy, ex * 35, ey * 35);
+						}
+					}
+
+					if (ex == 13 && ey == 2)
+					{
+						ex--;
+						Refresh();
+						g->DrawImage(door, 0 * 35, 0 * 35);
+						drawWallLevel1();
+						g->DrawImage(player, px * 35, py * 35);
+						if (ehealth > 0)
+						{
+							g->DrawImage(enemy, ex * 35, ey * 35);
+						}
+					}
+
+					if (ex == 14 && ey == 2)
+					{
+						ex--;
+						Refresh();
+						g->DrawImage(door, 0 * 35, 0 * 35);
+						drawWallLevel1();
+						g->DrawImage(player, px * 35, py * 35);
+						if (ehealth > 0)
+						{
+							g->DrawImage(enemy, ex * 35, ey * 35);
+						}
+					}
+
+					if (ex == 7 && ey == 3)
+					{
+						ex--;
+						Refresh();
+						g->DrawImage(door, 0 * 35, 0 * 35);
+						drawWallLevel1();
+						g->DrawImage(player, px * 35, py * 35);
+						if (ehealth > 0)
+						{
+							g->DrawImage(enemy, ex * 35, ey * 35);
+						}
+					}
+
+					if (ex == 8 && ey == 3)
+					{
+						ex--;
+						Refresh();
+						g->DrawImage(door, 0 * 35, 0 * 35);
+						drawWallLevel1();
+						g->DrawImage(player, px * 35, py * 35);
+						if (ehealth > 0)
+						{
+							g->DrawImage(enemy, ex * 35, ey * 35);
+						}
+					}
+
+					break;
+				}
+			case 3:
+				if (ehealth > 0 && phealth > 0)
+				{
+					if (ey > 0)
+					{
+						ey--;
+						g->DrawImage(enemy, ex * 35, ey * 35);
+					}
+					else g->DrawImage(enemy, ex * 35, ey * 35);
+
+					if (ex == 7 && ey == 0)
+					{
+						ey++;
+						Refresh();
+						g->DrawImage(door, 0 * 35, 0 * 35);
+						drawWallLevel1();
+						g->DrawImage(player, px * 35, py * 35);
+						if (ehealth > 0)
+						{
+							g->DrawImage(enemy, ex * 35, ey * 35);
+						}
+					}
+
+					if (ex == 8 && ey == 0)
+					{
+						ey++;
+						Refresh();
+						g->DrawImage(door, 0 * 35, 0 * 35);
+						drawWallLevel1();
+						g->DrawImage(player, px * 35, py * 35);
+						if (ehealth > 0)
+						{
+							g->DrawImage(enemy, ex * 35, ey * 35);
+						}
+					}
+
+					if (ex == 7 && ey == 1)
+					{
+						ey++;
+						Refresh();
+						g->DrawImage(door, 0 * 35, 0 * 35);
+						drawWallLevel1();
+						g->DrawImage(player, px * 35, py * 35);
+						if (ehealth > 0)
+						{
+							g->DrawImage(enemy, ex * 35, ey * 35);
+						}
+					}
+
+					if (ex == 8 && ey == 1)
+					{
+						ey++;
+						Refresh();
+						g->DrawImage(door, 0 * 35, 0 * 35);
+						drawWallLevel1();
+						g->DrawImage(player, px * 35, py * 35);
+						if (ehealth > 0)
+						{
+							g->DrawImage(enemy, ex * 35, ey * 35);
+						}
+					}
+
+					if (ex == 1 && ey == 2)
+					{
+						ey++;
+						Refresh();
+						g->DrawImage(door, 0 * 35, 0 * 35);
+						drawWallLevel1();
+						g->DrawImage(player, px * 35, py * 35);
+						if (ehealth > 0)
+						{
+							g->DrawImage(enemy, ex * 35, ey * 35);
+						}
+					}
+
+					if (ex == 2 && ey == 2)
+					{
+						ey++;
+						Refresh();
+						g->DrawImage(door, 0 * 35, 0 * 35);
+						drawWallLevel1();
+						g->DrawImage(player, px * 35, py * 35);
+						if (ehealth > 0)
+						{
+							g->DrawImage(enemy, ex * 35, ey * 35);
+						}
+					}
+
+					if (ex == 3 && ey == 2)
+					{
+						ey++;
+						Refresh();
+						g->DrawImage(door, 0 * 35, 0 * 35);
+						drawWallLevel1();
+						g->DrawImage(player, px * 35, py * 35);
+						if (ehealth > 0)
+						{
+							g->DrawImage(enemy, ex * 35, ey * 35);
+						}
+					}
+
+					if (ex == 4 && ey == 2)
+					{
+						ey++;
+						Refresh();
+						g->DrawImage(door, 0 * 35, 0 * 35);
+						drawWallLevel1();
+						g->DrawImage(player, px * 35, py * 35);
+						if (ehealth > 0)
+						{
+							g->DrawImage(enemy, ex * 35, ey * 35);
+						}
+					}
+
+					if (ex == 5 && ey == 2)
+					{
+						ey++;
+						Refresh();
+						g->DrawImage(door, 0 * 35, 0 * 35);
+						drawWallLevel1();
+						g->DrawImage(player, px * 35, py * 35);
+						if (ehealth > 0)
+						{
+							g->DrawImage(enemy, ex * 35, ey * 35);
+						}
+					}
+
+					if (ex == 6 && ey == 2)
+					{
+						ey++;
+						Refresh();
+						g->DrawImage(door, 0 * 35, 0 * 35);
+						drawWallLevel1();
+						g->DrawImage(player, px * 35, py * 35);
+						if (ehealth > 0)
+						{
+							g->DrawImage(enemy, ex * 35, ey * 35);
+						}
+					}
+
+					if (ex == 7 && ey == 2)
+					{
+						ey++;
+						Refresh();
+						g->DrawImage(door, 0 * 35, 0 * 35);
+						drawWallLevel1();
+						g->DrawImage(player, px * 35, py * 35);
+						if (ehealth > 0)
+						{
+							g->DrawImage(enemy, ex * 35, ey * 35);
+						}
+					}
+
+					if (ex == 8 && ey == 2)
+					{
+						ey++;
+						Refresh();
+						g->DrawImage(door, 0 * 35, 0 * 35);
+						drawWallLevel1();
+						g->DrawImage(player, px * 35, py * 35);
+						if (ehealth > 0)
+						{
+							g->DrawImage(enemy, ex * 35, ey * 35);
+						}
+					}
+
+					if (ex == 9 && ey == 2)
+					{
+						ey++;
+						Refresh();
+						g->DrawImage(door, 0 * 35, 0 * 35);
+						drawWallLevel1();
+						g->DrawImage(player, px * 35, py * 35);
+						if (ehealth > 0)
+						{
+							g->DrawImage(enemy, ex * 35, ey * 35);
+						}
+					}
+
+					if (ex == 10 && ey == 2)
+					{
+						ey++;
+						Refresh();
+						g->DrawImage(door, 0 * 35, 0 * 35);
+						drawWallLevel1();
+						g->DrawImage(player, px * 35, py * 35);
+						if (ehealth > 0)
+						{
+							g->DrawImage(enemy, ex * 35, ey * 35);
+						}
+					}
+
+					if (ex == 11 && ey == 2)
+					{
+						ey++;
+						Refresh();
+						g->DrawImage(door, 0 * 35, 0 * 35);
+						drawWallLevel1();
+						g->DrawImage(player, px * 35, py * 35);
+						if (ehealth > 0)
+						{
+							g->DrawImage(enemy, ex * 35, ey * 35);
+						}
+					}
+
+					if (ex == 12 && ey == 2)
+					{
+						ey++;
+						Refresh();
+						g->DrawImage(door, 0 * 35, 0 * 35);
+						drawWallLevel1();
+						g->DrawImage(player, px * 35, py * 35);
+						if (ehealth > 0)
+						{
+							g->DrawImage(enemy, ex * 35, ey * 35);
+						}
+					}
+
+					if (ex == 13 && ey == 2)
+					{
+						ey++;
+						Refresh();
+						g->DrawImage(door, 0 * 35, 0 * 35);
+						drawWallLevel1();
+						g->DrawImage(player, px * 35, py * 35);
+						if (ehealth > 0)
+						{
+							g->DrawImage(enemy, ex * 35, ey * 35);
+						}
+					}
+
+					if (ex == 14 && ey == 2)
+					{
+						ey++;
+						Refresh();
+						g->DrawImage(door, 0 * 35, 0 * 35);
+						drawWallLevel1();
+						g->DrawImage(player, px * 35, py * 35);
+						if (ehealth > 0)
+						{
+							g->DrawImage(enemy, ex * 35, ey * 35);
+						}
+					}
+
+					if (ex == 7 && ey == 3)
+					{
+						ey++;
+						Refresh();
+						g->DrawImage(door, 0 * 35, 0 * 35);
+						drawWallLevel1();
+						g->DrawImage(player, px * 35, py * 35);
+						if (ehealth > 0)
+						{
+							g->DrawImage(enemy, ex * 35, ey * 35);
+						}
+					}
+
+					if (ex == 8 && ey == 3)
+					{
+						ey++;
+						Refresh();
+						g->DrawImage(door, 0 * 35, 0 * 35);
+						drawWallLevel1();
+						g->DrawImage(player, px * 35, py * 35);
+						if (ehealth > 0)
+						{
+							g->DrawImage(enemy, ex * 35, ey * 35);
+						}
+					}
+
+					break;
+				}
+			case 4:
+				if (ehealth > 0 && phealth > 0)
+				{
+					if (ex > 0)
+					{
+						ex--;
+						g->DrawImage(enemy, ex * 35, ey * 35);
+					}
+					else g->DrawImage(enemy, ex * 35, ey * 35);
+
+					if (ex == 7 && ey == 0)
+					{
+						ex++;
+						Refresh();
+						g->DrawImage(door, 0 * 35, 0 * 35);
+						drawWallLevel1();
+						g->DrawImage(player, px * 35, py * 35);
+						if (ehealth > 0)
+						{
+							g->DrawImage(enemy, ex * 35, ey * 35);
+						}
+					}
+
+					if (ex == 8 && ey == 0)
+					{
+						ex++;
+						Refresh();
+						g->DrawImage(door, 0 * 35, 0 * 35);
+						drawWallLevel1();
+						g->DrawImage(player, px * 35, py * 35);
+						if (ehealth > 0)
+						{
+							g->DrawImage(enemy, ex * 35, ey * 35);
+						}
+					}
+
+					if (ex == 7 && ey == 1)
+					{
+						ex++;
+						Refresh();
+						g->DrawImage(door, 0 * 35, 0 * 35);
+						drawWallLevel1();
+						g->DrawImage(player, px * 35, py * 35);
+						if (ehealth > 0)
+						{
+							g->DrawImage(enemy, ex * 35, ey * 35);
+						}
+					}
+
+					if (ex == 8 && ey == 1)
+					{
+						ex++;
+						Refresh();
+						g->DrawImage(door, 0 * 35, 0 * 35);
+						drawWallLevel1();
+						g->DrawImage(player, px * 35, py * 35);
+						if (ehealth > 0)
+						{
+							g->DrawImage(enemy, ex * 35, ey * 35);
+						}
+					}
+
+					if (ex == 1 && ey == 2)
+					{
+						ex++;
+						Refresh();
+						g->DrawImage(door, 0 * 35, 0 * 35);
+						drawWallLevel1();
+						g->DrawImage(player, px * 35, py * 35);
+						if (ehealth > 0)
+						{
+							g->DrawImage(enemy, ex * 35, ey * 35);
+						}
+					}
+
+					if (ex == 2 && ey == 2)
+					{
+						ex++;
+						Refresh();
+						g->DrawImage(door, 0 * 35, 0 * 35);
+						drawWallLevel1();
+						g->DrawImage(player, px * 35, py * 35);
+						if (ehealth > 0)
+						{
+							g->DrawImage(enemy, ex * 35, ey * 35);
+						}
+					}
+
+					if (ex == 3 && ey == 2)
+					{
+						ex++;
+						Refresh();
+						g->DrawImage(door, 0 * 35, 0 * 35);
+						drawWallLevel1();
+						g->DrawImage(player, px * 35, py * 35);
+						if (ehealth > 0)
+						{
+							g->DrawImage(enemy, ex * 35, ey * 35);
+						}
+					}
+
+					if (ex == 4 && ey == 2)
+					{
+						ex++;
+						Refresh();
+						g->DrawImage(door, 0 * 35, 0 * 35);
+						drawWallLevel1();
+						g->DrawImage(player, px * 35, py * 35);
+						if (ehealth > 0)
+						{
+							g->DrawImage(enemy, ex * 35, ey * 35);
+						}
+					}
+
+					if (ex == 5 && ey == 2)
+					{
+						ex++;
+						Refresh();
+						g->DrawImage(door, 0 * 35, 0 * 35);
+						drawWallLevel1();
+						g->DrawImage(player, px * 35, py * 35);
+						if (ehealth > 0)
+						{
+							g->DrawImage(enemy, ex * 35, ey * 35);
+						}
+					}
+
+					if (ex == 6 && ey == 2)
+					{
+						ex++;
+						Refresh();
+						g->DrawImage(door, 0 * 35, 0 * 35);
+						drawWallLevel1();
+						g->DrawImage(player, px * 35, py * 35);
+						if (ehealth > 0)
+						{
+							g->DrawImage(enemy, ex * 35, ey * 35);
+						}
+					}
+
+					if (ex == 7 && ey == 2)
+					{
+						ex++;
+						Refresh();
+						g->DrawImage(door, 0 * 35, 0 * 35);
+						drawWallLevel1();
+						g->DrawImage(player, px * 35, py * 35);
+						if (ehealth > 0)
+						{
+							g->DrawImage(enemy, ex * 35, ey * 35);
+						}
+					}
+
+					if (ex == 8 && ey == 2)
+					{
+						ex++;
+						Refresh();
+						g->DrawImage(door, 0 * 35, 0 * 35);
+						drawWallLevel1();
+						g->DrawImage(player, px * 35, py * 35);
+						if (ehealth > 0)
+						{
+							g->DrawImage(enemy, ex * 35, ey * 35);
+						}
+					}
+
+					if (ex == 9 && ey == 2)
+					{
+						ex++;
+						Refresh();
+						g->DrawImage(door, 0 * 35, 0 * 35);
+						drawWallLevel1();
+						g->DrawImage(player, px * 35, py * 35);
+						if (ehealth > 0)
+						{
+							g->DrawImage(enemy, ex * 35, ey * 35);
+						}
+					}
+
+					if (ex == 10 && ey == 2)
+					{
+						ex++;
+						Refresh();
+						g->DrawImage(door, 0 * 35, 0 * 35);
+						drawWallLevel1();
+						g->DrawImage(player, px * 35, py * 35);
+						if (ehealth > 0)
+						{
+							g->DrawImage(enemy, ex * 35, ey * 35);
+						}
+					}
+
+					if (ex == 11 && ey == 2)
+					{
+						ex++;
+						Refresh();
+						g->DrawImage(door, 0 * 35, 0 * 35);
+						drawWallLevel1();
+						g->DrawImage(player, px * 35, py * 35);
+						if (ehealth > 0)
+						{
+							g->DrawImage(enemy, ex * 35, ey * 35);
+						}
+					}
+
+					if (ex == 12 && ey == 2)
+					{
+						ex++;
+						Refresh();
+						g->DrawImage(door, 0 * 35, 0 * 35);
+						drawWallLevel1();
+						g->DrawImage(player, px * 35, py * 35);
+						if (ehealth > 0)
+						{
+							g->DrawImage(enemy, ex * 35, ey * 35);
+						}
+					}
+
+					if (ex == 13 && ey == 2)
+					{
+						ex++;
+						Refresh();
+						g->DrawImage(door, 0 * 35, 0 * 35);
+						drawWallLevel1();
+						g->DrawImage(player, px * 35, py * 35);
+						if (ehealth > 0)
+						{
+							g->DrawImage(enemy, ex * 35, ey * 35);
+						}
+					}
+
+					if (ex == 14 && ey == 2)
+					{
+						ex++;
+						Refresh();
+						g->DrawImage(door, 0 * 35, 0 * 35);
+						drawWallLevel1();
+						g->DrawImage(player, px * 35, py * 35);
+						if (ehealth > 0)
+						{
+							g->DrawImage(enemy, ex * 35, ey * 35);
+						}
+					}
+
+					if (ex == 7 && ey == 3)
+					{
+						ex++;
+						Refresh();
+						g->DrawImage(door, 0 * 35, 0 * 35);
+						drawWallLevel1();
+						g->DrawImage(player, px * 35, py * 35);
+						if (ehealth > 0)
+						{
+							g->DrawImage(enemy, ex * 35, ey * 35);
+						}
+					}
+
+					if (ex == 8 && ey == 3)
+					{
+						ex++;
+						Refresh();
+						g->DrawImage(door, 0 * 35, 0 * 35);
+						drawWallLevel1();
+						g->DrawImage(player, px * 35, py * 35);
+						if (ehealth > 0)
+						{
+							g->DrawImage(enemy, ex * 35, ey * 35);
+						}
+					}
+
+					break;
+				}
+			}
+		}
+
+		void E1AILevel2()
+		{
+		srand(time(NULL));
+		int emove = rand() % 4 + 1;
+
+		switch (emove)
+		{
+		case 1:
+			if (ehealth > 0 && phealth > 0)
+			{
+				if (ey < 5)
+				{
+					ey++;
+					g->DrawImage(enemy, ex * 35, ey * 35);
+				}
+				else g->DrawImage(enemy, ex * 35, ey * 35);
+
+				if (ex == 7 && ey == 0)
+				{
+					ey--;
+					Refresh();
+					g->DrawImage(door, 0 * 35, 0 * 35);
+					drawWallLevel2();
+					g->DrawImage(player, px * 35, py * 35);
+					if (ehealth > 0)
+					{
+						g->DrawImage(enemy, ex * 35, ey * 35);
+					}
+				}
+
+				if (ex == 8 && ey == 0)
+				{
+					ey--;
+					Refresh();
+					g->DrawImage(door, 0 * 35, 0 * 35);
+					drawWallLevel2();
+					g->DrawImage(player, px * 35, py * 35);
+					if (ehealth > 0)
+					{
+						g->DrawImage(enemy, ex * 35, ey * 35);
+					}
+				}
+
+				if (ex == 7 && ey == 1)
+				{
+					ey--;
+					Refresh();
+					g->DrawImage(door, 0 * 35, 0 * 35);
+					drawWallLevel2();
+					g->DrawImage(player, px * 35, py * 35);
+					if (ehealth > 0)
+					{
+						g->DrawImage(enemy, ex * 35, ey * 35);
+					}
+				}
+
+				if (ex == 8 && ey == 1)
+				{
+					ey--;
+					Refresh();
+					g->DrawImage(door, 0 * 35, 0 * 35);
+					drawWallLevel2();
+					g->DrawImage(player, px * 35, py * 35);
+					if (ehealth > 0)
+					{
+						g->DrawImage(enemy, ex * 35, ey * 35);
+					}
+				}
+
+				if (ex == 4 && ey == 2)
+				{
+					ey--;
+					Refresh();
+					g->DrawImage(door, 0 * 35, 0 * 35);
+					drawWallLevel2();
+					g->DrawImage(player, px * 35, py * 35);
+					if (ehealth > 0)
+					{
+						g->DrawImage(enemy, ex * 35, ey * 35);
+					}
+				}
+
+				if (ex == 5 && ey == 2)
+				{
+					ey--;
+					Refresh();
+					g->DrawImage(door, 0 * 35, 0 * 35);
+					drawWallLevel2();
+					g->DrawImage(player, px * 35, py * 35);
+					if (ehealth > 0)
+					{
+						g->DrawImage(enemy, ex * 35, ey * 35);
+					}
+				}
+
+				if (ex == 6 && ey == 2)
+				{
+					ey--;
+					Refresh();
+					g->DrawImage(door, 0 * 35, 0 * 35);
+					drawWallLevel2();
+					g->DrawImage(player, px * 35, py * 35);
+					if (ehealth > 0)
+					{
+						g->DrawImage(enemy, ex * 35, ey * 35);
+					}
+				}
+
+				if (ex == 7 && ey == 2)
+				{
+					ey--;
+					Refresh();
+					g->DrawImage(door, 0 * 35, 0 * 35);
+					drawWallLevel2();
+					g->DrawImage(player, px * 35, py * 35);
+					if (ehealth > 0)
+					{
+						g->DrawImage(enemy, ex * 35, ey * 35);
+					}
+				}
+
+				if (ex == 8 && ey == 2)
+				{
+					ey--;
+					Refresh();
+					g->DrawImage(door, 0 * 35, 0 * 35);
+					drawWallLevel2();
+					g->DrawImage(player, px * 35, py * 35);
+					if (ehealth > 0)
+					{
+						g->DrawImage(enemy, ex * 35, ey * 35);
+					}
+				}
+
+				if (ex == 9 && ey == 2)
+				{
+					ey--;
+					Refresh();
+					g->DrawImage(door, 0 * 35, 0 * 35);
+					drawWallLevel2();
+					g->DrawImage(player, px * 35, py * 35);
+					if (ehealth > 0)
+					{
+						g->DrawImage(enemy, ex * 35, ey * 35);
+					}
+				}
+
+				if (ex == 10 && ey == 2)
+				{
+					ey--;
+					Refresh();
+					g->DrawImage(door, 0 * 35, 0 * 35);
+					drawWallLevel2();
+					g->DrawImage(player, px * 35, py * 35);
+					if (ehealth > 0)
+					{
+						g->DrawImage(enemy, ex * 35, ey * 35);
+					}
+				}
+
+				if (ex == 11 && ey == 2)
+				{
+					ey--;
+					Refresh();
+					g->DrawImage(door, 0 * 35, 0 * 35);
+					drawWallLevel2();
+					g->DrawImage(player, px * 35, py * 35);
+					if (ehealth > 0)
+					{
+						g->DrawImage(enemy, ex * 35, ey * 35);
+					}
+				}
+
+				if (ex == 7 && ey == 3)
+				{
+					ey--;
+					Refresh();
+					g->DrawImage(door, 0 * 35, 0 * 35);
+					drawWallLevel2();
+					g->DrawImage(player, px * 35, py * 35);
+					if (ehealth > 0)
+					{
+						g->DrawImage(enemy, ex * 35, ey * 35);
+					}
+				}
+
+				if (ex == 8 && ey == 3)
+				{
+					ey--;
+					Refresh();
+					g->DrawImage(door, 0 * 35, 0 * 35);
+					drawWallLevel2();
+					g->DrawImage(player, px * 35, py * 35);
+					if (ehealth > 0)
+					{
+						g->DrawImage(enemy, ex * 35, ey * 35);
+					}
+				}
+
+				if (ex == 7 && ey == 4)
+				{
+					ey--;
+					Refresh();
+					g->DrawImage(door, 0 * 35, 0 * 35);
+					drawWallLevel2();
+					g->DrawImage(player, px * 35, py * 35);
+					if (ehealth > 0)
+					{
+						g->DrawImage(enemy, ex * 35, ey * 35);
+					}
+				}
+
+				if (ex == 8 && ey == 4)
+				{
+					ey--;
+					Refresh();
+					g->DrawImage(door, 0 * 35, 0 * 35);
+					drawWallLevel2();
+					g->DrawImage(player, px * 35, py * 35);
+					if (ehealth > 0)
+					{
+						g->DrawImage(enemy, ex * 35, ey * 35);
+					}
+				}
+
+				if (ex == 6 && ey == 4)
+				{
+					ey--;
+					Refresh();
+					g->DrawImage(door, 0 * 35, 0 * 35);
+					drawWallLevel2();
+					g->DrawImage(player, px * 35, py * 35);
+					if (ehealth > 0)
+					{
+						g->DrawImage(enemy, ex * 35, ey * 35);
+					}
+				}
+
+				if (ex == 5 && ey == 4)
+				{
+					ey--;
+					Refresh();
+					g->DrawImage(door, 0 * 35, 0 * 35);
+					drawWallLevel2();
+					g->DrawImage(player, px * 35, py * 35);
+					if (ehealth > 0)
+					{
+						g->DrawImage(enemy, ex * 35, ey * 35);
+					}
+				}
+
+				if (ex == 4 && ey == 4)
+				{
+					ey--;
+					Refresh();
+					g->DrawImage(door, 0 * 35, 0 * 35);
+					drawWallLevel2();
+					g->DrawImage(player, px * 35, py * 35);
+					if (ehealth > 0)
+					{
+						g->DrawImage(enemy, ex * 35, ey * 35);
+					}
+				}
+
+				if (ex == 3 && ey == 4)
+				{
+					ey--;
+					Refresh();
+					g->DrawImage(door, 0 * 35, 0 * 35);
+					drawWallLevel2();
+					g->DrawImage(player, px * 35, py * 35);
+					if (ehealth > 0)
+					{
+						g->DrawImage(enemy, ex * 35, ey * 35);
+					}
+				}
+
+				if (ex == 11 && ey == 3)
+				{
+					ey--;
+					Refresh();
+					g->DrawImage(door, 0 * 35, 0 * 35);
+					drawWallLevel2();
+					g->DrawImage(player, px * 35, py * 35);
+					if (ehealth > 0)
+					{
+						g->DrawImage(enemy, ex * 35, ey * 35);
+					}
+				}
+
+				if (ex == 11 && ey == 4)
+				{
+					ey--;
+					Refresh();
+					g->DrawImage(door, 0 * 35, 0 * 35);
+					drawWallLevel2();
+					g->DrawImage(player, px * 35, py * 35);
+					if (ehealth > 0)
+					{
+						g->DrawImage(enemy, ex * 35, ey * 35);
+					}
+				}
+
+				break;
+			}
+		case 2:
+			if (ehealth > 0 && phealth > 0)
+			{
+				if (ex < 17)
+				{
+					ex++;
+					g->DrawImage(enemy, ex * 35, ey * 35);
+				}
+				else g->DrawImage(enemy, ex * 35, ey * 35);
+
+				if (ex == 7 && ey == 0)
+				{
+					ex--;
+					Refresh();
+					g->DrawImage(door, 0 * 35, 0 * 35);
+					drawWallLevel2();
+					g->DrawImage(player, px * 35, py * 35);
+					if (ehealth > 0)
+					{
+						g->DrawImage(enemy, ex * 35, ey * 35);
+					}
+				}
+
+				if (ex == 8 && ey == 0)
+				{
+					ex--;
+					Refresh();
+					g->DrawImage(door, 0 * 35, 0 * 35);
+					drawWallLevel2();
+					g->DrawImage(player, px * 35, py * 35);
+					if (ehealth > 0)
+					{
+						g->DrawImage(enemy, ex * 35, ey * 35);
+					}
+				}
+
+				if (ex == 7 && ey == 1)
+				{
+					ex--;
+					Refresh();
+					g->DrawImage(door, 0 * 35, 0 * 35);
+					drawWallLevel2();
+					g->DrawImage(player, px * 35, py * 35);
+					if (ehealth > 0)
+					{
+						g->DrawImage(enemy, ex * 35, ey * 35);
+					}
+				}
+
+				if (ex == 8 && ey == 1)
+				{
+					ex--;
+					Refresh();
+					g->DrawImage(door, 0 * 35, 0 * 35);
+					drawWallLevel2();
+					g->DrawImage(player, px * 35, py * 35);
+					if (ehealth > 0)
+					{
+						g->DrawImage(enemy, ex * 35, ey * 35);
+					}
+				}
+
+				if (ex == 4 && ey == 2)
+				{
+					ex--;
+					Refresh();
+					g->DrawImage(door, 0 * 35, 0 * 35);
+					drawWallLevel2();
+					g->DrawImage(player, px * 35, py * 35);
+					if (ehealth > 0)
+					{
+						g->DrawImage(enemy, ex * 35, ey * 35);
+					}
+				}
+
+				if (ex == 5 && ey == 2)
+				{
+					ex--;
+					Refresh();
+					g->DrawImage(door, 0 * 35, 0 * 35);
+					drawWallLevel2();
+					g->DrawImage(player, px * 35, py * 35);
+					if (ehealth > 0)
+					{
+						g->DrawImage(enemy, ex * 35, ey * 35);
+					}
+				}
+
+				if (ex == 6 && ey == 2)
+				{
+					ex--;
+					Refresh();
+					g->DrawImage(door, 0 * 35, 0 * 35);
+					drawWallLevel2();
+					g->DrawImage(player, px * 35, py * 35);
+					if (ehealth > 0)
+					{
+						g->DrawImage(enemy, ex * 35, ey * 35);
+					}
+				}
+
+				if (ex == 7 && ey == 2)
+				{
+					ex--;
+					Refresh();
+					g->DrawImage(door, 0 * 35, 0 * 35);
+					drawWallLevel2();
+					g->DrawImage(player, px * 35, py * 35);
+					if (ehealth > 0)
+					{
+						g->DrawImage(enemy, ex * 35, ey * 35);
+					}
+				}
+
+				if (ex == 8 && ey == 2)
+				{
+					ex--;
+					Refresh();
+					g->DrawImage(door, 0 * 35, 0 * 35);
+					drawWallLevel2();
+					g->DrawImage(player, px * 35, py * 35);
+					if (ehealth > 0)
+					{
+						g->DrawImage(enemy, ex * 35, ey * 35);
+					}
+				}
+
+				if (ex == 9 && ey == 2)
+				{
+					ex--;
+					Refresh();
+					g->DrawImage(door, 0 * 35, 0 * 35);
+					drawWallLevel2();
+					g->DrawImage(player, px * 35, py * 35);
+					if (ehealth > 0)
+					{
+						g->DrawImage(enemy, ex * 35, ey * 35);
+					}
+				}
+
+				if (ex == 10 && ey == 2)
+				{
+					ex--;
+					Refresh();
+					g->DrawImage(door, 0 * 35, 0 * 35);
+					drawWallLevel2();
+					g->DrawImage(player, px * 35, py * 35);
+					if (ehealth > 0)
+					{
+						g->DrawImage(enemy, ex * 35, ey * 35);
+					}
+				}
+
+				if (ex == 11 && ey == 2)
+				{
+					ex--;
+					Refresh();
+					g->DrawImage(door, 0 * 35, 0 * 35);
+					drawWallLevel2();
+					g->DrawImage(player, px * 35, py * 35);
+					if (ehealth > 0)
+					{
+						g->DrawImage(enemy, ex * 35, ey * 35);
+					}
+				}
+
+				if (ex == 7 && ey == 3)
+				{
+					ex--;
+					Refresh();
+					g->DrawImage(door, 0 * 35, 0 * 35);
+					drawWallLevel2();
+					g->DrawImage(player, px * 35, py * 35);
+					if (ehealth > 0)
+					{
+						g->DrawImage(enemy, ex * 35, ey * 35);
+					}
+				}
+
+				if (ex == 8 && ey == 3)
+				{
+					ex--;
+					Refresh();
+					g->DrawImage(door, 0 * 35, 0 * 35);
+					drawWallLevel2();
+					g->DrawImage(player, px * 35, py * 35);
+					if (ehealth > 0)
+					{
+						g->DrawImage(enemy, ex * 35, ey * 35);
+					}
+				}
+
+				if (ex == 7 && ey == 4)
+				{
+					ex--;
+					Refresh();
+					g->DrawImage(door, 0 * 35, 0 * 35);
+					drawWallLevel2();
+					g->DrawImage(player, px * 35, py * 35);
+					if (ehealth > 0)
+					{
+						g->DrawImage(enemy, ex * 35, ey * 35);
+					}
+				}
+
+				if (ex == 8 && ey == 4)
+				{
+					ex--;
+					Refresh();
+					g->DrawImage(door, 0 * 35, 0 * 35);
+					drawWallLevel2();
+					g->DrawImage(player, px * 35, py * 35);
+					if (ehealth > 0)
+					{
+						g->DrawImage(enemy, ex * 35, ey * 35);
+					}
+				}
+
+				if (ex == 6 && ey == 4)
+				{
+					ex--;
+					Refresh();
+					g->DrawImage(door, 0 * 35, 0 * 35);
+					drawWallLevel2();
+					g->DrawImage(player, px * 35, py * 35);
+					if (ehealth > 0)
+					{
+						g->DrawImage(enemy, ex * 35, ey * 35);
+					}
+				}
+
+				if (ex == 5 && ey == 4)
+				{
+					ex--;
+					Refresh();
+					g->DrawImage(door, 0 * 35, 0 * 35);
+					drawWallLevel2();
+					g->DrawImage(player, px * 35, py * 35);
+					if (ehealth > 0)
+					{
+						g->DrawImage(enemy, ex * 35, ey * 35);
+					}
+				}
+
+				if (ex == 4 && ey == 4)
+				{
+					ex--;
+					Refresh();
+					g->DrawImage(door, 0 * 35, 0 * 35);
+					drawWallLevel2();
+					g->DrawImage(player, px * 35, py * 35);
+					if (ehealth > 0)
+					{
+						g->DrawImage(enemy, ex * 35, ey * 35);
+					}
+				}
+
+				if (ex == 3 && ey == 4)
+				{
+					ex--;
+					Refresh();
+					g->DrawImage(door, 0 * 35, 0 * 35);
+					drawWallLevel2();
+					g->DrawImage(player, px * 35, py * 35);
+					if (ehealth > 0)
+					{
+						g->DrawImage(enemy, ex * 35, ey * 35);
+					}
+				}
+
+				if (ex == 11 && ey == 3)
+				{
+					ex--;
+					Refresh();
+					g->DrawImage(door, 0 * 35, 0 * 35);
+					drawWallLevel2();
+					g->DrawImage(player, px * 35, py * 35);
+					if (ehealth > 0)
+					{
+						g->DrawImage(enemy, ex * 35, ey * 35);
+					}
+				}
+
+				if (ex == 11 && ey == 4)
+				{
+					ex--;
+					Refresh();
+					g->DrawImage(door, 0 * 35, 0 * 35);
+					drawWallLevel2();
+					g->DrawImage(player, px * 35, py * 35);
+					if (ehealth > 0)
+					{
+						g->DrawImage(enemy, ex * 35, ey * 35);
+					}
+				}
+
+				break;
+			}
+		case 3:
+			if (ehealth > 0 && phealth > 0)
+			{
+				if (ey > 0)
+				{
+					ey--;
+					g->DrawImage(enemy, ex * 35, ey * 35);
+				}
+				else g->DrawImage(enemy, ex * 35, ey * 35);
+
+				if (ex == 7 && ey == 0)
+				{
+					ey++;
+					Refresh();
+					g->DrawImage(door, 0 * 35, 0 * 35);
+					drawWallLevel2();
+					g->DrawImage(player, px * 35, py * 35);
+					if (ehealth > 0)
+					{
+						g->DrawImage(enemy, ex * 35, ey * 35);
+					}
+				}
+
+				if (ex == 8 && ey == 0)
+				{
+					ey++;
+					Refresh();
+					g->DrawImage(door, 0 * 35, 0 * 35);
+					drawWallLevel2();
+					g->DrawImage(player, px * 35, py * 35);
+					if (ehealth > 0)
+					{
+						g->DrawImage(enemy, ex * 35, ey * 35);
+					}
+				}
+
+				if (ex == 7 && ey == 1)
+				{
+					ey++;
+					Refresh();
+					g->DrawImage(door, 0 * 35, 0 * 35);
+					drawWallLevel2();
+					g->DrawImage(player, px * 35, py * 35);
+					if (ehealth > 0)
+					{
+						g->DrawImage(enemy, ex * 35, ey * 35);
+					}
+				}
+
+				if (ex == 8 && ey == 1)
+				{
+					ey++;
+					Refresh();
+					g->DrawImage(door, 0 * 35, 0 * 35);
+					drawWallLevel2();
+					g->DrawImage(player, px * 35, py * 35);
+					if (ehealth > 0)
+					{
+						g->DrawImage(enemy, ex * 35, ey * 35);
+					}
+				}
+
+				if (ex == 4 && ey == 2)
+				{
+					ey++;
+					Refresh();
+					g->DrawImage(door, 0 * 35, 0 * 35);
+					drawWallLevel2();
+					g->DrawImage(player, px * 35, py * 35);
+					if (ehealth > 0)
+					{
+						g->DrawImage(enemy, ex * 35, ey * 35);
+					}
+				}
+
+				if (ex == 5 && ey == 2)
+				{
+					ey++;
+					Refresh();
+					g->DrawImage(door, 0 * 35, 0 * 35);
+					drawWallLevel2();
+					g->DrawImage(player, px * 35, py * 35);
+					if (ehealth > 0)
+					{
+						g->DrawImage(enemy, ex * 35, ey * 35);
+					}
+				}
+
+				if (ex == 6 && ey == 2)
+				{
+					ey++;
+					Refresh();
+					g->DrawImage(door, 0 * 35, 0 * 35);
+					drawWallLevel2();
+					g->DrawImage(player, px * 35, py * 35);
+					if (ehealth > 0)
+					{
+						g->DrawImage(enemy, ex * 35, ey * 35);
+					}
+				}
+
+				if (ex == 7 && ey == 2)
+				{
+					ey++;
+					Refresh();
+					g->DrawImage(door, 0 * 35, 0 * 35);
+					drawWallLevel2();
+					g->DrawImage(player, px * 35, py * 35);
+					if (ehealth > 0)
+					{
+						g->DrawImage(enemy, ex * 35, ey * 35);
+					}
+				}
+
+				if (ex == 8 && ey == 2)
+				{
+					ey++;
+					Refresh();
+					g->DrawImage(door, 0 * 35, 0 * 35);
+					drawWallLevel2();
+					g->DrawImage(player, px * 35, py * 35);
+					if (ehealth > 0)
+					{
+						g->DrawImage(enemy, ex * 35, ey * 35);
+					}
+				}
+
+				if (ex == 9 && ey == 2)
+				{
+					ey++;
+					Refresh();
+					g->DrawImage(door, 0 * 35, 0 * 35);
+					drawWallLevel2();
+					g->DrawImage(player, px * 35, py * 35);
+					if (ehealth > 0)
+					{
+						g->DrawImage(enemy, ex * 35, ey * 35);
+					}
+				}
+
+				if (ex == 10 && ey == 2)
+				{
+					ey++;
+					Refresh();
+					g->DrawImage(door, 0 * 35, 0 * 35);
+					drawWallLevel2();
+					g->DrawImage(player, px * 35, py * 35);
+					if (ehealth > 0)
+					{
+						g->DrawImage(enemy, ex * 35, ey * 35);
+					}
+				}
+
+				if (ex == 11 && ey == 2)
+				{
+					ey++;
+					Refresh();
+					g->DrawImage(door, 0 * 35, 0 * 35);
+					drawWallLevel2();
+					g->DrawImage(player, px * 35, py * 35);
+					if (ehealth > 0)
+					{
+						g->DrawImage(enemy, ex * 35, ey * 35);
+					}
+				}
+
+				if (ex == 7 && ey == 3)
+				{
+					ey++;
+					Refresh();
+					g->DrawImage(door, 0 * 35, 0 * 35);
+					drawWallLevel2();
+					g->DrawImage(player, px * 35, py * 35);
+					if (ehealth > 0)
+					{
+						g->DrawImage(enemy, ex * 35, ey * 35);
+					}
+				}
+
+				if (ex == 8 && ey == 3)
+				{
+					ey++;
+					Refresh();
+					g->DrawImage(door, 0 * 35, 0 * 35);
+					drawWallLevel2();
+					g->DrawImage(player, px * 35, py * 35);
+					if (ehealth > 0)
+					{
+						g->DrawImage(enemy, ex * 35, ey * 35);
+					}
+				}
+
+				if (ex == 7 && ey == 4)
+				{
+					ey++;
+					Refresh();
+					g->DrawImage(door, 0 * 35, 0 * 35);
+					drawWallLevel2();
+					g->DrawImage(player, px * 35, py * 35);
+					if (ehealth > 0)
+					{
+						g->DrawImage(enemy, ex * 35, ey * 35);
+					}
+				}
+
+				if (ex == 8 && ey == 4)
+				{
+					ey++;
+					Refresh();
+					g->DrawImage(door, 0 * 35, 0 * 35);
+					drawWallLevel2();
+					g->DrawImage(player, px * 35, py * 35);
+					if (ehealth > 0)
+					{
+						g->DrawImage(enemy, ex * 35, ey * 35);
+					}
+				}
+
+				if (ex == 6 && ey == 4)
+				{
+					ey++;
+					Refresh();
+					g->DrawImage(door, 0 * 35, 0 * 35);
+					drawWallLevel2();
+					g->DrawImage(player, px * 35, py * 35);
+					if (ehealth > 0)
+					{
+						g->DrawImage(enemy, ex * 35, ey * 35);
+					}
+				}
+
+				if (ex == 5 && ey == 4)
+				{
+					ey++;
+					Refresh();
+					g->DrawImage(door, 0 * 35, 0 * 35);
+					drawWallLevel2();
+					g->DrawImage(player, px * 35, py * 35);
+					if (ehealth > 0)
+					{
+						g->DrawImage(enemy, ex * 35, ey * 35);
+					}
+				}
+
+				if (ex == 4 && ey == 4)
+				{
+					ey++;
+					Refresh();
+					g->DrawImage(door, 0 * 35, 0 * 35);
+					drawWallLevel2();
+					g->DrawImage(player, px * 35, py * 35);
+					if (ehealth > 0)
+					{
+						g->DrawImage(enemy, ex * 35, ey * 35);
+					}
+				}
+
+				if (ex == 3 && ey == 4)
+				{
+					ey++;
+					Refresh();
+					g->DrawImage(door, 0 * 35, 0 * 35);
+					drawWallLevel2();
+					g->DrawImage(player, px * 35, py * 35);
+					if (ehealth > 0)
+					{
+						g->DrawImage(enemy, ex * 35, ey * 35);
+					}
+				}
+
+				if (ex == 11 && ey == 3)
+				{
+					ey++;
+					Refresh();
+					g->DrawImage(door, 0 * 35, 0 * 35);
+					drawWallLevel2();
+					g->DrawImage(player, px * 35, py * 35);
+					if (ehealth > 0)
+					{
+						g->DrawImage(enemy, ex * 35, ey * 35);
+					}
+				}
+
+				if (ex == 11 && ey == 4)
+				{
+					ey++;
+					Refresh();
+					g->DrawImage(door, 0 * 35, 0 * 35);
+					drawWallLevel2();
+					g->DrawImage(player, px * 35, py * 35);
+					if (ehealth > 0)
+					{
+						g->DrawImage(enemy, ex * 35, ey * 35);
+					}
+				}
+
+				break;
+			}
+		case 4:
+			if (ehealth > 0 && phealth > 0)
+			{
+				if (ex > 0)
+				{
+					ex--;
+					g->DrawImage(enemy, ex * 35, ey * 35);
+				}
+				else g->DrawImage(enemy, ex * 35, ey * 35);
+
+				if (ex == 7 && ey == 0)
+				{
+					ex++;
+					Refresh();
+					g->DrawImage(door, 0 * 35, 0 * 35);
+					drawWallLevel2();
+					g->DrawImage(player, px * 35, py * 35);
+					if (ehealth > 0)
+					{
+						g->DrawImage(enemy, ex * 35, ey * 35);
+					}
+				}
+
+				if (ex == 8 && ey == 0)
+				{
+					ex++;
+					Refresh();
+					g->DrawImage(door, 0 * 35, 0 * 35);
+					drawWallLevel2();
+					g->DrawImage(player, px * 35, py * 35);
+					if (ehealth > 0)
+					{
+						g->DrawImage(enemy, ex * 35, ey * 35);
+					}
+				}
+
+				if (ex == 7 && ey == 1)
+				{
+					ex++;
+					Refresh();
+					g->DrawImage(door, 0 * 35, 0 * 35);
+					drawWallLevel2();
+					g->DrawImage(player, px * 35, py * 35);
+					if (ehealth > 0)
+					{
+						g->DrawImage(enemy, ex * 35, ey * 35);
+					}
+				}
+
+				if (ex == 8 && ey == 1)
+				{
+					ex++;
+					Refresh();
+					g->DrawImage(door, 0 * 35, 0 * 35);
+					drawWallLevel2();
+					g->DrawImage(player, px * 35, py * 35);
+					if (ehealth > 0)
+					{
+						g->DrawImage(enemy, ex * 35, ey * 35);
+					}
+				}
+
+				if (ex == 4 && ey == 2)
+				{
+					ex++;
+					Refresh();
+					g->DrawImage(door, 0 * 35, 0 * 35);
+					drawWallLevel2();
+					g->DrawImage(player, px * 35, py * 35);
+					if (ehealth > 0)
+					{
+						g->DrawImage(enemy, ex * 35, ey * 35);
+					}
+				}
+
+				if (ex == 5 && ey == 2)
+				{
+					ex++;
+					Refresh();
+					g->DrawImage(door, 0 * 35, 0 * 35);
+					drawWallLevel2();
+					g->DrawImage(player, px * 35, py * 35);
+					if (ehealth > 0)
+					{
+						g->DrawImage(enemy, ex * 35, ey * 35);
+					}
+				}
+
+				if (ex == 6 && ey == 2)
+				{
+					ex++;
+					Refresh();
+					g->DrawImage(door, 0 * 35, 0 * 35);
+					drawWallLevel2();
+					g->DrawImage(player, px * 35, py * 35);
+					if (ehealth > 0)
+					{
+						g->DrawImage(enemy, ex * 35, ey * 35);
+					}
+				}
+
+				if (ex == 7 && ey == 2)
+				{
+					ex++;
+					Refresh();
+					g->DrawImage(door, 0 * 35, 0 * 35);
+					drawWallLevel2();
+					g->DrawImage(player, px * 35, py * 35);
+					if (ehealth > 0)
+					{
+						g->DrawImage(enemy, ex * 35, ey * 35);
+					}
+				}
+
+				if (ex == 8 && ey == 2)
+				{
+					ex++;
+					Refresh();
+					g->DrawImage(door, 0 * 35, 0 * 35);
+					drawWallLevel2();
+					g->DrawImage(player, px * 35, py * 35);
+					if (ehealth > 0)
+					{
+						g->DrawImage(enemy, ex * 35, ey * 35);
+					}
+				}
+
+				if (ex == 9 && ey == 2)
+				{
+					ex++;
+					Refresh();
+					g->DrawImage(door, 0 * 35, 0 * 35);
+					drawWallLevel2();
+					g->DrawImage(player, px * 35, py * 35);
+					if (ehealth > 0)
+					{
+						g->DrawImage(enemy, ex * 35, ey * 35);
+					}
+				}
+
+				if (ex == 10 && ey == 2)
+				{
+					ex++;
+					Refresh();
+					g->DrawImage(door, 0 * 35, 0 * 35);
+					drawWallLevel2();
+					g->DrawImage(player, px * 35, py * 35);
+					if (ehealth > 0)
+					{
+						g->DrawImage(enemy, ex * 35, ey * 35);
+					}
+				}
+
+				if (ex == 11 && ey == 2)
+				{
+					ex++;
+					Refresh();
+					g->DrawImage(door, 0 * 35, 0 * 35);
+					drawWallLevel2();
+					g->DrawImage(player, px * 35, py * 35);
+					if (ehealth > 0)
+					{
+						g->DrawImage(enemy, ex * 35, ey * 35);
+					}
+				}
+
+				if (ex == 7 && ey == 3)
+				{
+					ex++;
+					Refresh();
+					g->DrawImage(door, 0 * 35, 0 * 35);
+					drawWallLevel2();
+					g->DrawImage(player, px * 35, py * 35);
+					if (ehealth > 0)
+					{
+						g->DrawImage(enemy, ex * 35, ey * 35);
+					}
+				}
+
+				if (ex == 8 && ey == 3)
+				{
+					ex++;
+					Refresh();
+					g->DrawImage(door, 0 * 35, 0 * 35);
+					drawWallLevel2();
+					g->DrawImage(player, px * 35, py * 35);
+					if (ehealth > 0)
+					{
+						g->DrawImage(enemy, ex * 35, ey * 35);
+					}
+				}
+
+				if (ex == 7 && ey == 4)
+				{
+					ex++;
+					Refresh();
+					g->DrawImage(door, 0 * 35, 0 * 35);
+					drawWallLevel2();
+					g->DrawImage(player, px * 35, py * 35);
+					if (ehealth > 0)
+					{
+						g->DrawImage(enemy, ex * 35, ey * 35);
+					}
+				}
+
+				if (ex == 8 && ey == 4)
+				{
+					ex++;
+					Refresh();
+					g->DrawImage(door, 0 * 35, 0 * 35);
+					drawWallLevel2();
+					g->DrawImage(player, px * 35, py * 35);
+					if (ehealth > 0)
+					{
+						g->DrawImage(enemy, ex * 35, ey * 35);
+					}
+				}
+
+				if (ex == 6 && ey == 4)
+				{
+					ex++;
+					Refresh();
+					g->DrawImage(door, 0 * 35, 0 * 35);
+					drawWallLevel2();
+					g->DrawImage(player, px * 35, py * 35);
+					if (ehealth > 0)
+					{
+						g->DrawImage(enemy, ex * 35, ey * 35);
+					}
+				}
+
+				if (ex == 5 && ey == 4)
+				{
+					ex++;
+					Refresh();
+					g->DrawImage(door, 0 * 35, 0 * 35);
+					drawWallLevel2();
+					g->DrawImage(player, px * 35, py * 35);
+					if (ehealth > 0)
+					{
+						g->DrawImage(enemy, ex * 35, ey * 35);
+					}
+				}
+
+				if (ex == 4 && ey == 4)
+				{
+					ex++;
+					Refresh();
+					g->DrawImage(door, 0 * 35, 0 * 35);
+					drawWallLevel2();
+					g->DrawImage(player, px * 35, py * 35);
+					if (ehealth > 0)
+					{
+						g->DrawImage(enemy, ex * 35, ey * 35);
+					}
+				}
+
+				if (ex == 3 && ey == 4)
+				{
+					ex++;
+					Refresh();
+					g->DrawImage(door, 0 * 35, 0 * 35);
+					drawWallLevel2();
+					g->DrawImage(player, px * 35, py * 35);
+					if (ehealth > 0)
+					{
+						g->DrawImage(enemy, ex * 35, ey * 35);
+					}
+				}
+
+				if (ex == 11 && ey == 3)
+				{
+					ex++;
+					Refresh();
+					g->DrawImage(door, 0 * 35, 0 * 35);
+					drawWallLevel2();
+					g->DrawImage(player, px * 35, py * 35);
+					if (ehealth > 0)
+					{
+						g->DrawImage(enemy, ex * 35, ey * 35);
+					}
+				}
+
+				if (ex == 11 && ey == 4)
+				{
+					ex++;
+					Refresh();
+					g->DrawImage(door, 0 * 35, 0 * 35);
+					drawWallLevel2();
+					g->DrawImage(player, px * 35, py * 35);
+					if (ehealth > 0)
+					{
+						g->DrawImage(enemy, ex * 35, ey * 35);
+					}
+				}
+
+				break;
+			}
+		}
+		}
+
+		void drawWallLevel1()
+		{
+			g->DrawImage(wall, 7 * 35, 0 * 35);
+			g->DrawImage(wall, 8 * 35, 0 * 35);
+			g->DrawImage(wall, 7 * 35, 1 * 35);
+			g->DrawImage(wall, 8 * 35, 1 * 35);
+			g->DrawImage(wall, 1 * 35, 2 * 35);
+			g->DrawImage(wall, 2 * 35, 2 * 35);
+			g->DrawImage(wall, 3 * 35, 2 * 35);
+			g->DrawImage(wall, 4 * 35, 2 * 35);
+			g->DrawImage(wall, 5 * 35, 2 * 35);
+			g->DrawImage(wall, 6 * 35, 2 * 35);
+			g->DrawImage(wall, 7 * 35, 2 * 35);
+			g->DrawImage(wall, 8 * 35, 2 * 35);
+			g->DrawImage(wall, 9 * 35, 2 * 35);
+			g->DrawImage(wall, 10 * 35, 2 * 35);
+			g->DrawImage(wall, 11 * 35, 2 * 35);
+			g->DrawImage(wall, 12 * 35, 2 * 35);
+			g->DrawImage(wall, 13 * 35, 2 * 35);
+			g->DrawImage(wall, 14 * 35, 2 * 35);
+			g->DrawImage(wall, 7 * 35, 3 * 35);
+			g->DrawImage(wall, 8 * 35, 3 * 35);
+		}
+
+		void drawWallLevel2()
+		{
+			g->DrawImage(wall, 7 * 35, 0 * 35);
+			g->DrawImage(wall, 8 * 35, 0 * 35);
+			g->DrawImage(wall, 7 * 35, 1 * 35);
+			g->DrawImage(wall, 8 * 35, 1 * 35);
+			g->DrawImage(wall, 4 * 35, 2 * 35);
+			g->DrawImage(wall, 5 * 35, 2 * 35);
+			g->DrawImage(wall, 6 * 35, 2 * 35);
+			g->DrawImage(wall, 7 * 35, 2 * 35);
+			g->DrawImage(wall, 8 * 35, 2 * 35);
+			g->DrawImage(wall, 9 * 35, 2 * 35);
+			g->DrawImage(wall, 10 * 35, 2 * 35);
+			g->DrawImage(wall, 11 * 35, 2 * 35);
+			g->DrawImage(wall, 7 * 35, 3 * 35);
+			g->DrawImage(wall, 8 * 35, 3 * 35);
+			g->DrawImage(wall, 8 * 35, 4 * 35);
+			g->DrawImage(wall, 7 * 35, 4 * 35);
+			g->DrawImage(wall, 6 * 35, 4 * 35);
+			g->DrawImage(wall, 5 * 35, 4 * 35);
+			g->DrawImage(wall, 11 * 35, 3 * 35);
+			g->DrawImage(wall, 11 * 35, 4 * 35);
+			g->DrawImage(wall, 3 * 35, 4 * 35);
+			g->DrawImage(wall, 4 * 35, 4 * 35);
+		}
 		
 	private: System::Void MyForm_Load(System::Object^  sender, System::EventArgs^  e) {
 				  g = panel1->CreateGraphics();
@@ -212,17 +2562,17 @@ namespace Project6 {
 				 if (px == 0 && py == 0 && ey == 4 && ex == 16 && level == 1)
 				 {
 					 g->DrawImage(door, 0 * 35, 0 * 35);
-					 g->DrawImage(wall, 1 * 35, 1 * 35);
 					 g->DrawImage(player, px * 35, py * 35);
 					 g->DrawImage(enemy, ex * 35, ey * 35);
+					 drawWallLevel1();
 				 }
 
 				 if (px == 0 && py == 0 && ey == 4 && ex == 16 && level == 2)
 				 {
 					 g->DrawImage(door, 0 * 35, 0 * 35);
-					 g->DrawImage(wall, 5 * 35, 4 * 35);
 					 g->DrawImage(player, px * 35, py * 35);
 					 g->DrawImage(enemy, ex * 35, ey * 35);
+					 drawWallLevel2();
 				 }
 	}
 private: System::Void button3_Click(System::Object^  sender, System::EventArgs^  e) {
@@ -230,68 +2580,22 @@ private: System::Void button3_Click(System::Object^  sender, System::EventArgs^ 
 			 int emove = rand() % 4 + 1;
 			 Refresh();
 
-			 if (phealth > 0)
-			 {
-				 if (px < 17)
-				 {
-					 px++;
-					 g->DrawImage(player, px * 35, py * 35);
-				 }
-					else g->DrawImage(player, px * 35, py * 35);
-			 }
-
 			 if (level == 1)
 			 {
+				 drawWallLevel1();
 				 g->DrawImage(door, 0 * 35, 0 * 35);
-				 g->DrawImage(wall, 1 * 35, 1 * 35);
 
-				 switch (emove)
-				 {
-				 case 1:
-					 if (ehealth > 0 && phealth > 0)
+				if (phealth > 0)
+				{
+					 if (px < 17)
 					 {
-						 if (ey < 5)
-						 {
-							 ey++;
-							 g->DrawImage(enemy, ex * 35, ey * 35);
-						 }
-						 else g->DrawImage(enemy, ex * 35, ey * 35);
-						 break;
-					 }
-				 case 2:
-					 if (ehealth > 0 && phealth > 0)
-					 {
-						 if (ex < 17)
-						 {
-							 ex++;
-							 g->DrawImage(enemy, ex * 35, ey * 35);
-						 }
-						 else g->DrawImage(enemy, ex * 35, ey * 35);
-						 break;
-					 }
-				 case 3:
-					 if (ehealth > 0 && phealth > 0)
-					 {
-						 if (ey > 0)
-						 {
-							 ey--;
-							 g->DrawImage(enemy, ex * 35, ey * 35);
-						 }
-						 else g->DrawImage(enemy, ex * 35, ey * 35);
-						 break;
-					 }
-				 case 4:
-					 if (ehealth > 0 && phealth > 0)
-					 {
-						 if (ex > 0)
-						 {
-							 ex--;
-							 g->DrawImage(enemy, ex * 35, ey * 35);
-						 }
-						 else g->DrawImage(enemy, ex * 35, ey * 35);
-						 break;
-					 }
-				 }
+						 px++;
+						 g->DrawImage(player, px * 35, py * 35);
+					}
+						else g->DrawImage(player, px * 35, py * 35);
+				}
+
+				E1AILevel1();
 
 				 if (ey == py && ex == px)
 				 {
@@ -305,14 +2609,14 @@ private: System::Void button3_Click(System::Object^  sender, System::EventArgs^ 
 					 Refresh();
 					 g->DrawImage(player, px * 35, py * 35);
 					 g->DrawImage(door, 0 * 35, 0 * 35);
-					 g->DrawImage(wall, 1 * 35, 1 * 35);
+					 drawWallLevel1();
 				 }
 
 				 if (phealth == 0)
 				 {
 					 Refresh();
 					 g->DrawImage(door, 0 * 35, 0 * 35);
-					 g->DrawImage(wall, 1 * 35, 1 * 35);
+					 drawWallLevel1();
 					 g->DrawImage(enemy, ex * 35, ey * 35);
 					 label1->Text = "DEAD";
 				 }
@@ -329,12 +2633,259 @@ private: System::Void button3_Click(System::Object^  sender, System::EventArgs^ 
 					 level++;
 				 }
 
-				 if (px == 1 && py == 1)
+				 if (px == 7 && py == 0)
 				 {
 					 px--;
 					 Refresh();
 					 g->DrawImage(door, 0 * 35, 0 * 35);
-					 g->DrawImage(wall, 1 * 35, 1 * 35);
+					 drawWallLevel1();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 8 && py == 0)
+				 {
+					 px--;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel1();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 7 && py == 1)
+				 {
+					 px--;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel1();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 8 && py == 1)
+				 {
+					 px--;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel1();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 1 && py == 2)
+				 {
+					 px--;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel1();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 2 && py == 2)
+				 {
+					 px--;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel1();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 3 && py == 2)
+				 {
+					 px--;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel1();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 4 && py == 2)
+				 {
+					 px--;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel1();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 5 && py == 2)
+				 {
+					 px--;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel1();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 6 && py == 2)
+				 {
+					 px--;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel1();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 7 && py == 2)
+				 {
+					 px--;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel1();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 8 && py == 2)
+				 {
+					 px--;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel1();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 9 && py == 2)
+				 {
+					 px--;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel1();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 10 && py == 2)
+				 {
+					 px--;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel1();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 11 && py == 2)
+				 {
+					 px--;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel1();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 12 && py == 2)
+				 {
+					 px--;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel1();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 13 && py == 2)
+				 {
+					 px--;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel1();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 14 && py == 2)
+				 {
+					 px--;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel1();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 7 && py == 3)
+				 {
+					 px--;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel1();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 8 && py == 3)
+				 {
+					 px--;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel1();
 					 g->DrawImage(player, px * 35, py * 35);
 					 if (ehealth > 0)
 					 {
@@ -346,55 +2897,19 @@ private: System::Void button3_Click(System::Object^  sender, System::EventArgs^ 
 			 if (level == 2)
 			 {
 				 g->DrawImage(door, 0 * 35, 0 * 35);
-				 g->DrawImage(wall, 5 * 35, 4 * 35);
+				 drawWallLevel2();
 
-				 switch (emove)
+				 if (phealth > 0)
 				 {
-				 case 1:
-					 if (ehealth > 0 && phealth > 0)
+					 if (px < 17)
 					 {
-						 if (ey < 5)
-						 {
-							 ey++;
-							 g->DrawImage(enemy, ex * 35, ey * 35);
-						 }
-						 else g->DrawImage(enemy, ex * 35, ey * 35);
-						 break;
+						 px++;
+						 g->DrawImage(player, px * 35, py * 35);
 					 }
-				 case 2:
-					 if (ehealth > 0 && phealth > 0)
-					 {
-						 if (ex < 17)
-						 {
-							 ex++;
-							 g->DrawImage(enemy, ex * 35, ey * 35);
-						 }
-						 else g->DrawImage(enemy, ex * 35, ey * 35);
-						 break;
-					 }
-				 case 3:
-					 if (ehealth > 0 && phealth > 0)
-					 {
-						 if (ey > 0)
-						 {
-							 ey--;
-							 g->DrawImage(enemy, ex * 35, ey * 35);
-						 }
-						 else g->DrawImage(enemy, ex * 35, ey * 35);
-						 break;
-					 }
-				 case 4:
-					 if (ehealth > 0 && phealth > 0)
-					 {
-						 if (ex > 0)
-						 {
-							 ex--;
-							 g->DrawImage(enemy, ex * 35, ey * 35);
-						 }
-						 else g->DrawImage(enemy, ex * 35, ey * 35);
-						 break;
-					 }
+					 else g->DrawImage(player, px * 35, py * 35);
 				 }
+
+				 E1AILevel2();
 
 				 if (ey == py && ex == px)
 				 {
@@ -408,14 +2923,14 @@ private: System::Void button3_Click(System::Object^  sender, System::EventArgs^ 
 					 Refresh();
 					 g->DrawImage(player, px * 35, py * 35);
 					 g->DrawImage(door, 0 * 35, 0 * 35);
-					 g->DrawImage(wall, 5 * 35, 4 * 35);
+					 drawWallLevel2();
 				 }
 
 				 if (phealth == 0)
 				 {
 					 Refresh();
 					 g->DrawImage(door, 0 * 35, 0 * 35);
-					 g->DrawImage(wall, 5 * 35, 4 * 35);
+					 drawWallLevel2();
 					 g->DrawImage(enemy, ex * 35, ey * 35);
 					 label1->Text = "DEAD";
 				 }
@@ -425,12 +2940,285 @@ private: System::Void button3_Click(System::Object^  sender, System::EventArgs^ 
 					 level++;
 				 }
 
+				 if (px == 7 && py == 0)
+				 {
+					 px++;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel2();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 8 && py == 0)
+				 {
+					 px++;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel2();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 7 && py == 1)
+				 {
+					 px++;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel2();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 8 && py == 1)
+				 {
+					 px--;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel2();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 4 && py == 2)
+				 {
+					 px--;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel2();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 5 && py == 2)
+				 {
+					 px--;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel2();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 6 && py == 2)
+				 {
+					 px--;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel2();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 7 && py == 2)
+				 {
+					 px--;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel2();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 8 && py == 2)
+				 {
+					 px--;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel2();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 9 && py == 2)
+				 {
+					 px--;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel2();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 10 && py == 2)
+				 {
+					 px--;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel2();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 11 && py == 2)
+				 {
+					 px--;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel2();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 7 && py == 3)
+				 {
+					 px--;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel2();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 8 && py == 3)
+				 {
+					 px--;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel2();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 7 && py == 4)
+				 {
+					 px--;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel2();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 8 && py == 4)
+				 {
+					 px--;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel2();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 6 && py == 4)
+				 {
+					 px--;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel2();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
 				 if (px == 5 && py == 4)
 				 {
 					 px--;
 					 Refresh();
 					 g->DrawImage(door, 0 * 35, 0 * 35);
-					 g->DrawImage(wall, 5 * 35, 4 * 35);
+					 drawWallLevel2();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 4 && py == 4)
+				 {
+					 px--;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel2();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 3 && py == 4)
+				 {
+					 px--;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel2();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 11 && py == 3)
+				 {
+					 px--;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel2();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 11 && py == 4)
+				 {
+					 px--;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel2();
 					 g->DrawImage(player, px * 35, py * 35);
 					 if (ehealth > 0)
 					 {
@@ -444,68 +3232,23 @@ private: System::Void button4_Click(System::Object^  sender, System::EventArgs^ 
 			 int emove = rand() % 4 + 1;
 			 Refresh();
 
-			 if (phealth > 0)
-			 {
-				 if (py < 5)
-				 {
-					 py++;
-					 g->DrawImage(player, px * 35, py * 35);
-				 }
-				 else g->DrawImage(player, px * 35, py * 35);
-			 }
 
 			 if (level == 1)
 			 {
+				 drawWallLevel1();
 				 g->DrawImage(door, 0 * 35, 0 * 35);
-				 g->DrawImage(wall, 1 * 35, 1 * 35);
 
-				 switch (emove)
+				 if (phealth > 0)
 				 {
-				 case 1:
-					 if (ehealth > 0 && phealth > 0)
+					 if (py < 5)
 					 {
-						 if (ey < 5)
-						 {
-							 ey++;
-							 g->DrawImage(enemy, ex * 35, ey * 35);
-						 }
-						 else g->DrawImage(enemy, ex * 35, ey * 35);
-						 break;
+						 py++;
+						 g->DrawImage(player, px * 35, py * 35);
 					 }
-				 case 2:
-					 if (ehealth > 0 && phealth > 0)
-					 {
-						 if (ex < 17)
-						 {
-							 ex++;
-							 g->DrawImage(enemy, ex * 35, ey * 35);
-						 }
-						 else g->DrawImage(enemy, ex * 35, ey * 35);
-						 break;
-					 }
-				 case 3:
-					 if (ehealth > 0 && phealth > 0)
-					 {
-						 if (ey > 0)
-						 {
-							 ey--;
-							 g->DrawImage(enemy, ex * 35, ey * 35);
-						 }
-						 else g->DrawImage(enemy, ex * 35, ey * 35);
-						 break;
-					 }
-				 case 4:
-					 if (ehealth > 0 && phealth > 0)
-					 {
-						 if (ex > 0)
-						 {
-							 ex--;
-							 g->DrawImage(enemy, ex * 35, ey * 35);
-						 }
-						 else g->DrawImage(enemy, ex * 35, ey * 35);
-						 break;
-					 }
+					 else g->DrawImage(player, px * 35, py * 35);
 				 }
+
+				 E1AILevel1();
 
 				 if (ey == py && ex == px)
 				 {
@@ -519,14 +3262,14 @@ private: System::Void button4_Click(System::Object^  sender, System::EventArgs^ 
 					 Refresh();
 					 g->DrawImage(player, px * 35, py * 35);
 					 g->DrawImage(door, 0 * 35, 0 * 35);
-					 g->DrawImage(wall, 1 * 35, 1 * 35);
+					 drawWallLevel1();
 				 }
 
 				 if (phealth == 0)
 				 {
 					 Refresh();
 					 g->DrawImage(door, 0 * 35, 0 * 35);
-					 g->DrawImage(wall, 1 * 35, 1 * 35);
+					 drawWallLevel1();
 					 g->DrawImage(enemy, ex * 35, ey * 35);
 					 label1->Text = "DEAD";
 				 }
@@ -543,12 +3286,259 @@ private: System::Void button4_Click(System::Object^  sender, System::EventArgs^ 
 					 level++;
 				 }
 
-				 if (px == 1 && py == 1)
+				 if (px == 7 && py == 0)
 				 {
 					 py--;
 					 Refresh();
 					 g->DrawImage(door, 0 * 35, 0 * 35);
-					 g->DrawImage(wall, 1 * 35, 1 * 35);
+					 drawWallLevel1();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 8 && py == 0)
+				 {
+					 py--;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel1();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 7 && py == 1)
+				 {
+					 py--;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel1();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 8 && py == 1)
+				 {
+					 py--;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel1();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 1 && py == 2)
+				 {
+					 py--;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel1();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 2 && py == 2)
+				 {
+					 py--;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel1();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 3 && py == 2)
+				 {
+					 py--;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel1();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 4 && py == 2)
+				 {
+					 py--;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel1();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 5 && py == 2)
+				 {
+					 py--;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel1();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 6 && py == 2)
+				 {
+					 py--;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel1();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 7 && py == 2)
+				 {
+					 py--;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel1();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 8 && py == 2)
+				 {
+					 py--;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel1();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 9 && py == 2)
+				 {
+					 py--;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel1();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 10 && py == 2)
+				 {
+					 py--;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel1();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 11 && py == 2)
+				 {
+					 py--;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel1();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 12 && py == 2)
+				 {
+					 py--;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel1();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 13 && py == 2)
+				 {
+					 py--;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel1();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 14 && py == 2)
+				 {
+					 py--;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel1();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 7 && py == 3)
+				 {
+					 py--;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel1();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 8 && py == 3)
+				 {
+					 py--;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel1();
 					 g->DrawImage(player, px * 35, py * 35);
 					 if (ehealth > 0)
 					 {
@@ -560,55 +3550,19 @@ private: System::Void button4_Click(System::Object^  sender, System::EventArgs^ 
 			 if (level == 2)
 			 {
 				 g->DrawImage(door, 0 * 35, 0 * 35);
-				 g->DrawImage(wall, 5 * 35, 4 * 35);
+				 drawWallLevel2();
 
-				 switch (emove)
+				 if (phealth > 0)
 				 {
-				 case 1:
-					 if (ehealth > 0 && phealth > 0)
+					 if (py < 5)
 					 {
-						 if (ey < 5)
-						 {
-							 ey++;
-							 g->DrawImage(enemy, ex * 35, ey * 35);
-						 }
-						 else g->DrawImage(enemy, ex * 35, ey * 35);
-						 break;
+						 py++;
+						 g->DrawImage(player, px * 35, py * 35);
 					 }
-				 case 2:
-					 if (ehealth > 0 && phealth > 0)
-					 {
-						 if (ex < 17)
-						 {
-							 ex++;
-							 g->DrawImage(enemy, ex * 35, ey * 35);
-						 }
-						 else g->DrawImage(enemy, ex * 35, ey * 35);
-						 break;
-					 }
-				 case 3:
-					 if (ehealth > 0 && phealth > 0)
-					 {
-						 if (ey > 0)
-						 {
-							 ey--;
-							 g->DrawImage(enemy, ex * 35, ey * 35);
-						 }
-						 else g->DrawImage(enemy, ex * 35, ey * 35);
-						 break;
-					 }
-				 case 4:
-					 if (ehealth > 0 && phealth > 0)
-					 {
-						 if (ex > 0)
-						 {
-							 ex--;
-							 g->DrawImage(enemy, ex * 35, ey * 35);
-						 }
-						 else g->DrawImage(enemy, ex * 35, ey * 35);
-						 break;
-					 }
+					 else g->DrawImage(player, px * 35, py * 35);
 				 }
+
+				 E1AILevel2();
 
 				 if (ey == py && ex == px)
 				 {
@@ -622,14 +3576,14 @@ private: System::Void button4_Click(System::Object^  sender, System::EventArgs^ 
 					 Refresh();
 					 g->DrawImage(player, px * 35, py * 35);
 					 g->DrawImage(door, 0 * 35, 0 * 35);
-					 g->DrawImage(wall, 5 * 35, 4 * 35);
+					 drawWallLevel2();
 				 }
 
 				 if (phealth == 0)
 				 {
 					 Refresh();
 					 g->DrawImage(door, 0 * 35, 0 * 35);
-					 g->DrawImage(wall, 5 * 35, 4 * 35);
+					 drawWallLevel2();
 					 g->DrawImage(enemy, ex * 35, ey * 35);
 					 label1->Text = "DEAD";
 				 }
@@ -645,12 +3599,246 @@ private: System::Void button4_Click(System::Object^  sender, System::EventArgs^ 
 					 level++;
 				 }
 
+				 if (px == 8 && py == 1)
+				 {
+					 py--;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel2();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 4 && py == 2)
+				 {
+					 py--;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel2();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 5 && py == 2)
+				 {
+					 py--;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel2();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 6 && py == 2)
+				 {
+					 py--;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel2();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 7 && py == 2)
+				 {
+					 py--;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel2();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 8 && py == 2)
+				 {
+					 py--;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel2();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 9 && py == 2)
+				 {
+					 py--;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel2();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 10 && py == 2)
+				 {
+					 py--;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel2();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 11 && py == 2)
+				 {
+					 py--;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel2();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 7 && py == 3)
+				 {
+					 py--;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel2();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 8 && py == 3)
+				 {
+					 py--;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel2();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 7 && py == 4)
+				 {
+					 py--;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel2();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 8 && py == 4)
+				 {
+					 py--;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel2();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 6 && py == 4)
+				 {
+					 py--;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel2();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
 				 if (px == 5 && py == 4)
 				 {
 					 py--;
 					 Refresh();
 					 g->DrawImage(door, 0 * 35, 0 * 35);
-					 g->DrawImage(wall, 5 * 35, 4 * 35);
+					 drawWallLevel2();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 4 && py == 4)
+				 {
+					 py--;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel2();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 3 && py == 4)
+				 {
+					 py--;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel2();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 11 && py == 3)
+				 {
+					 py--;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel2();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 11 && py == 4)
+				 {
+					 py--;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel2();
 					 g->DrawImage(player, px * 35, py * 35);
 					 if (ehealth > 0)
 					 {
@@ -664,69 +3852,24 @@ private: System::Void button2_Click(System::Object^  sender, System::EventArgs^ 
 			 int emove = rand() % 4 + 1;
 			 Refresh();
 
-			 if (phealth > 0)
-			 {
-				 if (px > 0)
-				 {
-					 px--;
-					 g->DrawImage(player, px * 35, py * 35);
-				 }
-				 else g->DrawImage(player, px * 35, py * 35);
-			 }
+
 
 			 if (level == 1)
 			 {
 				 g->DrawImage(door, 0 * 35, 0 * 35);
-				 g->DrawImage(wall, 1 * 35, 1 * 35);
+				 drawWallLevel1();
 
-
-				 switch (emove)
-				 {
-				 case 1:
-					 if (ehealth > 0 && phealth > 0)
-					 {
-						 if (ey < 5)
-						 {
-							 ey++;
-							 g->DrawImage(enemy, ex * 35, ey * 35);
-						 }
-						 else g->DrawImage(enemy, ex * 35, ey * 35);
-						 break;
+				if (phealth > 0)
+				{
+					 if (px > 0)
+					{
+						 px--;
+						g->DrawImage(player, px * 35, py * 35);
 					 }
-				 case 2:
-					 if (ehealth > 0 && phealth > 0)
-					 {
-						 if (ex < 17)
-						 {
-							 ex++;
-							 g->DrawImage(enemy, ex * 35, ey * 35);
-						 }
-						 else g->DrawImage(enemy, ex * 35, ey * 35);
-						 break;
-					 }
-				 case 3:
-					 if (ehealth > 0 && phealth > 0)
-					 {
-						 if (ey > 0)
-						 {
-							 ey--;
-							 g->DrawImage(enemy, ex * 35, ey * 35);
-						 }
-						 else g->DrawImage(enemy, ex * 35, ey * 35);
-						 break;
-					 }
-				 case 4:
-					 if (ehealth > 0 && phealth > 0)
-					 {
-						 if (ex > 0)
-						 {
-							 ex--;
-							 g->DrawImage(enemy, ex * 35, ey * 35);
-						 }
-						 else g->DrawImage(enemy, ex * 35, ey * 35);
-						 break;
-					 }
+					else g->DrawImage(player, px * 35, py * 35);
 				 }
+
+				 E1AILevel1();
 
 				 if (ey == py && ex == px)
 				 {
@@ -740,14 +3883,14 @@ private: System::Void button2_Click(System::Object^  sender, System::EventArgs^ 
 					 Refresh();
 					 g->DrawImage(player, px * 35, py * 35);
 					 g->DrawImage(door, 0 * 35, 0 * 35);
-					 g->DrawImage(wall, 1 * 35, 1 * 35);
+					 drawWallLevel1();
 				 }
 
 				 if (phealth == 0)
 				 {
 					 Refresh();
 					 g->DrawImage(door, 0 * 35, 0 * 35);
-					 g->DrawImage(wall, 1 * 35, 1 * 35);
+					 drawWallLevel1();
 					 g->DrawImage(enemy, ex * 35, ey * 35);
 					 label1->Text = "DEAD";
 				 }
@@ -764,72 +3907,284 @@ private: System::Void button2_Click(System::Object^  sender, System::EventArgs^ 
 					 level++;
 				 }
 
-				 if (px == 1 && py == 1)
+				 if (px == 7 && py == 0)
 				 {
 					 px++;
 					 Refresh();
 					 g->DrawImage(door, 0 * 35, 0 * 35);
-					 g->DrawImage(wall, 1 * 35, 1 * 35);
+					 drawWallLevel1();
 					 g->DrawImage(player, px * 35, py * 35);
 					 if (ehealth > 0)
 					 {
 						 g->DrawImage(enemy, ex * 35, ey * 35);
 					 }
 				 }
+
+				 if (px == 8 && py == 0)
+				 {
+					 px++;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel1();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 7 && py == 1)
+				 {
+					 px++;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel1();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 8 && py == 1)
+				 {
+					 px++;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel1();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 1 && py == 2)
+				 {
+					 px++;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel1();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 2 && py == 2)
+				 {
+					 px++;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel1();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 3 && py == 2)
+				 {
+					 px++;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel1();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 4 && py == 2)
+				 {
+					 px++;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel1();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 5 && py == 2)
+				 {
+					 px++;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel1();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 6 && py == 2)
+				 {
+					 px++;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel1();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 7 && py == 2)
+				 {
+					 px++;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel1();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 8 && py == 2)
+				 {
+					 px++;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel1();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 9 && py == 2)
+				 {
+					 px++;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel1();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 10 && py == 2)
+				 {
+					 px++;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel1();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 11 && py == 2)
+				 {
+					 px++;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel1();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 12 && py == 2)
+				 {
+					 px++;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel1();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 13 && py == 2)
+				 {
+					 px++;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel1();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 14 && py == 2)
+				 {
+					 px++;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel1();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 7 && py == 3)
+				 {
+					 px++;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel1();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 8 && py == 3)
+				 {
+					 px++;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel1();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
 			 }
 
 			 if (level == 2)
 			 {
 				 g->DrawImage(door, 0 * 35, 0 * 35);
-				 g->DrawImage(wall, 5 * 35, 4 * 35);
+				 drawWallLevel2();
 
-				 switch (emove)
+				 if (phealth > 0)
 				 {
-				 case 1:
-					 if (ehealth > 0 && phealth > 0)
+					 if (px > 0)
 					 {
-						 if (ey < 5)
-						 {
-							 ey++;
-							 g->DrawImage(enemy, ex * 35, ey * 35);
-						 }
-						 else g->DrawImage(enemy, ex * 35, ey * 35);
-						 break;
+						 px--;
+						 g->DrawImage(player, px * 35, py * 35);
 					 }
-				 case 2:
-					 if (ehealth > 0 && phealth > 0)
-					 {
-						 if (ex < 17)
-						 {
-							 ex++;
-							 g->DrawImage(enemy, ex * 35, ey * 35);
-						 }
-						 else g->DrawImage(enemy, ex * 35, ey * 35);
-						 break;
-					 }
-				 case 3:
-					 if (ehealth > 0 && phealth > 0)
-					 {
-						 if (ey > 0)
-						 {
-							 ey--;
-							 g->DrawImage(enemy, ex * 35, ey * 35);
-						 }
-						 else g->DrawImage(enemy, ex * 35, ey * 35);
-						 break;
-					 }
-				 case 4:
-					 if (ehealth > 0 && phealth > 0)
-					 {
-						 if (ex > 0)
-						 {
-							 ex--;
-							 g->DrawImage(enemy, ex * 35, ey * 35);
-						 }
-						 else g->DrawImage(enemy, ex * 35, ey * 35);
-						 break;
-					 }
+					 else g->DrawImage(player, px * 35, py * 35);
 				 }
+
+				 E1AILevel2();
 
 				 if (ey == py && ex == px)
 				 {
@@ -843,14 +4198,14 @@ private: System::Void button2_Click(System::Object^  sender, System::EventArgs^ 
 					 Refresh();
 					 g->DrawImage(player, px * 35, py * 35);
 					 g->DrawImage(door, 0 * 35, 0 * 35);
-					 g->DrawImage(wall, 5 * 35, 4 * 35);
+					 drawWallLevel2();
 				 }
 
 				 if (phealth == 0)
 				 {
 					 Refresh();
 					 g->DrawImage(door, 0 * 35, 0 * 35);
-					 g->DrawImage(wall, 5 * 35, 4 * 35);
+					 drawWallLevel2();
 					 g->DrawImage(enemy, ex * 35, ey * 35);
 					 label1->Text = "DEAD";
 				 }
@@ -864,6 +4219,188 @@ private: System::Void button2_Click(System::Object^  sender, System::EventArgs^ 
 					 key = false;
 					 ehealth = 1;
 					 level++;
+				 }
+
+				 if (px == 8 && py == 1)
+				 {
+					 px++;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel2();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 4 && py == 2)
+				 {
+					 px++;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel2();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 5 && py == 2)
+				 {
+					 px++;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel2();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 6 && py == 2)
+				 {
+					 px++;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel2();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 7 && py == 2)
+				 {
+					 px++;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel2();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 8 && py == 2)
+				 {
+					 px++;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel2();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 9 && py == 2)
+				 {
+					 px++;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel2();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 10 && py == 2)
+				 {
+					 px++;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel2();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 11 && py == 2)
+				 {
+					 px++;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel2();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 7 && py == 3)
+				 {
+					 px++;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel2();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 8 && py == 3)
+				 {
+					 px++;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel2();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 7 && py == 4)
+				 {
+					 px++;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel2();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 8 && py == 4)
+				 {
+					 px++;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel2();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 6 && py == 4)
+				 {
+					 px++;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel2();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
 				 }
 
 				 if (px == 5 && py == 4)
@@ -871,13 +4408,66 @@ private: System::Void button2_Click(System::Object^  sender, System::EventArgs^ 
 					 px++;
 					 Refresh();
 					 g->DrawImage(door, 0 * 35, 0 * 35);
-					 g->DrawImage(wall, 5 * 35, 4 * 35);
+					 drawWallLevel2();
 					 g->DrawImage(player, px * 35, py * 35);
 					 if (ehealth > 0)
 					 {
 						 g->DrawImage(enemy, ex * 35, ey * 35);
 					 }
 				 }
+
+				 if (px == 4 && py == 4)
+				 {
+					 px++;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel2();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 3 && py == 4)
+				 {
+					 px++;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel2();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 11 && py == 3)
+				 {
+					 px++;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel2();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 11 && py == 4)
+				 {
+					 px++;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel2();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
 			 }
 }
 private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
@@ -885,68 +4475,24 @@ private: System::Void button1_Click(System::Object^  sender, System::EventArgs^ 
 			 int emove = rand() % 4 + 1;
 			 Refresh();
 
-			 if (phealth > 0)
-			 {
-				 if (py > 0)
-				 {
-					 py--;
-					 g->DrawImage(player, px * 35, py * 35);
-				 }
-				 else g->DrawImage(player, px * 35, py * 35);
-			 }
+
 
 			 if (level == 1)
 			 {
 				 g->DrawImage(door, 0 * 35, 0 * 35);
-				 g->DrawImage(wall, 1 * 35, 1 * 35);
+				 drawWallLevel1();
 
-				 switch (emove)
+				 if (phealth > 0)
 				 {
-				 case 1:
-					 if (ehealth > 0 && phealth > 0)
+					 if (py > 0)
 					 {
-						 if (ey < 5)
-						 {
-							 ey++;
-							 g->DrawImage(enemy, ex * 35, ey * 35);
-						 }
-						 else g->DrawImage(enemy, ex * 35, ey * 35);
-						 break;
-					 }
-				 case 2:
-					 if (ehealth > 0 && phealth > 0)
-					 {
-						 if (ex < 17)
-						 {
-							 ex++;
-							 g->DrawImage(enemy, ex * 35, ey * 35);
-						 }
-						 else g->DrawImage(enemy, ex * 35, ey * 35);
-						 break;
-					 }
-				 case 3:
-					 if (ehealth > 0 && phealth > 0)
-					 {
-						 if (ey > 0)
-						 {
-							 ey--;
-							 g->DrawImage(enemy, ex * 35, ey * 35);
-						 }
-						 else g->DrawImage(enemy, ex * 35, ey * 35);
-						 break;
-					 }
-				 case 4:
-					 if (ehealth > 0 && phealth > 0)
-					 {
-						 if (ex > 0)
-						 {
-							 ex--;
-							 g->DrawImage(enemy, ex * 35, ey * 35);
-						 }
-						 else g->DrawImage(enemy, ex * 35, ey * 35);
-						 break;
-					 }
+						 py--;
+						 g->DrawImage(player, px * 35, py * 35);
+					}
+					else g->DrawImage(player, px * 35, py * 35);
 				 }
+
+				 E1AILevel1();
 
 				 if (ey == py && ex == px)
 				 {
@@ -960,14 +4506,14 @@ private: System::Void button1_Click(System::Object^  sender, System::EventArgs^ 
 					 Refresh();
 					 g->DrawImage(player, px * 35, py * 35);
 					 g->DrawImage(door, 0 * 35, 0 * 35);
-					 g->DrawImage(wall, 1 * 35, 1 * 35);
+					 drawWallLevel1();
 				 }
 
 				 if (phealth == 0)
 				 {
 					 Refresh();
 					 g->DrawImage(door, 0 * 35, 0 * 35);
-					 g->DrawImage(wall, 1 * 35, 1 * 35);
+					 drawWallLevel1();
 					 g->DrawImage(enemy, ex * 35, ey * 35);
 					 label1->Text = "DEAD";
 				 }
@@ -984,12 +4530,259 @@ private: System::Void button1_Click(System::Object^  sender, System::EventArgs^ 
 					 level++;
 				 }
 
-				 if (px == 5 && py == 4)
+				 if (px == 7 && py == 0)
 				 {
 					 py++;
 					 Refresh();
 					 g->DrawImage(door, 0 * 35, 0 * 35);
-					 g->DrawImage(wall, 1 * 35, 1 * 35);
+					 drawWallLevel1();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 8 && py == 0)
+				 {
+					 py++;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel1();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 7 && py == 1)
+				 {
+					 py++;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel1();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 8 && py == 1)
+				 {
+					 py++;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel1();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 1 && py == 2)
+				 {
+					 py++;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel1();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 2 && py == 2)
+				 {
+					 py++;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel1();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 3 && py == 2)
+				 {
+					 py++;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel1();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 4 && py == 2)
+				 {
+					 py++;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel1();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 5 && py == 2)
+				 {
+					 py++;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel1();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 6 && py == 2)
+				 {
+					 py++;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel1();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 7 && py == 2)
+				 {
+					 py++;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel1();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 8 && py == 2)
+				 {
+					 py++;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel1();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 9 && py == 2)
+				 {
+					 py++;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel1();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 10 && py == 2)
+				 {
+					 py++;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel1();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 11 && py == 2)
+				 {
+					 py++;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel1();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 12 && py == 2)
+				 {
+					 py++;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel1();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 13 && py == 2)
+				 {
+					 py++;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel1();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 14 && py == 2)
+				 {
+					 py++;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel1();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 7 && py == 3)
+				 {
+					 py++;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel1();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 8 && py == 3)
+				 {
+					 py++;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel1();
 					 g->DrawImage(player, px * 35, py * 35);
 					 if (ehealth > 0)
 					 {
@@ -1001,55 +4794,19 @@ private: System::Void button1_Click(System::Object^  sender, System::EventArgs^ 
 			 if (level == 2)
 			 {
 				 g->DrawImage(door, 0 * 35, 0 * 35);
-				 g->DrawImage(wall, 5 * 35, 4 * 35);
+				 drawWallLevel2();
 
-				 switch (emove)
+				 if (phealth > 0)
 				 {
-				 case 1:
-					 if (ehealth > 0 && phealth > 0)
+					 if (py > 0)
 					 {
-						 if (ey < 5)
-						 {
-							 ey++;
-							 g->DrawImage(enemy, ex * 35, ey * 35);
-						 }
-						 else g->DrawImage(enemy, ex * 35, ey * 35);
-						 break;
+						 py--;
+						 g->DrawImage(player, px * 35, py * 35);
 					 }
-				 case 2:
-					 if (ehealth > 0 && phealth > 0)
-					 {
-						 if (ex < 17)
-						 {
-							 ex++;
-							 g->DrawImage(enemy, ex * 35, ey * 35);
-						 }
-						 else g->DrawImage(enemy, ex * 35, ey * 35);
-						 break;
-					 }
-				 case 3:
-					 if (ehealth > 0 && phealth > 0)
-					 {
-						 if (ey > 0)
-						 {
-							 ey--;
-							 g->DrawImage(enemy, ex * 35, ey * 35);
-						 }
-						 else g->DrawImage(enemy, ex * 35, ey * 35);
-						 break;
-					 }
-				 case 4:
-					 if (ehealth > 0 && phealth > 0)
-					 {
-						 if (ex > 0)
-						 {
-							 ex--;
-							 g->DrawImage(enemy, ex * 35, ey * 35);
-						 }
-						 else g->DrawImage(enemy, ex * 35, ey * 35);
-						 break;
-					 }
+					 else g->DrawImage(player, px * 35, py * 35);
 				 }
+
+				 E1AILevel2();
 
 				 if (ey == py && ex == px)
 				 {
@@ -1063,14 +4820,14 @@ private: System::Void button1_Click(System::Object^  sender, System::EventArgs^ 
 					 Refresh();
 					 g->DrawImage(player, px * 35, py * 35);
 					 g->DrawImage(door, 0 * 35, 0 * 35);
-					 g->DrawImage(wall, 5 * 35, 4 * 35);
+					 drawWallLevel2();
 				 }
 
 				 if (phealth == 0)
 				 {
 					 Refresh();
 					 g->DrawImage(door, 0 * 35, 0 * 35);
-					 g->DrawImage(wall, 5 * 35, 4 * 35);
+					 drawWallLevel2();
 					 g->DrawImage(enemy, ex * 35, ey * 35);
 					 label1->Text = "DEAD";
 				 }
@@ -1086,18 +4843,253 @@ private: System::Void button1_Click(System::Object^  sender, System::EventArgs^ 
 					 level++;
 				 }
 
-				 if (px == 5 && py == 4)
+				 if (px == 8 && py == 1)
 				 {
 					 py++;
 					 Refresh();
 					 g->DrawImage(door, 0 * 35, 0 * 35);
-					 g->DrawImage(wall, 5 * 35, 4 * 35);
+					 drawWallLevel2();
 					 g->DrawImage(player, px * 35, py * 35);
 					 if (ehealth > 0)
 					 {
 						 g->DrawImage(enemy, ex * 35, ey * 35);
 					 }
 				 }
+
+				 if (px == 4 && py == 2)
+				 {
+					 py++;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel2();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 5 && py == 2)
+				 {
+					 py++;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel2();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 6 && py == 2)
+				 {
+					 py++;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel2();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 7 && py == 2)
+				 {
+					 py++;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel2();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 8 && py == 2)
+				 {
+					 py++;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel2();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 9 && py == 2)
+				 {
+					 py++;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel2();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 10 && py == 2)
+				 {
+					 py++;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel2();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 11 && py == 2)
+				 {
+					 py++;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel2();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 7 && py == 3)
+				 {
+					 py++;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel2();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 8 && py == 3)
+				 {
+					 py++;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel2();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 7 && py == 4)
+				 {
+					 py++;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel2();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 8 && py == 4)
+				 {
+					 py++;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel2();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 6 && py == 4)
+				 {
+					 py++;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel2();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 5 && py == 4)
+				 {
+					 py++;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel2();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 4 && py == 4)
+				 {
+					 py++;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel2();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 3 && py == 4)
+				 {
+					 py++;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel2();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 11 && py == 3)
+				 {
+					 py++;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel2();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
+				 if (px == 11 && py == 4)
+				 {
+					 py++;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 drawWallLevel2();
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+
 			 }
 }
 };

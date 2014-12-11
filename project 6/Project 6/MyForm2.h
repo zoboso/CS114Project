@@ -191,6 +191,7 @@ namespace Project6 {
 		int ehealth = 1;
 		int phealth = 2;
 		bool key = false;
+		int level = 1;
 		
 	private: System::Void MyForm_Load(System::Object^  sender, System::EventArgs^  e) {
 				  g = panel1->CreateGraphics();
@@ -206,15 +207,29 @@ namespace Project6 {
 
 
 	}
-	private: System::Void panel1_Paint(System::Object^  sender, System::Windows::Forms::PaintEventArgs^  e) {		 
+	private: System::Void panel1_Paint(System::Object^  sender, System::Windows::Forms::PaintEventArgs^  e) {
+
+				 if (px == 0 && py == 0 && ey == 4 && ex == 16 && level == 1)
+				 {
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 g->DrawImage(wall, 1 * 35, 1 * 35);
+					 g->DrawImage(player, px * 35, py * 35);
+					 g->DrawImage(enemy, ex * 35, ey * 35);
+				 }
+
+				 if (px == 0 && py == 0 && ey == 4 && ex == 16 && level == 2)
+				 {
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 g->DrawImage(wall, 5 * 35, 4 * 35);
+					 g->DrawImage(player, px * 35, py * 35);
+					 g->DrawImage(enemy, ex * 35, ey * 35);
+				 }
 	}
 private: System::Void button3_Click(System::Object^  sender, System::EventArgs^  e) {
 			 srand(time(NULL));
 			 int emove = rand() % 4 + 1;
 			 Refresh();
 
-			 g->DrawImage(door, 0 * 35, 0 * 35);
-			 g->DrawImage(wall, 1 * 35, 1 * 35);
 			 if (phealth > 0)
 			 {
 				 if (px < 17)
@@ -222,121 +237,212 @@ private: System::Void button3_Click(System::Object^  sender, System::EventArgs^ 
 					 px++;
 					 g->DrawImage(player, px * 35, py * 35);
 				 }
-				 else g->DrawImage(player, px * 35, py * 35);
+					else g->DrawImage(player, px * 35, py * 35);
 			 }
 
-				 
-				switch (emove)
+			 if (level == 1)
+			 {
+				 g->DrawImage(door, 0 * 35, 0 * 35);
+				 g->DrawImage(wall, 1 * 35, 1 * 35);
+
+				 switch (emove)
 				 {
-					 case 1:
-						 if (ehealth > 0 && phealth > 0)
+				 case 1:
+					 if (ehealth > 0 && phealth > 0)
+					 {
+						 if (ey < 5)
 						 {
-							 if (ey < 5)
-							 {
-								 ey++;
-								 g->DrawImage(enemy, ex * 35, ey * 35);
-							 }
-							 else g->DrawImage(enemy, ex * 35, ey * 35);
-							 break;
+							 ey++;
+							 g->DrawImage(enemy, ex * 35, ey * 35);
 						 }
-					 case 2:
-						 if (ehealth > 0 && phealth > 0)
+						 else g->DrawImage(enemy, ex * 35, ey * 35);
+						 break;
+					 }
+				 case 2:
+					 if (ehealth > 0 && phealth > 0)
+					 {
+						 if (ex < 17)
 						 {
-							 if (ex < 17)
-							 {
-								 ex++;
-								 g->DrawImage(enemy, ex * 35, ey * 35);
-							 }
-							 else g->DrawImage(enemy, ex * 35, ey * 35);
-							 break;
+							 ex++;
+							 g->DrawImage(enemy, ex * 35, ey * 35);
 						 }
-					 case 3:
-						 if (ehealth > 0 && phealth > 0)
+						 else g->DrawImage(enemy, ex * 35, ey * 35);
+						 break;
+					 }
+				 case 3:
+					 if (ehealth > 0 && phealth > 0)
+					 {
+						 if (ey > 0)
 						 {
-							 if (ey > 0)
-							 {
-								 ey--;
-								 g->DrawImage(enemy, ex * 35, ey * 35);
-							 }
-							 else g->DrawImage(enemy, ex * 35, ey * 35);
-							 break;
+							 ey--;
+							 g->DrawImage(enemy, ex * 35, ey * 35);
 						 }
-					 case 4:
-						 if (ehealth > 0 && phealth > 0)
+						 else g->DrawImage(enemy, ex * 35, ey * 35);
+						 break;
+					 }
+				 case 4:
+					 if (ehealth > 0 && phealth > 0)
+					 {
+						 if (ex > 0)
 						 {
-							 if (ex > 0)
-							 {
-								 ex--;
-								 g->DrawImage(enemy, ex * 35, ey * 35);
-							 }
-							 else g->DrawImage(enemy, ex * 35, ey * 35);
-							 break;
+							 ex--;
+							 g->DrawImage(enemy, ex * 35, ey * 35);
 						 }
-				 }	
+						 else g->DrawImage(enemy, ex * 35, ey * 35);
+						 break;
+					 }
+				 }
 
-				if (ey == py && ex == px)
-				{
-					ehealth--;
-					phealth--;
-					key = true;
-				}
+				 if (ey == py && ex == px)
+				 {
+					 ehealth--;
+					 phealth--;
+					 key = true;
+				 }
 
-				if (ehealth == 0)
-				{
-					Refresh();
-					g->DrawImage(player, px * 35, py * 35);
-					g->DrawImage(door, 0 * 35, 0 * 35);
-					g->DrawImage(wall, 1 * 35, 1 * 35);
-				}
+				 if (ehealth == 0)
+				 {
+					 Refresh();
+					 g->DrawImage(player, px * 35, py * 35);
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 g->DrawImage(wall, 1 * 35, 1 * 35);
+				 }
 
-				if (phealth == 0)
-				{
-					Refresh();
-					g->DrawImage(door, 0 * 35, 0 * 35);
-					g->DrawImage(wall, 1 * 35, 1 * 35);
-					g->DrawImage(enemy, ex * 35, ey * 35);
-					label1->Text = "DEAD";
-				}
+				 if (phealth == 0)
+				 {
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 g->DrawImage(wall, 1 * 35, 1 * 35);
+					 g->DrawImage(enemy, ex * 35, ey * 35);
+					 label1->Text = "DEAD";
+				 }
 
-				if (py == 0 && px == 0 && key == true)
-				{
-					px = 0;
-					py = 0;
-					ex = 16;
-					ey = 4;
-					ehealth = 1;
-					key = false;
+				 if (py == 0 && px == 0 && key == true)
+				 {
+					 Refresh();
+					 px = 0;
+					 py = 0;
+					 ex = 16;
+					 ey = 4;
+					 key = false;
+					 ehealth = 1;
+					 level++;
+				 }
 
-					Refresh();
+				 if (px == 1 && py == 1)
+				 {
+					 px--;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 g->DrawImage(wall, 1 * 35, 1 * 35);
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+			 }
 
-					g->DrawImage(enemy, ex * 35, ey * 35);
-					g->DrawImage(wall, 1 * 35, 1 * 35);
-					g->DrawImage(player, px * 35, py * 35);
-					g->DrawImage(door, 0 * 35, 0 * 35);
+			 if (level == 2)
+			 {
+				 g->DrawImage(door, 0 * 35, 0 * 35);
+				 g->DrawImage(wall, 5 * 35, 4 * 35);
 
-				}
+				 switch (emove)
+				 {
+				 case 1:
+					 if (ehealth > 0 && phealth > 0)
+					 {
+						 if (ey < 5)
+						 {
+							 ey++;
+							 g->DrawImage(enemy, ex * 35, ey * 35);
+						 }
+						 else g->DrawImage(enemy, ex * 35, ey * 35);
+						 break;
+					 }
+				 case 2:
+					 if (ehealth > 0 && phealth > 0)
+					 {
+						 if (ex < 17)
+						 {
+							 ex++;
+							 g->DrawImage(enemy, ex * 35, ey * 35);
+						 }
+						 else g->DrawImage(enemy, ex * 35, ey * 35);
+						 break;
+					 }
+				 case 3:
+					 if (ehealth > 0 && phealth > 0)
+					 {
+						 if (ey > 0)
+						 {
+							 ey--;
+							 g->DrawImage(enemy, ex * 35, ey * 35);
+						 }
+						 else g->DrawImage(enemy, ex * 35, ey * 35);
+						 break;
+					 }
+				 case 4:
+					 if (ehealth > 0 && phealth > 0)
+					 {
+						 if (ex > 0)
+						 {
+							 ex--;
+							 g->DrawImage(enemy, ex * 35, ey * 35);
+						 }
+						 else g->DrawImage(enemy, ex * 35, ey * 35);
+						 break;
+					 }
+				 }
 
-				if (px == 1 && py == 1)
-				{
-					px--;
-					Refresh();
-					g->DrawImage(door, 0 * 35, 0 * 35);
-					g->DrawImage(wall, 1 * 35, 1 * 35);
-					g->DrawImage(player, px * 35, py * 35);
-					if (ehealth > 0)
-					{
-						g->DrawImage(enemy, ex * 35, ey * 35);
-					}
-				}
+				 if (ey == py && ex == px)
+				 {
+					 ehealth--;
+					 phealth--;
+					 key = true;
+				 }
 
+				 if (ehealth == 0)
+				 {
+					 Refresh();
+					 g->DrawImage(player, px * 35, py * 35);
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 g->DrawImage(wall, 5 * 35, 4 * 35);
+				 }
+
+				 if (phealth == 0)
+				 {
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 g->DrawImage(wall, 5 * 35, 4 * 35);
+					 g->DrawImage(enemy, ex * 35, ey * 35);
+					 label1->Text = "DEAD";
+				 }
+
+				 if (py == 0 && px == 0 && key == true)
+				 {
+					 level++;
+				 }
+
+				 if (px == 5 && py == 4)
+				 {
+					 px--;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 g->DrawImage(wall, 5 * 35, 4 * 35);
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+			 }
 }
 private: System::Void button4_Click(System::Object^  sender, System::EventArgs^  e) {
 			 srand(time(NULL));
 			 int emove = rand() % 4 + 1;
 			 Refresh();
-
-			 g->DrawImage(door, 0 * 35, 0 * 35);
-			 g->DrawImage(wall, 1 * 35, 1 * 35);
 
 			 if (phealth > 0)
 			 {
@@ -348,108 +454,208 @@ private: System::Void button4_Click(System::Object^  sender, System::EventArgs^ 
 				 else g->DrawImage(player, px * 35, py * 35);
 			 }
 
-			 switch (emove)
+			 if (level == 1)
 			 {
-			 case 1:
-				 if (ehealth > 0 && phealth > 0)
-				 {
-					 if (ey < 5)
-					 {
-						 ey++;
-						 g->DrawImage(enemy, ex * 35, ey * 35);
-					 }
-					 else g->DrawImage(enemy, ex * 35, ey * 35);
-					 break;
-				 }
-			 case 2:
-				 if (ehealth > 0 && phealth > 0)
-				 {
-					 if (ex < 17)
-					 {
-						 ex++;
-						 g->DrawImage(enemy, ex * 35, ey * 35);
-					 }
-					 else g->DrawImage(enemy, ex * 35, ey * 35);
-					 break;
-				 }
-			 case 3:
-				 if (ehealth > 0 && phealth > 0)
-				 {
-					 if (ey > 0)
-					 {
-						 ey--;
-						 g->DrawImage(enemy, ex * 35, ey * 35);
-					 }
-					 else g->DrawImage(enemy, ex * 35, ey * 35);
-					 break;
-				 }
-			 case 4:
-				 if (ehealth > 0 && phealth > 0)
-				 {
-					 if (ex > 0)
-					 {
-						 ex--;
-						 g->DrawImage(enemy, ex * 35, ey * 35);
-					 }
-					 else g->DrawImage(enemy, ex * 35, ey * 35);
-					 break;
-				 }
-			 }
-
-			 if (ey == py && ex == px)
-			 {
-				 ehealth--;
-				 phealth--;
-				 key = true;
-			 }
-
-			 if (ehealth == 0)
-			 {
-				 Refresh();
-				 
 				 g->DrawImage(door, 0 * 35, 0 * 35);
 				 g->DrawImage(wall, 1 * 35, 1 * 35);
-				 g->DrawImage(player, px * 35, py * 35);
-			 }
 
-			 if (phealth == 0)
-			 {
-				 Refresh();
-				 g->DrawImage(door, 0 * 35, 0 * 35);
-				 g->DrawImage(wall, 1 * 35, 1 * 35);
-				 g->DrawImage(enemy, ex * 35, ey * 35);
-				 label1->Text = "DEAD";
-			 }
-
-			 if (py == 0 && px == 0 && key == true)
-			 {
-				 px = 0;
-				 py = 0;
-				 ex = 16;
-				 ey = 4;
-				 ehealth = 1;
-				 key = false;
-
-				 Refresh();
-				 
-				 g->DrawImage(enemy, ex * 35, ey * 35);
-				 g->DrawImage(wall, 1 * 35, 1 * 35);
-				 g->DrawImage(player, px * 35, py * 35);
-				 g->DrawImage(door, 0 * 35, 0 * 35);
-			 }
-
-			 if (px == 1 && py == 1)
-			 {
-				 py--;
-				 Refresh();
-				 
-				 g->DrawImage(door, 0 * 35, 0 * 35);
-				 g->DrawImage(wall, 1 * 35, 1 * 35);
-				 g->DrawImage(player, px * 35, py * 35);
-
-				 if (ehealth > 0)
+				 switch (emove)
 				 {
+				 case 1:
+					 if (ehealth > 0 && phealth > 0)
+					 {
+						 if (ey < 5)
+						 {
+							 ey++;
+							 g->DrawImage(enemy, ex * 35, ey * 35);
+						 }
+						 else g->DrawImage(enemy, ex * 35, ey * 35);
+						 break;
+					 }
+				 case 2:
+					 if (ehealth > 0 && phealth > 0)
+					 {
+						 if (ex < 17)
+						 {
+							 ex++;
+							 g->DrawImage(enemy, ex * 35, ey * 35);
+						 }
+						 else g->DrawImage(enemy, ex * 35, ey * 35);
+						 break;
+					 }
+				 case 3:
+					 if (ehealth > 0 && phealth > 0)
+					 {
+						 if (ey > 0)
+						 {
+							 ey--;
+							 g->DrawImage(enemy, ex * 35, ey * 35);
+						 }
+						 else g->DrawImage(enemy, ex * 35, ey * 35);
+						 break;
+					 }
+				 case 4:
+					 if (ehealth > 0 && phealth > 0)
+					 {
+						 if (ex > 0)
+						 {
+							 ex--;
+							 g->DrawImage(enemy, ex * 35, ey * 35);
+						 }
+						 else g->DrawImage(enemy, ex * 35, ey * 35);
+						 break;
+					 }
+				 }
+
+				 if (ey == py && ex == px)
+				 {
+					 ehealth--;
+					 phealth--;
+					 key = true;
+				 }
+
+				 if (ehealth == 0)
+				 {
+					 Refresh();
+					 g->DrawImage(player, px * 35, py * 35);
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 g->DrawImage(wall, 1 * 35, 1 * 35);
+				 }
+
+				 if (phealth == 0)
+				 {
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 g->DrawImage(wall, 1 * 35, 1 * 35);
 					 g->DrawImage(enemy, ex * 35, ey * 35);
+					 label1->Text = "DEAD";
+				 }
+
+				 if (py == 0 && px == 0 && key == true)
+				 {
+					 Refresh();
+					 px = 0;
+					 py = 0;
+					 ex = 16;
+					 ey = 4;
+					 key = false;
+					 ehealth = 1;
+					 level++;
+				 }
+
+				 if (px == 1 && py == 1)
+				 {
+					 py--;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 g->DrawImage(wall, 1 * 35, 1 * 35);
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+			 }
+
+			 if (level == 2)
+			 {
+				 g->DrawImage(door, 0 * 35, 0 * 35);
+				 g->DrawImage(wall, 5 * 35, 4 * 35);
+
+				 switch (emove)
+				 {
+				 case 1:
+					 if (ehealth > 0 && phealth > 0)
+					 {
+						 if (ey < 5)
+						 {
+							 ey++;
+							 g->DrawImage(enemy, ex * 35, ey * 35);
+						 }
+						 else g->DrawImage(enemy, ex * 35, ey * 35);
+						 break;
+					 }
+				 case 2:
+					 if (ehealth > 0 && phealth > 0)
+					 {
+						 if (ex < 17)
+						 {
+							 ex++;
+							 g->DrawImage(enemy, ex * 35, ey * 35);
+						 }
+						 else g->DrawImage(enemy, ex * 35, ey * 35);
+						 break;
+					 }
+				 case 3:
+					 if (ehealth > 0 && phealth > 0)
+					 {
+						 if (ey > 0)
+						 {
+							 ey--;
+							 g->DrawImage(enemy, ex * 35, ey * 35);
+						 }
+						 else g->DrawImage(enemy, ex * 35, ey * 35);
+						 break;
+					 }
+				 case 4:
+					 if (ehealth > 0 && phealth > 0)
+					 {
+						 if (ex > 0)
+						 {
+							 ex--;
+							 g->DrawImage(enemy, ex * 35, ey * 35);
+						 }
+						 else g->DrawImage(enemy, ex * 35, ey * 35);
+						 break;
+					 }
+				 }
+
+				 if (ey == py && ex == px)
+				 {
+					 ehealth--;
+					 phealth--;
+					 key = true;
+				 }
+
+				 if (ehealth == 0)
+				 {
+					 Refresh();
+					 g->DrawImage(player, px * 35, py * 35);
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 g->DrawImage(wall, 5 * 35, 4 * 35);
+				 }
+
+				 if (phealth == 0)
+				 {
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 g->DrawImage(wall, 5 * 35, 4 * 35);
+					 g->DrawImage(enemy, ex * 35, ey * 35);
+					 label1->Text = "DEAD";
+				 }
+
+				 if (py == 0 && px == 0 && key == true)
+				 {
+					 px = 0;
+					 py = 0;
+					 ex = 16;
+					 ey = 4;
+					 ehealth = 1;
+					 key = false;
+					 level++;
+				 }
+
+				 if (px == 5 && py == 4)
+				 {
+					 py--;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 g->DrawImage(wall, 5 * 35, 4 * 35);
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
 				 }
 			 }
 }
@@ -458,8 +664,6 @@ private: System::Void button2_Click(System::Object^  sender, System::EventArgs^ 
 			 int emove = rand() % 4 + 1;
 			 Refresh();
 
-			 g->DrawImage(door, 0 * 35, 0 * 35);
-			 g->DrawImage(wall, 1 * 35, 1 * 35);
 			 if (phealth > 0)
 			 {
 				 if (px > 0)
@@ -470,109 +674,209 @@ private: System::Void button2_Click(System::Object^  sender, System::EventArgs^ 
 				 else g->DrawImage(player, px * 35, py * 35);
 			 }
 
-			 switch (emove)
+			 if (level == 1)
 			 {
-			 case 1:
-				 if (ehealth > 0 && phealth > 0)
-				 {
-					 if (ey < 5)
-					 {
-						 ey++;
-						 g->DrawImage(enemy, ex * 35, ey * 35);
-					 }
-					 else g->DrawImage(enemy, ex * 35, ey * 35);
-					 break;
-				 }
-			 case 2:
-				 if (ehealth > 0 && phealth > 0)
-				 {
-					 if (ex < 17)
-					 {
-						 ex++;
-						 g->DrawImage(enemy, ex * 35, ey * 35);
-					 }
-					 else g->DrawImage(enemy, ex * 35, ey * 35);
-					 break;
-				 }
-			 case 3:
-				 if (ehealth > 0 && phealth > 0)
-				 {
-					 if (ey > 0)
-					 {
-						 ey--;
-						 g->DrawImage(enemy, ex * 35, ey * 35);
-					 }
-					 else g->DrawImage(enemy, ex * 35, ey * 35);
-					 break;
-				 }
-			 case 4:
-				 if (ehealth > 0 && phealth > 0)
-				 {
-					 if (ex > 0)
-					 {
-						 ex--;
-						 g->DrawImage(enemy, ex * 35, ey * 35);
-					 }
-					 else g->DrawImage(enemy, ex * 35, ey * 35);
-					 break;
-				 }
-			 }
-
-			 if (ey == py && ex == px)
-			 {
-				 ehealth--;
-				 phealth--;
-				 key = true;
-			 }
-
-			 if (ehealth == 0)
-			 {
-				 Refresh();
-				 
 				 g->DrawImage(door, 0 * 35, 0 * 35);
 				 g->DrawImage(wall, 1 * 35, 1 * 35);
-				 g->DrawImage(player, px * 35, py * 35);
-			 }
 
-			 if (phealth == 0)
-			 {
-				 Refresh();
-				 g->DrawImage(door, 0 * 35, 0 * 35);
-				 g->DrawImage(wall, 1 * 35, 1 * 35);
-				 g->DrawImage(enemy, ex * 35, ey * 35);
-				 label1->Text = "DEAD";
-			 }
 
-			 if (py == 0 && px == 0 && key == true)
-			 {
-				 px = 0;
-				 py = 0;
-				 ex = 16;
-				 ey = 4;
-				 ehealth = 1;
-				 key = false;
-
-				 Refresh();
-				 
-				 g->DrawImage(enemy, ex * 35, ey * 35);
-				;
-				 g->DrawImage(wall, 1 * 35, 1 * 35);
-				 g->DrawImage(player, px * 35, py * 35); 
-				 g->DrawImage(door, 0 * 35, 0 * 35);
-			 }
-
-			 if (px == 1 && py == 1)
-			 {
-				 px++;
-				 Refresh();
-				 
-				 g->DrawImage(door, 0 * 35, 0 * 35);
-				 g->DrawImage(wall, 1 * 35, 1 * 35);
-				 g->DrawImage(player, px * 35, py * 35);
-
-				 if (ehealth > 0)
+				 switch (emove)
 				 {
+				 case 1:
+					 if (ehealth > 0 && phealth > 0)
+					 {
+						 if (ey < 5)
+						 {
+							 ey++;
+							 g->DrawImage(enemy, ex * 35, ey * 35);
+						 }
+						 else g->DrawImage(enemy, ex * 35, ey * 35);
+						 break;
+					 }
+				 case 2:
+					 if (ehealth > 0 && phealth > 0)
+					 {
+						 if (ex < 17)
+						 {
+							 ex++;
+							 g->DrawImage(enemy, ex * 35, ey * 35);
+						 }
+						 else g->DrawImage(enemy, ex * 35, ey * 35);
+						 break;
+					 }
+				 case 3:
+					 if (ehealth > 0 && phealth > 0)
+					 {
+						 if (ey > 0)
+						 {
+							 ey--;
+							 g->DrawImage(enemy, ex * 35, ey * 35);
+						 }
+						 else g->DrawImage(enemy, ex * 35, ey * 35);
+						 break;
+					 }
+				 case 4:
+					 if (ehealth > 0 && phealth > 0)
+					 {
+						 if (ex > 0)
+						 {
+							 ex--;
+							 g->DrawImage(enemy, ex * 35, ey * 35);
+						 }
+						 else g->DrawImage(enemy, ex * 35, ey * 35);
+						 break;
+					 }
+				 }
+
+				 if (ey == py && ex == px)
+				 {
+					 ehealth--;
+					 phealth--;
+					 key = true;
+				 }
+
+				 if (ehealth == 0)
+				 {
+					 Refresh();
+					 g->DrawImage(player, px * 35, py * 35);
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 g->DrawImage(wall, 1 * 35, 1 * 35);
+				 }
+
+				 if (phealth == 0)
+				 {
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 g->DrawImage(wall, 1 * 35, 1 * 35);
 					 g->DrawImage(enemy, ex * 35, ey * 35);
+					 label1->Text = "DEAD";
+				 }
+
+				 if (py == 0 && px == 0 && key == true)
+				 {
+					 Refresh();
+					 px = 0;
+					 py = 0;
+					 ex = 16;
+					 ey = 4;
+					 key = false;
+					 ehealth = 1;
+					 level++;
+				 }
+
+				 if (px == 1 && py == 1)
+				 {
+					 px++;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 g->DrawImage(wall, 1 * 35, 1 * 35);
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+			 }
+
+			 if (level == 2)
+			 {
+				 g->DrawImage(door, 0 * 35, 0 * 35);
+				 g->DrawImage(wall, 5 * 35, 4 * 35);
+
+				 switch (emove)
+				 {
+				 case 1:
+					 if (ehealth > 0 && phealth > 0)
+					 {
+						 if (ey < 5)
+						 {
+							 ey++;
+							 g->DrawImage(enemy, ex * 35, ey * 35);
+						 }
+						 else g->DrawImage(enemy, ex * 35, ey * 35);
+						 break;
+					 }
+				 case 2:
+					 if (ehealth > 0 && phealth > 0)
+					 {
+						 if (ex < 17)
+						 {
+							 ex++;
+							 g->DrawImage(enemy, ex * 35, ey * 35);
+						 }
+						 else g->DrawImage(enemy, ex * 35, ey * 35);
+						 break;
+					 }
+				 case 3:
+					 if (ehealth > 0 && phealth > 0)
+					 {
+						 if (ey > 0)
+						 {
+							 ey--;
+							 g->DrawImage(enemy, ex * 35, ey * 35);
+						 }
+						 else g->DrawImage(enemy, ex * 35, ey * 35);
+						 break;
+					 }
+				 case 4:
+					 if (ehealth > 0 && phealth > 0)
+					 {
+						 if (ex > 0)
+						 {
+							 ex--;
+							 g->DrawImage(enemy, ex * 35, ey * 35);
+						 }
+						 else g->DrawImage(enemy, ex * 35, ey * 35);
+						 break;
+					 }
+				 }
+
+				 if (ey == py && ex == px)
+				 {
+					 ehealth--;
+					 phealth--;
+					 key = true;
+				 }
+
+				 if (ehealth == 0)
+				 {
+					 Refresh();
+					 g->DrawImage(player, px * 35, py * 35);
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 g->DrawImage(wall, 5 * 35, 4 * 35);
+				 }
+
+				 if (phealth == 0)
+				 {
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 g->DrawImage(wall, 5 * 35, 4 * 35);
+					 g->DrawImage(enemy, ex * 35, ey * 35);
+					 label1->Text = "DEAD";
+				 }
+
+				 if (py == 0 && px == 0 && key == true)
+				 {
+					 px = 0;
+					 py = 0;
+					 ex = 16;
+					 ey = 4;
+					 key = false;
+					 ehealth = 1;
+					 level++;
+				 }
+
+				 if (px == 5 && py == 4)
+				 {
+					 px++;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 g->DrawImage(wall, 5 * 35, 4 * 35);
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
 				 }
 			 }
 }
@@ -581,8 +885,6 @@ private: System::Void button1_Click(System::Object^  sender, System::EventArgs^ 
 			 int emove = rand() % 4 + 1;
 			 Refresh();
 
-			 g->DrawImage(door, 0 * 35, 0 * 35);
-			 g->DrawImage(wall, 1 * 35, 1 * 35);
 			 if (phealth > 0)
 			 {
 				 if (py > 0)
@@ -593,107 +895,208 @@ private: System::Void button1_Click(System::Object^  sender, System::EventArgs^ 
 				 else g->DrawImage(player, px * 35, py * 35);
 			 }
 
-			 switch (emove)
+			 if (level == 1)
 			 {
-			 case 1:
-				 if (ehealth > 0 && phealth > 0)
-				 {
-					 if (ey < 5)
-					 {
-						 ey++;
-						 g->DrawImage(enemy, ex * 35, ey * 35);
-					 }
-					 else g->DrawImage(enemy, ex * 35, ey * 35);
-					 break;
-				 }
-			 case 2:
-				 if (ehealth > 0 && phealth > 0)
-				 {
-					 if (ex < 17)
-					 {
-						 ex++;
-						 g->DrawImage(enemy, ex * 35, ey * 35);
-					 }
-					 else g->DrawImage(enemy, ex * 35, ey * 35);
-					 break;
-				 }
-			 case 3:
-				 if (ehealth > 0 && phealth > 0)
-				 {
-					 if (ey > 0)
-					 {
-						 ey--;
-						 g->DrawImage(enemy, ex * 35, ey * 35);
-					 }
-					 else g->DrawImage(enemy, ex * 35, ey * 35);
-					 break;
-				 }
-			 case 4:
-				 if (ehealth > 0 && phealth > 0)
-				 {
-					 if (ex > 0)
-					 {
-						 ex--;
-						 g->DrawImage(enemy, ex * 35, ey * 35);
-					 }
-					 else g->DrawImage(enemy, ex * 35, ey * 35);
-					 break;
-				 }
-			 }
-
-			 if (ey == py && ex == px)
-			 {
-				 ehealth--;
-				 phealth--;
-				 key = true;
-			 }
-
-			 if (ehealth == 0)
-			 {
-				 Refresh();
-				 
 				 g->DrawImage(door, 0 * 35, 0 * 35);
 				 g->DrawImage(wall, 1 * 35, 1 * 35);
-				 g->DrawImage(player, px * 35, py * 35);
-			 }
 
-			 if (phealth == 0)
-			 {
-				 Refresh();
-				 g->DrawImage(door, 0 * 35, 0 * 35);
-				 g->DrawImage(wall, 1 * 35, 1 * 35);
-				 g->DrawImage(enemy, ex * 35, ey * 35);
-				 label1->Text = "DEAD";
-			 }
-
-			 if (py == 0 && px == 0 && key == true)
-			 {
-				 px = 0;
-				 py = 0;
-				 ex = 16;
-				 ey = 4;
-				 ehealth = 1;
-				 key = false;
-
-				 Refresh();
-				 
-				 g->DrawImage(enemy, ex * 35, ey * 35);
-				 g->DrawImage(wall, 1 * 35, 1 * 35);
-				 g->DrawImage(player, px * 35, py * 35);
-				 g->DrawImage(door, 0 * 35, 0 * 35);
-			 }
-			 if (px == 1 && py == 1)
-			 {
-				 py++;
-				 Refresh();
-				 
-				 g->DrawImage(door, 0 * 35, 0 * 35);
-				 g->DrawImage(wall, 1 * 35, 1 * 35);
-				 g->DrawImage(player, px * 35, py * 35);
-
-				 if (ehealth > 0)
+				 switch (emove)
 				 {
+				 case 1:
+					 if (ehealth > 0 && phealth > 0)
+					 {
+						 if (ey < 5)
+						 {
+							 ey++;
+							 g->DrawImage(enemy, ex * 35, ey * 35);
+						 }
+						 else g->DrawImage(enemy, ex * 35, ey * 35);
+						 break;
+					 }
+				 case 2:
+					 if (ehealth > 0 && phealth > 0)
+					 {
+						 if (ex < 17)
+						 {
+							 ex++;
+							 g->DrawImage(enemy, ex * 35, ey * 35);
+						 }
+						 else g->DrawImage(enemy, ex * 35, ey * 35);
+						 break;
+					 }
+				 case 3:
+					 if (ehealth > 0 && phealth > 0)
+					 {
+						 if (ey > 0)
+						 {
+							 ey--;
+							 g->DrawImage(enemy, ex * 35, ey * 35);
+						 }
+						 else g->DrawImage(enemy, ex * 35, ey * 35);
+						 break;
+					 }
+				 case 4:
+					 if (ehealth > 0 && phealth > 0)
+					 {
+						 if (ex > 0)
+						 {
+							 ex--;
+							 g->DrawImage(enemy, ex * 35, ey * 35);
+						 }
+						 else g->DrawImage(enemy, ex * 35, ey * 35);
+						 break;
+					 }
+				 }
+
+				 if (ey == py && ex == px)
+				 {
+					 ehealth--;
+					 phealth--;
+					 key = true;
+				 }
+
+				 if (ehealth == 0)
+				 {
+					 Refresh();
+					 g->DrawImage(player, px * 35, py * 35);
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 g->DrawImage(wall, 1 * 35, 1 * 35);
+				 }
+
+				 if (phealth == 0)
+				 {
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 g->DrawImage(wall, 1 * 35, 1 * 35);
 					 g->DrawImage(enemy, ex * 35, ey * 35);
+					 label1->Text = "DEAD";
+				 }
+
+				 if (py == 0 && px == 0 && key == true)
+				 {
+					 Refresh();
+					 px = 0;
+					 py = 0;
+					 ex = 16;
+					 ey = 4;
+					 key = false;
+					 ehealth = 1;
+					 level++;
+				 }
+
+				 if (px == 5 && py == 4)
+				 {
+					 py++;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 g->DrawImage(wall, 1 * 35, 1 * 35);
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
+				 }
+			 }
+
+			 if (level == 2)
+			 {
+				 g->DrawImage(door, 0 * 35, 0 * 35);
+				 g->DrawImage(wall, 5 * 35, 4 * 35);
+
+				 switch (emove)
+				 {
+				 case 1:
+					 if (ehealth > 0 && phealth > 0)
+					 {
+						 if (ey < 5)
+						 {
+							 ey++;
+							 g->DrawImage(enemy, ex * 35, ey * 35);
+						 }
+						 else g->DrawImage(enemy, ex * 35, ey * 35);
+						 break;
+					 }
+				 case 2:
+					 if (ehealth > 0 && phealth > 0)
+					 {
+						 if (ex < 17)
+						 {
+							 ex++;
+							 g->DrawImage(enemy, ex * 35, ey * 35);
+						 }
+						 else g->DrawImage(enemy, ex * 35, ey * 35);
+						 break;
+					 }
+				 case 3:
+					 if (ehealth > 0 && phealth > 0)
+					 {
+						 if (ey > 0)
+						 {
+							 ey--;
+							 g->DrawImage(enemy, ex * 35, ey * 35);
+						 }
+						 else g->DrawImage(enemy, ex * 35, ey * 35);
+						 break;
+					 }
+				 case 4:
+					 if (ehealth > 0 && phealth > 0)
+					 {
+						 if (ex > 0)
+						 {
+							 ex--;
+							 g->DrawImage(enemy, ex * 35, ey * 35);
+						 }
+						 else g->DrawImage(enemy, ex * 35, ey * 35);
+						 break;
+					 }
+				 }
+
+				 if (ey == py && ex == px)
+				 {
+					 ehealth--;
+					 phealth--;
+					 key = true;
+				 }
+
+				 if (ehealth == 0)
+				 {
+					 Refresh();
+					 g->DrawImage(player, px * 35, py * 35);
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 g->DrawImage(wall, 5 * 35, 4 * 35);
+				 }
+
+				 if (phealth == 0)
+				 {
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 g->DrawImage(wall, 5 * 35, 4 * 35);
+					 g->DrawImage(enemy, ex * 35, ey * 35);
+					 label1->Text = "DEAD";
+				 }
+
+				 if (py == 0 && px == 0 && key == true)
+				 {
+					 px = 0;
+					 py = 0;
+					 ex = 16;
+					 ey = 4;
+					 key = false;
+					 ehealth = 1;
+					 level++;
+				 }
+
+				 if (px == 5 && py == 4)
+				 {
+					 py++;
+					 Refresh();
+					 g->DrawImage(door, 0 * 35, 0 * 35);
+					 g->DrawImage(wall, 5 * 35, 4 * 35);
+					 g->DrawImage(player, px * 35, py * 35);
+					 if (ehealth > 0)
+					 {
+						 g->DrawImage(enemy, ex * 35, ey * 35);
+					 }
 				 }
 			 }
 }

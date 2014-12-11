@@ -1,0 +1,13 @@
+where you declare your shit
+
+SoundPlayer ^player;
+
+
+
+
+in the my ford load
+
+player = gcnew System::Media::SoundPlayer();
+player->SoundLocation = "jeopardy.wav"; // Enables sound player
+player->Play(); // Plays music
+player->PlayLooping(); // Loops the music

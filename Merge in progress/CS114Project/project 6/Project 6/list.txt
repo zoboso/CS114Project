@@ -1,0 +1,8 @@
+house
+keyboard
+word
+edit
+format
+view
+file
+help

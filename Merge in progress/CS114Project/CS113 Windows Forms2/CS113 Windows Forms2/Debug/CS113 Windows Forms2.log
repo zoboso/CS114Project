@@ -1,0 +1,17 @@
+﻿Build started 12/11/2014 3:43:26 PM.
+     1>Project "K:\2014\Merge in progress\CS114Project\CS113 Windows Forms2\CS113 Windows Forms2\CS113 Windows Forms2.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /AI"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\\" /AI"C:\Program Files\Windows Kits\8.1\References\CommonConfiguration\Neutral" /AI"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\\" /Zi /clr /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /TP /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\mscorlib.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Data.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Drawing.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Windows.Forms.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Xml.dll" /analyze- /errorReport:prompt /clr:nostdlib Input.cpp
+         Input.cpp
+     1>Input.cpp(29): warning C4018: '<' : signed/unsigned mismatch
+       Link:
+         C:\Program Files\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"K:\2014\Merge in progress\CS114Project\CS113 Windows Forms2\Debug\CS113 Windows Forms2.exe" /INCREMENTAL /NOLOGO /ASSEMBLYRESOURCE:Debug\CS113_Windows_Forms2.MyForm.resources /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"K:\2014\Merge in progress\CS114Project\CS113 Windows Forms2\Debug\CS113 Windows Forms2.pdb" /ASSEMBLYDEBUG /SUBSYSTEM:WINDOWS /TLBID:1 /ENTRY:"main" /DYNAMICBASE /FIXED:NO /NXCOMPAT /MACHINE:X86 Debug\Entity.obj
+         Debug\MyForm.obj
+         Debug\Input.obj
+         "Debug\.NETFramework,Version=v4.5.AssemblyAttributes.obj"
+         CS113 Windows Forms2.vcxproj -> K:\2014\Merge in progress\CS114Project\CS113 Windows Forms2\Debug\CS113 Windows Forms2.exe
+     1>Done Building Project "K:\2014\Merge in progress\CS114Project\CS113 Windows Forms2\CS113 Windows Forms2\CS113 Windows Forms2.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:01.85

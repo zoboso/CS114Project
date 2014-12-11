@@ -1,0 +1,31 @@
+	ifstream myFile;
+	myFile.open("level" + to_string(level) + ".txt");
+	string line;
+	int row = 0;
+	while (getline(myFile, line)){
+		for (int column = 0; column < line.length(); column++){
+			char square = line[column];
+		
+			switch (square){	
+			case ' ':
+				cout << ' ';
+				break;
+			case '1':
+				cout << '#';
+				break;
+			case '2':
+				cout << 'P';
+				break;
+			case '3':
+				cout << 'E';
+				break;
+			case '4':
+				cout << 'D';
+				break;
+	
+			}
+		}
+		row++;
+		cout << endl;
+	}
+	myFile.close();

@@ -1,0 +1,133 @@
+﻿Build started 12/10/2014 1:22:23 PM.
+     1>Project "C:\Users\jverner\Desktop\New folder\CS114Project\Controller\Controller\Controller.vcxproj" on node 3 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt Entity.cpp
+         Entity.cpp
+     1>c:\users\jverner\desktop\new folder\cs114project\controller\controller\entity.h(29): error C2061: syntax error : identifier 'vector'
+     1>c:\users\jverner\desktop\new folder\cs114project\controller\controller\entity.h(30): error C2061: syntax error : identifier 'vector'
+     1>c:\users\jverner\desktop\new folder\cs114project\controller\controller\entity.h(31): error C2061: syntax error : identifier 'vector'
+     1>c:\users\jverner\desktop\new folder\cs114project\controller\controller\entity.h(32): error C2061: syntax error : identifier 'vector'
+     1>c:\users\jverner\desktop\new folder\cs114project\controller\controller\entity.cpp(8): error C2511: 'Entity::Entity(int,int,int,int,bool,bool,bool,bool,bool,int)' : overloaded member function not found in 'Entity'
+                 c:\users\jverner\desktop\new folder\cs114project\controller\controller\entity.h(6) : see declaration of 'Entity'
+     1>c:\users\jverner\desktop\new folder\cs114project\controller\controller\entity.cpp(9): error C2597: illegal reference to non-static member 'Entity::hp'
+     1>c:\users\jverner\desktop\new folder\cs114project\controller\controller\entity.cpp(10): error C2597: illegal reference to non-static member 'Entity::atk'
+     1>c:\users\jverner\desktop\new folder\cs114project\controller\controller\entity.cpp(11): error C2597: illegal reference to non-static member 'Entity::x'
+     1>c:\users\jverner\desktop\new folder\cs114project\controller\controller\entity.cpp(12): error C2597: illegal reference to non-static member 'Entity::y'
+     1>c:\users\jverner\desktop\new folder\cs114project\controller\controller\entity.cpp(13): error C2597: illegal reference to non-static member 'Entity::canAtk'
+     1>c:\users\jverner\desktop\new folder\cs114project\controller\controller\entity.cpp(14): error C2597: illegal reference to non-static member 'Entity::traversable'
+     1>c:\users\jverner\desktop\new folder\cs114project\controller\controller\entity.cpp(15): error C2597: illegal reference to non-static member 'Entity::player'
+     1>c:\users\jverner\desktop\new folder\cs114project\controller\controller\entity.cpp(16): error C2597: illegal reference to non-static member 'Entity::haskey'
+     1>c:\users\jverner\desktop\new folder\cs114project\controller\controller\entity.cpp(17): error C2597: illegal reference to non-static member 'Entity::door'
+     1>c:\users\jverner\desktop\new folder\cs114project\controller\controller\entity.cpp(18): error C2597: illegal reference to non-static member 'Entity::AIAggroRange'
+     1>c:\users\jverner\desktop\new folder\cs114project\controller\controller\entity.cpp(112): error C2511: 'void Entity::moveup(std::vector<std::vector<Entity,std::allocator<_Ty>>,std::allocator<std::vector<_Ty,std::allocator<_Ty>>>> &)' : overloaded member function not found in 'Entity'
+                 with
+                 [
+                     _Ty=Entity
+                 ]
+                 c:\users\jverner\desktop\new folder\cs114project\controller\controller\entity.h(6) : see declaration of 'Entity'
+     1>c:\users\jverner\desktop\new folder\cs114project\controller\controller\entity.cpp(113): error C2671: 'Entity::moveup' : static member functions do not have 'this' pointers
+     1>c:\users\jverner\desktop\new folder\cs114project\controller\controller\entity.cpp(113): error C2227: left of '->getx' must point to class/struct/union/generic type
+     1>c:\users\jverner\desktop\new folder\cs114project\controller\controller\entity.cpp(114): error C2671: 'Entity::moveup' : static member functions do not have 'this' pointers
+     1>c:\users\jverner\desktop\new folder\cs114project\controller\controller\entity.cpp(114): error C2227: left of '->gety' must point to class/struct/union/generic type
+     1>c:\users\jverner\desktop\new folder\cs114project\controller\controller\entity.cpp(118): error C2671: 'Entity::moveup' : static member functions do not have 'this' pointers
+     1>c:\users\jverner\desktop\new folder\cs114project\controller\controller\entity.cpp(118): error C2227: left of '->setx' must point to class/struct/union/generic type
+     1>c:\users\jverner\desktop\new folder\cs114project\controller\controller\entity.cpp(123): error C2671: 'Entity::moveup' : static member functions do not have 'this' pointers
+     1>c:\users\jverner\desktop\new folder\cs114project\controller\controller\entity.cpp(123): error C2227: left of '->sethhp' must point to class/struct/union/generic type
+     1>c:\users\jverner\desktop\new folder\cs114project\controller\controller\entity.cpp(123): error C2227: left of '->gethp' must point to class/struct/union/generic type
+     1>c:\users\jverner\desktop\new folder\cs114project\controller\controller\entity.cpp(124): error C2671: 'Entity::moveup' : static member functions do not have 'this' pointers
+     1>c:\users\jverner\desktop\new folder\cs114project\controller\controller\entity.cpp(124): error C2227: left of '->getatk' must point to class/struct/union/generic type
+     1>c:\users\jverner\desktop\new folder\cs114project\controller\controller\entity.cpp(126): error C2671: 'Entity::moveup' : static member functions do not have 'this' pointers
+     1>c:\users\jverner\desktop\new folder\cs114project\controller\controller\entity.cpp(126): error C2227: left of '->gethp' must point to class/struct/union/generic type
+     1>c:\users\jverner\desktop\new folder\cs114project\controller\controller\entity.cpp(129): error C2671: 'Entity::moveup' : static member functions do not have 'this' pointers
+     1>c:\users\jverner\desktop\new folder\cs114project\controller\controller\entity.cpp(129): error C2227: left of '->player' must point to class/struct/union/generic type
+     1>c:\users\jverner\desktop\new folder\cs114project\controller\controller\entity.cpp(134): error C3867: 'Entity::gethp': function call missing argument list; use '&Entity::gethp' to create a pointer to member
+     1>c:\users\jverner\desktop\new folder\cs114project\controller\controller\entity.cpp(134): error C2296: '<=' : illegal, left operand has type 'int (__thiscall Entity::* )(void)'
+     1>c:\users\jverner\desktop\new folder\cs114project\controller\controller\entity.cpp(134): error C2297: '<=' : illegal, right operand has type 'int (__thiscall Entity::* )(void)'
+     1>c:\users\jverner\desktop\new folder\cs114project\controller\controller\entity.cpp(138): error C2671: 'Entity::moveup' : static member functions do not have 'this' pointers
+     1>c:\users\jverner\desktop\new folder\cs114project\controller\controller\entity.cpp(138): error C2227: left of '->setx' must point to class/struct/union/generic type
+     1>c:\users\jverner\desktop\new folder\cs114project\controller\controller\entity.cpp(145): error C2671: 'Entity::moveup' : static member functions do not have 'this' pointers
+     1>c:\users\jverner\desktop\new folder\cs114project\controller\controller\entity.cpp(145): error C2227: left of '->player' must point to class/struct/union/generic type
+     1>c:\users\jverner\desktop\new folder\cs114project\controller\controller\entity.cpp(145): error C2227: left of '->haskey' must point to class/struct/union/generic type
+     1>c:\users\jverner\desktop\new folder\cs114project\controller\controller\entity.cpp(153): error C2511: 'void Entity::movedown(std::vector<std::vector<Entity,std::allocator<_Ty>>,std::allocator<std::vector<_Ty,std::allocator<_Ty>>>> &)' : overloaded member function not found in 'Entity'
+                 with
+                 [
+                     _Ty=Entity
+                 ]
+                 c:\users\jverner\desktop\new folder\cs114project\controller\controller\entity.h(6) : see declaration of 'Entity'
+     1>c:\users\jverner\desktop\new folder\cs114project\controller\controller\entity.cpp(154): error C2671: 'Entity::movedown' : static member functions do not have 'this' pointers
+     1>c:\users\jverner\desktop\new folder\cs114project\controller\controller\entity.cpp(154): error C2227: left of '->getx' must point to class/struct/union/generic type
+     1>c:\users\jverner\desktop\new folder\cs114project\controller\controller\entity.cpp(155): error C2671: 'Entity::movedown' : static member functions do not have 'this' pointers
+     1>c:\users\jverner\desktop\new folder\cs114project\controller\controller\entity.cpp(155): error C2227: left of '->gety' must point to class/struct/union/generic type
+     1>c:\users\jverner\desktop\new folder\cs114project\controller\controller\entity.cpp(159): error C2671: 'Entity::movedown' : static member functions do not have 'this' pointers
+     1>c:\users\jverner\desktop\new folder\cs114project\controller\controller\entity.cpp(159): error C2227: left of '->setx' must point to class/struct/union/generic type
+     1>c:\users\jverner\desktop\new folder\cs114project\controller\controller\entity.cpp(164): error C2671: 'Entity::movedown' : static member functions do not have 'this' pointers
+     1>c:\users\jverner\desktop\new folder\cs114project\controller\controller\entity.cpp(164): error C2227: left of '->sethhp' must point to class/struct/union/generic type
+     1>c:\users\jverner\desktop\new folder\cs114project\controller\controller\entity.cpp(164): error C2227: left of '->gethp' must point to class/struct/union/generic type
+     1>c:\users\jverner\desktop\new folder\cs114project\controller\controller\entity.cpp(165): error C2671: 'Entity::movedown' : static member functions do not have 'this' pointers
+     1>c:\users\jverner\desktop\new folder\cs114project\controller\controller\entity.cpp(165): error C2227: left of '->getatk' must point to class/struct/union/generic type
+     1>c:\users\jverner\desktop\new folder\cs114project\controller\controller\entity.cpp(167): error C2671: 'Entity::movedown' : static member functions do not have 'this' pointers
+     1>c:\users\jverner\desktop\new folder\cs114project\controller\controller\entity.cpp(167): error C2227: left of '->gethp' must point to class/struct/union/generic type
+     1>c:\users\jverner\desktop\new folder\cs114project\controller\controller\entity.cpp(170): error C2671: 'Entity::movedown' : static member functions do not have 'this' pointers
+     1>c:\users\jverner\desktop\new folder\cs114project\controller\controller\entity.cpp(170): error C2227: left of '->player' must point to class/struct/union/generic type
+     1>c:\users\jverner\desktop\new folder\cs114project\controller\controller\entity.cpp(175): error C3867: 'Entity::gethp': function call missing argument list; use '&Entity::gethp' to create a pointer to member
+     1>c:\users\jverner\desktop\new folder\cs114project\controller\controller\entity.cpp(175): error C2296: '<=' : illegal, left operand has type 'int (__thiscall Entity::* )(void)'
+     1>c:\users\jverner\desktop\new folder\cs114project\controller\controller\entity.cpp(175): error C2297: '<=' : illegal, right operand has type 'int (__thiscall Entity::* )(void)'
+     1>c:\users\jverner\desktop\new folder\cs114project\controller\controller\entity.cpp(179): error C2671: 'Entity::movedown' : static member functions do not have 'this' pointers
+     1>c:\users\jverner\desktop\new folder\cs114project\controller\controller\entity.cpp(179): error C2227: left of '->setx' must point to class/struct/union/generic type
+     1>c:\users\jverner\desktop\new folder\cs114project\controller\controller\entity.cpp(186): error C2671: 'Entity::movedown' : static member functions do not have 'this' pointers
+     1>c:\users\jverner\desktop\new folder\cs114project\controller\controller\entity.cpp(186): error C2227: left of '->player' must point to class/struct/union/generic type
+     1>c:\users\jverner\desktop\new folder\cs114project\controller\controller\entity.cpp(186): error C2227: left of '->haskey' must point to class/struct/union/generic type
+     1>c:\users\jverner\desktop\new folder\cs114project\controller\controller\entity.cpp(193): error C2511: 'void Entity::moveleft(std::vector<std::vector<Entity,std::allocator<_Ty>>,std::allocator<std::vector<_Ty,std::allocator<_Ty>>>> &)' : overloaded member function not found in 'Entity'
+                 with
+                 [
+                     _Ty=Entity
+                 ]
+                 c:\users\jverner\desktop\new folder\cs114project\controller\controller\entity.h(6) : see declaration of 'Entity'
+     1>c:\users\jverner\desktop\new folder\cs114project\controller\controller\entity.cpp(194): error C2671: 'Entity::moveleft' : static member functions do not have 'this' pointers
+     1>c:\users\jverner\desktop\new folder\cs114project\controller\controller\entity.cpp(194): error C2227: left of '->getx' must point to class/struct/union/generic type
+     1>c:\users\jverner\desktop\new folder\cs114project\controller\controller\entity.cpp(195): error C2671: 'Entity::moveleft' : static member functions do not have 'this' pointers
+     1>c:\users\jverner\desktop\new folder\cs114project\controller\controller\entity.cpp(195): error C2227: left of '->gety' must point to class/struct/union/generic type
+     1>c:\users\jverner\desktop\new folder\cs114project\controller\controller\entity.cpp(199): error C2671: 'Entity::moveleft' : static member functions do not have 'this' pointers
+     1>c:\users\jverner\desktop\new folder\cs114project\controller\controller\entity.cpp(199): error C2227: left of '->sety' must point to class/struct/union/generic type
+     1>c:\users\jverner\desktop\new folder\cs114project\controller\controller\entity.cpp(204): error C2671: 'Entity::moveleft' : static member functions do not have 'this' pointers
+     1>c:\users\jverner\desktop\new folder\cs114project\controller\controller\entity.cpp(204): error C2227: left of '->sethhp' must point to class/struct/union/generic type
+     1>c:\users\jverner\desktop\new folder\cs114project\controller\controller\entity.cpp(204): error C2227: left of '->gethp' must point to class/struct/union/generic type
+     1>c:\users\jverner\desktop\new folder\cs114project\controller\controller\entity.cpp(205): error C2671: 'Entity::moveleft' : static member functions do not have 'this' pointers
+     1>c:\users\jverner\desktop\new folder\cs114project\controller\controller\entity.cpp(205): error C2227: left of '->getatk' must point to class/struct/union/generic type
+     1>c:\users\jverner\desktop\new folder\cs114project\controller\controller\entity.cpp(207): error C2671: 'Entity::moveleft' : static member functions do not have 'this' pointers
+     1>c:\users\jverner\desktop\new folder\cs114project\controller\controller\entity.cpp(207): error C2227: left of '->gethp' must point to class/struct/union/generic type
+     1>c:\users\jverner\desktop\new folder\cs114project\controller\controller\entity.cpp(210): error C2671: 'Entity::moveleft' : static member functions do not have 'this' pointers
+     1>c:\users\jverner\desktop\new folder\cs114project\controller\controller\entity.cpp(210): error C2227: left of '->player' must point to class/struct/union/generic type
+     1>c:\users\jverner\desktop\new folder\cs114project\controller\controller\entity.cpp(215): error C3867: 'Entity::gethp': function call missing argument list; use '&Entity::gethp' to create a pointer to member
+     1>c:\users\jverner\desktop\new folder\cs114project\controller\controller\entity.cpp(215): error C2296: '<=' : illegal, left operand has type 'int (__thiscall Entity::* )(void)'
+     1>c:\users\jverner\desktop\new folder\cs114project\controller\controller\entity.cpp(215): error C2297: '<=' : illegal, right operand has type 'int (__thiscall Entity::* )(void)'
+     1>c:\users\jverner\desktop\new folder\cs114project\controller\controller\entity.cpp(219): error C2671: 'Entity::moveleft' : static member functions do not have 'this' pointers
+     1>c:\users\jverner\desktop\new folder\cs114project\controller\controller\entity.cpp(219): error C2227: left of '->sety' must point to class/struct/union/generic type
+     1>c:\users\jverner\desktop\new folder\cs114project\controller\controller\entity.cpp(226): error C2671: 'Entity::moveleft' : static member functions do not have 'this' pointers
+     1>c:\users\jverner\desktop\new folder\cs114project\controller\controller\entity.cpp(226): error C2227: left of '->player' must point to class/struct/union/generic type
+     1>c:\users\jverner\desktop\new folder\cs114project\controller\controller\entity.cpp(226): error C2227: left of '->haskey' must point to class/struct/union/generic type
+     1>c:\users\jverner\desktop\new folder\cs114project\controller\controller\entity.cpp(233): error C2511: 'void Entity::moveright(std::vector<std::vector<Entity,std::allocator<_Ty>>,std::allocator<std::vector<_Ty,std::allocator<_Ty>>>> &)' : overloaded member function not found in 'Entity'
+                 with
+                 [
+                     _Ty=Entity
+                 ]
+                 c:\users\jverner\desktop\new folder\cs114project\controller\controller\entity.h(6) : see declaration of 'Entity'
+     1>c:\users\jverner\desktop\new folder\cs114project\controller\controller\entity.cpp(234): error C2671: 'Entity::moveright' : static member functions do not have 'this' pointers
+     1>c:\users\jverner\desktop\new folder\cs114project\controller\controller\entity.cpp(234): error C2227: left of '->getx' must point to class/struct/union/generic type
+     1>c:\users\jverner\desktop\new folder\cs114project\controller\controller\entity.cpp(235): error C2671: 'Entity::moveright' : static member functions do not have 'this' pointers
+     1>c:\users\jverner\desktop\new folder\cs114project\controller\controller\entity.cpp(235): error C2227: left of '->gety' must point to class/struct/union/generic type
+     1>c:\users\jverner\desktop\new folder\cs114project\controller\controller\entity.cpp(239): error C2671: 'Entity::moveright' : static member functions do not have 'this' pointers
+     1>c:\users\jverner\desktop\new folder\cs114project\controller\controller\entity.cpp(239): error C2227: left of '->sety' must point to class/struct/union/generic type
+     1>c:\users\jverner\desktop\new folder\cs114project\controller\controller\entity.cpp(244): error C2671: 'Entity::moveright' : static member functions do not have 'this' pointers
+     1>c:\users\jverner\desktop\new folder\cs114project\controller\controller\entity.cpp(244): error C2227: left of '->sethhp' must point to class/struct/union/generic type
+     1>c:\users\jverner\desktop\new folder\cs114project\controller\controller\entity.cpp(244): error C2227: left of '->gethp' must point to class/struct/union/generic type
+     1>c:\users\jverner\desktop\new folder\cs114project\controller\controller\entity.cpp(245): error C2671: 'Entity::moveright' : static member functions do not have 'this' pointers
+     1>c:\users\jverner\desktop\new folder\cs114project\controller\controller\entity.cpp(245): error C2227: left of '->getatk' must point to class/struct/union/generic type
+     1>c:\users\jverner\desktop\new folder\cs114project\controller\controller\entity.cpp(247): error C2671: 'Entity::moveright' : static member functions do not have 'this' pointers
+     1>c:\users\jverner\desktop\new folder\cs114project\controller\controller\entity.cpp(247): error C2227: left of '->gethp' must point to class/struct/union/generic type
+     1>c:\users\jverner\desktop\new folder\cs114project\controller\controller\entity.cpp(247): fatal error C1003: error count exceeds 100; stopping compilation
+     1>Done Building Project "C:\Users\jverner\Desktop\New folder\CS114Project\Controller\Controller\Controller.vcxproj" (Build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:00.63

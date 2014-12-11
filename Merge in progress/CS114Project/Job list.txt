@@ -1,0 +1,18 @@
+Door - TOM
+-check for player+key
+-load next level
+
+
+both -JOSH
+-move
+-attack
+
+Enemies = JOE
+-distance
+-aggro range
+-path finding
+
+
+
+Player
+-form stuff

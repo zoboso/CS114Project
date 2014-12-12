@@ -154,7 +154,9 @@ namespace Project6 {
 			// 
 			// panel1
 			// 
+			this->panel1->BackColor = System::Drawing::Color::Silver;
 			this->panel1->Controls->Add(this->label1);
+			this->panel1->ForeColor = System::Drawing::SystemColors::ControlLightLight;
 			this->panel1->Location = System::Drawing::Point(12, 12);
 			this->panel1->Name = L"panel1";
 			this->panel1->Size = System::Drawing::Size(637, 212);
@@ -226,6 +228,7 @@ namespace Project6 {
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+			this->BackColor = System::Drawing::Color::Black;
 			this->ClientSize = System::Drawing::Size(661, 346);
 			this->Controls->Add(this->label5);
 			this->Controls->Add(this->label4);
@@ -2653,7 +2656,7 @@ private: System::Void button3_Click(System::Object^  sender, System::EventArgs^ 
 
 				E1AILevel1();
 
-				 if (ey == py && ex == px && phealth > 0)
+				 if (ey == py && ex == px && ehealth > 0)
 				 {
 					 ehealth--;
 					 phealth--;
@@ -2973,7 +2976,7 @@ private: System::Void button3_Click(System::Object^  sender, System::EventArgs^ 
 
 				 E1AILevel2();
 
-				 if (ey == py && ex == px && phealth > 0)
+				 if (ey == py && ex == px && ehealth > 0)
 				 {
 					 ehealth--;
 					 phealth--;
@@ -3319,7 +3322,7 @@ private: System::Void button4_Click(System::Object^  sender, System::EventArgs^ 
 
 				 E1AILevel1();
 
-				 if (ey == py && ex == px && phealth > 0)
+				 if (ey == py && ex == px && ehealth > 0)
 				 {
 					 ehealth--;
 					 phealth--;
@@ -3639,7 +3642,7 @@ private: System::Void button4_Click(System::Object^  sender, System::EventArgs^ 
 
 				 E1AILevel2();
 
-				 if (ey == py && ex == px && phealth > 0)
+				 if (ey == py && ex == px && ehealth > 0)
 				 {
 					 ehealth--;
 					 phealth--;
@@ -3953,7 +3956,7 @@ private: System::Void button2_Click(System::Object^  sender, System::EventArgs^ 
 
 				 E1AILevel1();
 
-				 if (ey == py && ex == px && phealth > 0)
+				 if (ey == py && ex == px && ehealth > 0)
 				 {
 					 ehealth--;
 					 phealth--;
@@ -4274,7 +4277,7 @@ private: System::Void button2_Click(System::Object^  sender, System::EventArgs^ 
 
 				 E1AILevel2();
 
-				 if (ey == py && ex == px && phealth > 0)
+				 if (ey == py && ex == px && ehealth > 0)
 				 {
 					 ehealth--;
 					 phealth--;
@@ -4589,7 +4592,7 @@ private: System::Void button1_Click(System::Object^  sender, System::EventArgs^ 
 
 				 E1AILevel1();
 
-				 if (ey == py && ex == px && phealth > 0)
+				 if (ey == py && ex == px && ehealth > 0)
 				 {
 					 ehealth--;
 					 phealth--;
@@ -4909,7 +4912,7 @@ private: System::Void button1_Click(System::Object^  sender, System::EventArgs^ 
 
 				 E1AILevel2();
 
-				 if (ey == py && ex == px && phealth > 0)
+				 if (ey == py && ex == px && ehealth > 0)
 				 {
 					 ehealth--;
 					 phealth--;

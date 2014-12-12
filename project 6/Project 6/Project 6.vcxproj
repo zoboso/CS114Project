@@ -35,7 +35,6 @@
     <ResourceCompile Include="Project6.rc" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="..\..\Images\floor.png" />
     <Image Include="EnemyV1.png" />
     <Image Include="floor.png" />
     <Image Include="player.bmp" />

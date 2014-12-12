@@ -38,9 +38,6 @@
     </ResourceCompile>
   </ItemGroup>
   <ItemGroup>
-    <Image Include="..\..\Images\floor.png">
-      <Filter>Resource Files</Filter>
-    </Image>
     <Image Include="player.bmp">
       <Filter>Resource Files</Filter>
     </Image>

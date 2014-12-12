@@ -95,6 +95,7 @@ namespace Project6 {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(MyForm::typeid));
 			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->button2 = (gcnew System::Windows::Forms::Button());
 			this->button3 = (gcnew System::Windows::Forms::Button());
@@ -146,6 +147,7 @@ namespace Project6 {
 			// 
 			// panel1
 			// 
+			this->panel1->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"panel1.BackgroundImage")));
 			this->panel1->Controls->Add(this->label1);
 			this->panel1->Location = System::Drawing::Point(12, 12);
 			this->panel1->Name = L"panel1";
@@ -2545,13 +2547,13 @@ namespace Project6 {
 		
 	private: System::Void MyForm_Load(System::Object^  sender, System::EventArgs^  e) {
 				  g = panel1->CreateGraphics();
-				  player = gcnew Bitmap("K:/CS114/CS114Project/Images/PlayerV2.png");
-				  enemy = gcnew Bitmap("K:/CS114/CS114Project/Images/EnemyV1.png");
-				  wall = gcnew Bitmap("K:/CS114/CS114Project/Images/wall.png");
-				  door = gcnew Bitmap("K:/CS114/CS114Project/Images/TrapDoor.png");
+				  player = gcnew Bitmap("PlayerV3.png");
+				  enemy = gcnew Bitmap("EnemyV1.png");
+				  wall = gcnew Bitmap("wall.png");
+				  door = gcnew Bitmap("TrapDoor.png");
 
 				  musicplayer = gcnew System::Media::SoundPlayer();
-				  musicplayer->SoundLocation = "K:/CS114/CS114Project/GuilesthemeWAV.wav";
+				  musicplayer->SoundLocation = "GuilesthemeWAV.wav";
 				  musicplayer->Play(); 
 				  musicplayer->PlayLooping(); 
 

@@ -36,6 +36,12 @@
   </ItemGroup>
   <ItemGroup>
     <Image Include="..\..\Images\floor.png" />
+    <Image Include="EnemyV1.png" />
+    <Image Include="floor.png" />
+    <Image Include="player.bmp" />
+    <Image Include="PlayerV3.png" />
+    <Image Include="TrapDoor.png" />
+    <Image Include="wall.png" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{F863E268-BA5C-402F-8208-A262C5137D9F}</ProjectGuid>

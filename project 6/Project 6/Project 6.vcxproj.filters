@@ -41,5 +41,23 @@
     <Image Include="..\..\Images\floor.png">
       <Filter>Resource Files</Filter>
     </Image>
+    <Image Include="player.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="PlayerV3.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="floor.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="EnemyV1.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="wall.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="TrapDoor.png">
+      <Filter>Resource Files</Filter>
+    </Image>
   </ItemGroup>
 </Project>

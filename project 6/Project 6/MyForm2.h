@@ -63,6 +63,10 @@ namespace Project6 {
 	private: Bitmap^ door;
 	private: SoundPlayer^ musicplayer;
 	private: System::Windows::Forms::Label^  label1;
+	private: System::Windows::Forms::Label^  label2;
+	private: System::Windows::Forms::Label^  label3;
+	private: System::Windows::Forms::Label^  label4;
+	private: System::Windows::Forms::Label^  label5;
 
 
 	protected:
@@ -95,13 +99,16 @@ namespace Project6 {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			System::ComponentModel::ComponentResourceManager^  resources = (gcnew System::ComponentModel::ComponentResourceManager(MyForm::typeid));
 			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->button2 = (gcnew System::Windows::Forms::Button());
 			this->button3 = (gcnew System::Windows::Forms::Button());
 			this->button4 = (gcnew System::Windows::Forms::Button());
 			this->panel1 = (gcnew System::Windows::Forms::Panel());
 			this->label1 = (gcnew System::Windows::Forms::Label());
+			this->label2 = (gcnew System::Windows::Forms::Label());
+			this->label3 = (gcnew System::Windows::Forms::Label());
+			this->label4 = (gcnew System::Windows::Forms::Label());
+			this->label5 = (gcnew System::Windows::Forms::Label());
 			this->panel1->SuspendLayout();
 			this->SuspendLayout();
 			// 
@@ -147,7 +154,6 @@ namespace Project6 {
 			// 
 			// panel1
 			// 
-//			this->panel1->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"panel1.BackgroundImage")));
 			this->panel1->Controls->Add(this->label1);
 			this->panel1->Location = System::Drawing::Point(12, 12);
 			this->panel1->Name = L"panel1";
@@ -166,11 +172,65 @@ namespace Project6 {
 			this->label1->Size = System::Drawing::Size(0, 26);
 			this->label1->TabIndex = 0;
 			// 
+			// label2
+			// 
+			this->label2->AutoSize = true;
+			this->label2->Font = (gcnew System::Drawing::Font(L"Miramonte", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label2->ForeColor = System::Drawing::Color::Red;
+			this->label2->Location = System::Drawing::Point(395, 261);
+			this->label2->Name = L"label2";
+			this->label2->Size = System::Drawing::Size(18, 19);
+			this->label2->TabIndex = 5;
+			this->label2->Text = L"2";
+			// 
+			// label3
+			// 
+			this->label3->AutoSize = true;
+			this->label3->Font = (gcnew System::Drawing::Font(L"Miramonte", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label3->ForeColor = System::Drawing::Color::Red;
+			this->label3->Location = System::Drawing::Point(361, 227);
+			this->label3->Name = L"label3";
+			this->label3->Size = System::Drawing::Size(88, 29);
+			this->label3->TabIndex = 6;
+			this->label3->Text = L"Health";
+			// 
+			// label4
+			// 
+			this->label4->AutoSize = true;
+			this->label4->Font = (gcnew System::Drawing::Font(L"Miramonte", 18, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label4->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(128)),
+				static_cast<System::Int32>(static_cast<System::Byte>(0)));
+			this->label4->Location = System::Drawing::Point(514, 227);
+			this->label4->Name = L"label4";
+			this->label4->Size = System::Drawing::Size(54, 29);
+			this->label4->TabIndex = 7;
+			this->label4->Text = L"Key";
+			// 
+			// label5
+			// 
+			this->label5->AutoSize = true;
+			this->label5->Font = (gcnew System::Drawing::Font(L"Miramonte", 12, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->label5->ForeColor = System::Drawing::Color::FromArgb(static_cast<System::Int32>(static_cast<System::Byte>(255)), static_cast<System::Int32>(static_cast<System::Byte>(128)),
+				static_cast<System::Int32>(static_cast<System::Byte>(0)));
+			this->label5->Location = System::Drawing::Point(527, 261);
+			this->label5->Name = L"label5";
+			this->label5->Size = System::Drawing::Size(31, 19);
+			this->label5->TabIndex = 8;
+			this->label5->Text = L"No";
+			// 
 			// MyForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(661, 346);
+			this->Controls->Add(this->label5);
+			this->Controls->Add(this->label4);
+			this->Controls->Add(this->label3);
+			this->Controls->Add(this->label2);
 			this->Controls->Add(this->panel1);
 			this->Controls->Add(this->button4);
 			this->Controls->Add(this->button3);
@@ -182,6 +242,7 @@ namespace Project6 {
 			this->panel1->ResumeLayout(false);
 			this->panel1->PerformLayout();
 			this->ResumeLayout(false);
+			this->PerformLayout();
 
 		}
 #pragma endregion
@@ -2573,6 +2634,7 @@ private: System::Void button3_Click(System::Object^  sender, System::EventArgs^ 
 			 srand(time(NULL));
 			 int emove = rand() % 4 + 1;
 			 Refresh();
+			 label2->Text = System::Convert::ToString(phealth);
 
 			 if (level == 1)
 			 {
@@ -2597,6 +2659,12 @@ private: System::Void button3_Click(System::Object^  sender, System::EventArgs^ 
 					 phealth--;
 					 key = true;
 				 }
+
+				 if (key == true)
+				 {
+					 label5->Text = "Yes";
+				 }
+				 else label5->Text = "No";
 
 				 if (ehealth == 0)
 				 {
@@ -2911,6 +2979,12 @@ private: System::Void button3_Click(System::Object^  sender, System::EventArgs^ 
 					 phealth--;
 					 key = true;
 				 }
+
+				 if (key == true)
+				 {
+					 label5->Text = "Yes";
+				 }
+				 else label5->Text = "No";
 
 				 if (ehealth == 0)
 				 {
@@ -3224,6 +3298,7 @@ private: System::Void button3_Click(System::Object^  sender, System::EventArgs^ 
 private: System::Void button4_Click(System::Object^  sender, System::EventArgs^  e) {
 			 srand(time(NULL));
 			 int emove = rand() % 4 + 1;
+			 label2->Text = System::Convert::ToString(phealth);
 			 Refresh();
 
 
@@ -3250,6 +3325,12 @@ private: System::Void button4_Click(System::Object^  sender, System::EventArgs^ 
 					 phealth--;
 					 key = true;
 				 }
+
+				 if (key == true)
+				 {
+					 label5->Text = "Yes";
+				 }
+				 else label5->Text = "No";
 
 				 if (ehealth == 0)
 				 {
@@ -3564,6 +3645,12 @@ private: System::Void button4_Click(System::Object^  sender, System::EventArgs^ 
 					 phealth--;
 					 key = true;
 				 }
+
+				 if (key == true)
+				 {
+					 label5->Text = "Yes";
+				 }
+				 else label5->Text = "No";
 
 				 if (ehealth == 0)
 				 {
@@ -3844,6 +3931,7 @@ private: System::Void button4_Click(System::Object^  sender, System::EventArgs^ 
 private: System::Void button2_Click(System::Object^  sender, System::EventArgs^  e) {
 			 srand(time(NULL));
 			 int emove = rand() % 4 + 1;
+			 label2->Text = System::Convert::ToString(phealth);
 			 Refresh();
 
 
@@ -3871,6 +3959,12 @@ private: System::Void button2_Click(System::Object^  sender, System::EventArgs^ 
 					 phealth--;
 					 key = true;
 				 }
+
+				 if (key == true)
+				 {
+					 label5->Text = "Yes";
+				 }
+				 else label5->Text = "No";
 
 				 if (ehealth == 0)
 				 {
@@ -4186,6 +4280,12 @@ private: System::Void button2_Click(System::Object^  sender, System::EventArgs^ 
 					 phealth--;
 					 key = true;
 				 }
+
+				 if (key == true)
+				 {
+					 label5->Text = "Yes";
+				 }
+				 else label5->Text = "No";
 
 				 if (ehealth == 0)
 				 {
@@ -4467,6 +4567,7 @@ private: System::Void button2_Click(System::Object^  sender, System::EventArgs^ 
 private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
 			 srand(time(NULL));
 			 int emove = rand() % 4 + 1;
+			 label2->Text = System::Convert::ToString(phealth);
 			 Refresh();
 
 
@@ -4494,6 +4595,12 @@ private: System::Void button1_Click(System::Object^  sender, System::EventArgs^ 
 					 phealth--;
 					 key = true;
 				 }
+
+				 if (key == true)
+				 {
+					 label5->Text = "Yes";
+				 }
+				 else label5->Text = "No";
 
 				 if (ehealth == 0)
 				 {
@@ -4808,6 +4915,12 @@ private: System::Void button1_Click(System::Object^  sender, System::EventArgs^ 
 					 phealth--;
 					 key = true;
 				 }
+
+				 if (key == true)
+				 {
+					 label5->Text = "Yes";
+				 }
+				 else label5->Text = "No";
 
 				 if (ehealth == 0)
 				 {

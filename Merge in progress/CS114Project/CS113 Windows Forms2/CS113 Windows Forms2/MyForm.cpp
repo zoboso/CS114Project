@@ -1,4 +1,5 @@
 #include "MyForm.h"
+#include <iostream>
 #include <vector>
 #include "Entity.h"
 #include "input.h"
@@ -17,14 +18,61 @@ int main(array<System::String ^> ^args)
 
 	// Create the main window and run it
 	Application::Run(gcnew MyForm());
+	vector<Entity> players;
+	vector<vector<Entity>> world;
+
+	ifstream myFile;
+	int level = 1;
+	myFile.open("level" + to_string(level) + ".txt");
+	string line;
+	int row = 0;
+	while (getline(myFile, line)){
+		int count = 0;
+		for (int column = 0; column < line.length(); column++){
+			char square = line[column];
+			count++;
+			switch (square){
+			case ' ':
+			{
+						Entity blank = Entity(0, 0, row, column, 0, false, true, false, false, false);
+						world[row][column] = blank;
+						break;
+			}
+			case '1':
+			{
+						Entity wall = Entity(0, 0, row, column, 0, false, false, false, false, false);
+						world[row][column] = wall;
+						break;
+			}
+			case '2':
+			{
+						Entity Player = Entity(12, 2, row, column, 0, true, false, true, false, false);
+						players.insert[0] = Player;
+						world[row][column] = Player;
+						break;
+			}
+			case '3':
+			{
+						Entity Enemy = Entity(1, 1, row, column, 0, true, false, false, false, false);
+						players.push_back = Enemy;
+						world[row][column] = Enemy;
+						break;
+			}
+			case '4':
+			{
+						Entity Door = Entity(0, 0, row, column, 0, false, false, false, false, true);
+						world[row][column] = Door;
+						break;
+			}
+
+			}
+		}
+		row++;
+		cout << endl;
+	}
+	myFile.close();
+
 	return 0;
 	
-	std::vector< std::vector< Entity >> map;
-	int level = 1;
-
-	{
-		//Level's loop
-		input(map, level++);
-
-	}
+	
 }

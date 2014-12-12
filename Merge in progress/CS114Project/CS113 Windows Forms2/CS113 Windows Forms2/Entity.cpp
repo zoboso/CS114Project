@@ -2,7 +2,7 @@
 
 using namespace std;
 
-Entity::Entity(int h, int a, int cX, int cY, int AIAR, bool canA, bool trav, bool p, bool hasK, bool d)
+Entity::Entity(int h, int a, int cX, int cY, int AIAR,bool has, bool canA, bool trav, bool p, bool hasK, bool d)
 {
 	hp = h;
 	atk = a;

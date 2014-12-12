@@ -11,6 +11,7 @@ private:
 	int x;
 	int y;
 	int AIAggroRange;
+	bool has;
 	bool canAtk;
 	bool traversable;
 	bool player;
@@ -19,7 +20,7 @@ private:
 public:
 
 	Entity();
-	Entity(int, int, int, int, int, bool, bool, bool, bool, bool);
+	Entity(int, int, int, int, int, bool, bool, bool, bool, bool, bool);
 	//~Entity();
 	int gethp();
 	int getatk();

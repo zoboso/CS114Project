@@ -62,6 +62,20 @@ void populate(int lvl)
 	myFile.close();
 }
 
+void draw()
+ {
+	
+	for (int x = 0; world[][]; x++)
+		{
+			for (int y = 0; world[][]; y++)
+				{
+					
+				}
+		}
+	
+}
+
+
 [STAThreadAttribute]
 int main(array<System::String ^> ^args)
 {

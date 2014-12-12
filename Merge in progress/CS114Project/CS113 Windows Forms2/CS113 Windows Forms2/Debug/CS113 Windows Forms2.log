@@ -1,17 +1,16 @@
-﻿Build started 12/12/2014 2:47:00 AM.
+﻿Build started 12/12/2014 2:28:30 PM.
      1>Project "C:\Users\jverner\Documents\GitHub\CS114Project\Merge in progress\CS114Project\CS113 Windows Forms2\CS113 Windows Forms2\CS113 Windows Forms2.vcxproj" on node 2 (Rebuild target(s)).
      1>ClCompile:
          C:\Program Files\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /AI"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\\" /AI"C:\Program Files\Windows Kits\8.1\References\CommonConfiguration\Neutral" /AI"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\\" /Zi /clr /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /TP /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\mscorlib.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Data.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Drawing.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Windows.Forms.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Xml.dll" /analyze- /errorReport:prompt /clr:nostdlib Entity.cpp MyForm.cpp Input.cpp
          Entity.cpp
          MyForm.cpp
-     1>MyForm.cpp(31): warning C4018: '<' : signed/unsigned mismatch
-     1>MyForm.cpp(50): error C3867: 'std::vector<Entity,std::allocator<_Ty>>::insert': function call missing argument list; use '&std::vector<Entity,std::allocator<_Ty>>::insert' to create a pointer to member
-                 with
-                 [
-                     _Ty=Entity
-                 ]
-     1>MyForm.cpp(50): error C2109: subscript requires array or pointer type
-     1>MyForm.cpp(57): error C2659: '=' : function as left operand
+     1>MyForm.cpp(22): warning C4018: '<' : signed/unsigned mismatch
+     1>MyForm.cpp(68): error C2059: syntax error : ']'
+     1>MyForm.cpp(68): error C2143: syntax error : missing ';' before ')'
+     1>MyForm.cpp(69): error C2143: syntax error : missing ';' before '{'
+     1>MyForm.cpp(70): error C2059: syntax error : ']'
+     1>MyForm.cpp(70): error C2143: syntax error : missing ';' before ')'
+     1>MyForm.cpp(71): error C2143: syntax error : missing ';' before '{'
          Input.cpp
      1>Input.cpp(29): warning C4018: '<' : signed/unsigned mismatch
          Generating Code...
@@ -19,4 +18,4 @@
 
 Build FAILED.
 
-Time Elapsed 00:00:03.52
+Time Elapsed 00:00:03.02

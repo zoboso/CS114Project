@@ -147,7 +147,7 @@ namespace Project6 {
 			// 
 			// panel1
 			// 
-			this->panel1->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"panel1.BackgroundImage")));
+//			this->panel1->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"panel1.BackgroundImage")));
 			this->panel1->Controls->Add(this->label1);
 			this->panel1->Location = System::Drawing::Point(12, 12);
 			this->panel1->Name = L"panel1";
@@ -2568,14 +2568,6 @@ namespace Project6 {
 					 g->DrawImage(enemy, ex * 35, ey * 35);
 					 drawWallLevel1();
 				 }
-
-				 if (px == 0 && py == 0 && ey == 4 && ex == 16 && level == 2)
-				 {
-					 g->DrawImage(door, 0 * 35, 0 * 35);
-					 g->DrawImage(player, px * 35, py * 35);
-					 g->DrawImage(enemy, ex * 35, ey * 35);
-					 drawWallLevel2();
-				 }
 	}
 private: System::Void button3_Click(System::Object^  sender, System::EventArgs^  e) {
 			 srand(time(NULL));
@@ -2599,7 +2591,7 @@ private: System::Void button3_Click(System::Object^  sender, System::EventArgs^ 
 
 				E1AILevel1();
 
-				 if (ey == py && ex == px)
+				 if (ey == py && ex == px && phealth > 0)
 				 {
 					 ehealth--;
 					 phealth--;
@@ -2913,7 +2905,7 @@ private: System::Void button3_Click(System::Object^  sender, System::EventArgs^ 
 
 				 E1AILevel2();
 
-				 if (ey == py && ex == px)
+				 if (ey == py && ex == px && phealth > 0)
 				 {
 					 ehealth--;
 					 phealth--;
@@ -3252,7 +3244,7 @@ private: System::Void button4_Click(System::Object^  sender, System::EventArgs^ 
 
 				 E1AILevel1();
 
-				 if (ey == py && ex == px)
+				 if (ey == py && ex == px && phealth > 0)
 				 {
 					 ehealth--;
 					 phealth--;
@@ -3566,7 +3558,7 @@ private: System::Void button4_Click(System::Object^  sender, System::EventArgs^ 
 
 				 E1AILevel2();
 
-				 if (ey == py && ex == px)
+				 if (ey == py && ex == px && phealth > 0)
 				 {
 					 ehealth--;
 					 phealth--;
@@ -3873,7 +3865,7 @@ private: System::Void button2_Click(System::Object^  sender, System::EventArgs^ 
 
 				 E1AILevel1();
 
-				 if (ey == py && ex == px)
+				 if (ey == py && ex == px && phealth > 0)
 				 {
 					 ehealth--;
 					 phealth--;
@@ -4188,7 +4180,7 @@ private: System::Void button2_Click(System::Object^  sender, System::EventArgs^ 
 
 				 E1AILevel2();
 
-				 if (ey == py && ex == px)
+				 if (ey == py && ex == px && phealth > 0)
 				 {
 					 ehealth--;
 					 phealth--;
@@ -4496,7 +4488,7 @@ private: System::Void button1_Click(System::Object^  sender, System::EventArgs^ 
 
 				 E1AILevel1();
 
-				 if (ey == py && ex == px)
+				 if (ey == py && ex == px && phealth > 0)
 				 {
 					 ehealth--;
 					 phealth--;
@@ -4810,7 +4802,7 @@ private: System::Void button1_Click(System::Object^  sender, System::EventArgs^ 
 
 				 E1AILevel2();
 
-				 if (ey == py && ex == px)
+				 if (ey == py && ex == px && phealth > 0)
 				 {
 					 ehealth--;
 					 phealth--;

@@ -114,46 +114,63 @@ namespace Project6 {
 			// 
 			// button1
 			// 
+			this->button1->BackColor = System::Drawing::Color::Blue;
+			this->button1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->button1->ForeColor = System::Drawing::Color::White;
 			this->button1->Location = System::Drawing::Point(132, 237);
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(75, 23);
 			this->button1->TabIndex = 0;
 			this->button1->Text = L"UP";
-			this->button1->UseVisualStyleBackColor = true;
+			this->button1->UseVisualStyleBackColor = false;
 			this->button1->Click += gcnew System::EventHandler(this, &MyForm::button1_Click);
 			// 
 			// button2
 			// 
+			this->button2->BackColor = System::Drawing::Color::Blue;
+			this->button2->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->button2->ForeColor = System::Drawing::Color::White;
 			this->button2->Location = System::Drawing::Point(51, 260);
 			this->button2->Name = L"button2";
 			this->button2->Size = System::Drawing::Size(75, 23);
 			this->button2->TabIndex = 1;
 			this->button2->Text = L"LEFT";
-			this->button2->UseVisualStyleBackColor = true;
+			this->button2->UseVisualStyleBackColor = false;
 			this->button2->Click += gcnew System::EventHandler(this, &MyForm::button2_Click);
 			// 
 			// button3
 			// 
+			this->button3->BackColor = System::Drawing::Color::Blue;
+			this->button3->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->button3->ForeColor = System::Drawing::Color::White;
 			this->button3->Location = System::Drawing::Point(213, 260);
 			this->button3->Name = L"button3";
 			this->button3->Size = System::Drawing::Size(75, 23);
 			this->button3->TabIndex = 2;
 			this->button3->Text = L"RIGHT";
-			this->button3->UseVisualStyleBackColor = true;
+			this->button3->UseVisualStyleBackColor = false;
 			this->button3->Click += gcnew System::EventHandler(this, &MyForm::button3_Click);
 			// 
 			// button4
 			// 
+			this->button4->BackColor = System::Drawing::Color::Blue;
+			this->button4->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 8.25F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(0)));
+			this->button4->ForeColor = System::Drawing::Color::White;
 			this->button4->Location = System::Drawing::Point(132, 278);
 			this->button4->Name = L"button4";
 			this->button4->Size = System::Drawing::Size(75, 23);
 			this->button4->TabIndex = 3;
 			this->button4->Text = L"DOWN";
-			this->button4->UseVisualStyleBackColor = true;
+			this->button4->UseVisualStyleBackColor = false;
 			this->button4->Click += gcnew System::EventHandler(this, &MyForm::button4_Click);
 			// 
 			// panel1
 			// 
+			this->panel1->BackColor = System::Drawing::Color::Silver;
 			this->panel1->Controls->Add(this->label1);
 			this->panel1->Location = System::Drawing::Point(12, 12);
 			this->panel1->Name = L"panel1";
@@ -180,9 +197,8 @@ namespace Project6 {
 			this->label2->ForeColor = System::Drawing::Color::Red;
 			this->label2->Location = System::Drawing::Point(395, 261);
 			this->label2->Name = L"label2";
-			this->label2->Size = System::Drawing::Size(18, 19);
+			this->label2->Size = System::Drawing::Size(0, 19);
 			this->label2->TabIndex = 5;
-			this->label2->Text = L"2";
 			// 
 			// label3
 			// 
@@ -226,6 +242,7 @@ namespace Project6 {
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+			this->BackColor = System::Drawing::Color::Black;
 			this->ClientSize = System::Drawing::Size(661, 346);
 			this->Controls->Add(this->label5);
 			this->Controls->Add(this->label4);
@@ -2608,10 +2625,11 @@ namespace Project6 {
 		
 	private: System::Void MyForm_Load(System::Object^  sender, System::EventArgs^  e) {
 				  g = panel1->CreateGraphics();
-				  player = gcnew Bitmap("PlayerV3.png");
-				  enemy = gcnew Bitmap("EnemyV1.png");
+				  player = gcnew Bitmap("PlayerV4.png");
+				  enemy = gcnew Bitmap("EnemyV2.png");
 				  wall = gcnew Bitmap("wall.png");
-				  door = gcnew Bitmap("TrapDoor.png");
+				  door = gcnew Bitmap("TrapDoorv2.png");
+				  label2->Text = System::Convert::ToString(phealth);
 
 				  musicplayer = gcnew System::Media::SoundPlayer();
 				  musicplayer->SoundLocation = "GuilesthemeWAV.wav";
@@ -2634,7 +2652,7 @@ private: System::Void button3_Click(System::Object^  sender, System::EventArgs^ 
 			 srand(time(NULL));
 			 int emove = rand() % 4 + 1;
 			 Refresh();
-			 label2->Text = System::Convert::ToString(phealth);
+			 
 
 			 if (level == 1)
 			 {
@@ -2659,6 +2677,8 @@ private: System::Void button3_Click(System::Object^  sender, System::EventArgs^ 
 					 phealth--;
 					 key = true;
 				 }
+
+				 label2->Text = System::Convert::ToString(phealth);
 
 				 if (key == true)
 				 {
@@ -2979,6 +2999,8 @@ private: System::Void button3_Click(System::Object^  sender, System::EventArgs^ 
 					 phealth--;
 					 key = true;
 				 }
+
+				 label2->Text = System::Convert::ToString(phealth);
 
 				 if (key == true)
 				 {
@@ -3298,7 +3320,6 @@ private: System::Void button3_Click(System::Object^  sender, System::EventArgs^ 
 private: System::Void button4_Click(System::Object^  sender, System::EventArgs^  e) {
 			 srand(time(NULL));
 			 int emove = rand() % 4 + 1;
-			 label2->Text = System::Convert::ToString(phealth);
 			 Refresh();
 
 
@@ -3325,6 +3346,8 @@ private: System::Void button4_Click(System::Object^  sender, System::EventArgs^ 
 					 phealth--;
 					 key = true;
 				 }
+
+				 label2->Text = System::Convert::ToString(phealth);
 
 				 if (key == true)
 				 {
@@ -3645,6 +3668,8 @@ private: System::Void button4_Click(System::Object^  sender, System::EventArgs^ 
 					 phealth--;
 					 key = true;
 				 }
+
+				 label2->Text = System::Convert::ToString(phealth);
 
 				 if (key == true)
 				 {
@@ -3931,7 +3956,6 @@ private: System::Void button4_Click(System::Object^  sender, System::EventArgs^ 
 private: System::Void button2_Click(System::Object^  sender, System::EventArgs^  e) {
 			 srand(time(NULL));
 			 int emove = rand() % 4 + 1;
-			 label2->Text = System::Convert::ToString(phealth);
 			 Refresh();
 
 
@@ -3959,6 +3983,8 @@ private: System::Void button2_Click(System::Object^  sender, System::EventArgs^ 
 					 phealth--;
 					 key = true;
 				 }
+
+				 label2->Text = System::Convert::ToString(phealth);
 
 				 if (key == true)
 				 {
@@ -4280,6 +4306,8 @@ private: System::Void button2_Click(System::Object^  sender, System::EventArgs^ 
 					 phealth--;
 					 key = true;
 				 }
+
+				 label2->Text = System::Convert::ToString(phealth);
 
 				 if (key == true)
 				 {
@@ -4596,6 +4624,8 @@ private: System::Void button1_Click(System::Object^  sender, System::EventArgs^ 
 					 key = true;
 				 }
 
+				 label2->Text = System::Convert::ToString(phealth);
+
 				 if (key == true)
 				 {
 					 label5->Text = "Yes";
@@ -4915,6 +4945,8 @@ private: System::Void button1_Click(System::Object^  sender, System::EventArgs^ 
 					 phealth--;
 					 key = true;
 				 }
+
+				 label2->Text = System::Convert::ToString(phealth);
 
 				 if (key == true)
 				 {

@@ -14,7 +14,8 @@
     <ProjectGuid>{D9760699-DC61-4476-9931-B304B49EBE2B}</ProjectGuid>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <Keyword>ManagedCProj</Keyword>
-    <RootNamespace>CS113_Windows_Forms2</RootNamespace>
+    <RootNamespace>CS113 Windows Forms2</RootNamespace>
+    <ProjectName>CS113 Windows Forms2</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -55,7 +56,6 @@
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies />
       <SubSystem>Windows</SubSystem>
       <EntryPointSymbol>main</EntryPointSymbol>
     </Link>
@@ -80,11 +80,9 @@
   <ItemGroup>
     <ClCompile Include="Entity.cpp" />
     <ClCompile Include="MyForm.cpp" />
-    <ClCompile Include="Input.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Entity.h" />
-    <ClInclude Include="Input.h" />
     <ClInclude Include="MyForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>

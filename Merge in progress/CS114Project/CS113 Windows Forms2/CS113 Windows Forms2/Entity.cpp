@@ -21,7 +21,7 @@ int Entity::gethp()
 	return this->hp;
 
 }
-int Entity::getMaxHp()
+int Entity::getMaxHP()
 {
 	return this->maxHp;
 
@@ -41,15 +41,21 @@ int Entity::gety()
 }
 bool Entity::isPlayer()
 {
-	return this->p;
+	return this->player;
 }
-bool Entity::isActor();
+bool Entity::isActor()
 {
 	return this->canAtk;
 }
-bool Entity::isTraversable();
+bool Entity::isTraversable()
 {
 	return this->traversable;
+}
+bool Entity::isDoor()
+{
+
+	return this->door;
+
 }
 void Entity::update()
 {

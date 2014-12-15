@@ -24,13 +24,14 @@ public:
 	Entity(int, int, int, int, int, bool, bool, bool, bool, bool, bool);
 	//~Entity();
 	int gethp();
-	int getMaxHP()
+	int getMaxHP();
 	int getatk();
 	int getx();
 	int gety();
 	bool isPlayer();
 	bool isActor();
 	bool isTraversable();
+	bool isDoor();
 	void update();
 	void sethp(int);
 	void setatk(int);

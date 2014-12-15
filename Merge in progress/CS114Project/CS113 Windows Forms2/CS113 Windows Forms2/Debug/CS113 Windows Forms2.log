@@ -1,34 +1,19 @@
-﻿Build started 12/14/2014 11:18:17 PM.
-     1>Project "C:\Users\Joseph\Documents\GitHub\CS114Project\Merge in progress\CS114Project\CS113 Windows Forms2\CS113 Windows Forms2\CS113 Windows Forms2.vcxproj" on node 2 (Build target(s)).
+﻿Build started 12/15/2014 4:43:12 PM.
+     1>Project "C:\Users\jverner\Documents\GitHub\CS114Project\Merge in progress\CS114Project\CS113 Windows Forms2\CS113 Windows Forms2\CS113 Windows Forms2.vcxproj" on node 2 (Build target(s)).
+     1>C:\Program Files\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(381,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (WinFormsProjectTemplate.vcxproj).  This can lead to incorrect clean and rebuild behavior.
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\\" /AI"C:\Program Files (x86)\Windows Kits\8.1\References\CommonConfiguration\Neutral" /AI"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\\" /Zi /clr /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /TP /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\mscorlib.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Data.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Drawing.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Windows.Forms.dll" /FU"C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Xml.dll" /analyze- /errorReport:prompt /clr:nostdlib Entity.cpp MyForm.cpp Input.cpp
-         Entity.cpp
-     1>c:\users\joseph\documents\github\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\Entity.h(28): error C2144: syntax error : 'int' should be preceded by ';'
-     1>Entity.cpp(24): error C2039: 'getMaxHp' : is not a member of 'Entity'
-                 c:\users\joseph\documents\github\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\Entity.h(7) : see declaration of 'Entity'
-     1>Entity.cpp(26): error C2355: 'this' : can only be referenced inside non-static member functions or non-static data member initializers
-     1>Entity.cpp(26): error C2227: left of '->maxHp' must point to class/struct/union/generic type
-     1>Entity.cpp(44): error C2039: 'p' : is not a member of 'Entity'
-                 c:\users\joseph\documents\github\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\Entity.h(7) : see declaration of 'Entity'
-     1>Entity.cpp(46): error C2761: 'bool Entity::isActor(void)' : member function redeclaration not allowed
-     1>Entity.cpp(47): error C2447: '{' : missing function header (old-style formal list?)
-     1>Entity.cpp(50): error C2761: 'bool Entity::isTraversable(void)' : member function redeclaration not allowed
-     1>Entity.cpp(51): error C2447: '{' : missing function header (old-style formal list?)
+         C:\Program Files\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /AI"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\\" /AI"C:\Program Files\Windows Kits\8.1\References\CommonConfiguration\Neutral" /AI"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\\" /Zi /clr /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /TP /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\mscorlib.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Data.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Drawing.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Windows.Forms.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Xml.dll" /analyze- /errorReport:prompt /clr:nostdlib MyForm.cpp
          MyForm.cpp
-     1>c:\users\joseph\documents\github\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\Entity.h(28): error C2144: syntax error : 'int' should be preceded by ';'
-     1>MyForm.cpp(22): warning C4018: '<' : signed/unsigned mismatch
-     1>MyForm.cpp(68): error C2059: syntax error : ']'
-     1>MyForm.cpp(68): error C2143: syntax error : missing ';' before ')'
-     1>MyForm.cpp(69): error C2143: syntax error : missing ';' before '{'
-     1>MyForm.cpp(70): error C2059: syntax error : ']'
-     1>MyForm.cpp(70): error C2143: syntax error : missing ';' before ')'
-     1>MyForm.cpp(71): error C2143: syntax error : missing ';' before '{'
-         Input.cpp
-     1>c:\users\joseph\documents\github\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\Entity.h(28): error C2144: syntax error : 'int' should be preceded by ';'
-     1>Input.cpp(29): warning C4018: '<' : signed/unsigned mismatch
-         Generating Code...
-     1>Done Building Project "C:\Users\Joseph\Documents\GitHub\CS114Project\Merge in progress\CS114Project\CS113 Windows Forms2\CS113 Windows Forms2\CS113 Windows Forms2.vcxproj" (Build target(s)) -- FAILED.
+     1>c:\users\jverner\documents\github\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\MyForm.h(217): warning C4018: '<' : signed/unsigned mismatch
+       Link:
+         C:\Program Files\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\jverner\Documents\GitHub\CS114Project\Merge in progress\CS114Project\CS113 Windows Forms2\Debug\CS113 Windows Forms2.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /ASSEMBLYRESOURCE:"Debug\CS113 Windows Forms2.MyForm.resources" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\jverner\Documents\GitHub\CS114Project\Merge in progress\CS114Project\CS113 Windows Forms2\Debug\CS113 Windows Forms2.pdb" /ASSEMBLYDEBUG /SUBSYSTEM:WINDOWS /TLBID:1 /ENTRY:"main" /DYNAMICBASE /FIXED:NO /NXCOMPAT /MACHINE:X86 Debug\Entity.obj
+         Debug\MyForm.obj
+         "Debug\.NETFramework,Version=v4.5.AssemblyAttributes.obj"
+     1>MyForm.obj : error LNK2028: unresolved token (0A0004FE) "public: __thiscall Entity::Entity(void)" (??0Entity@@$$FQAE@XZ) referenced in function "void __clrcall WinFormsProjectTemplate::`dynamic initializer for 'world''(void)" (???__Eworld@WinFormsProjectTemplate@@YMXXZ@?A0xf353f3e7@@$$FYMXXZ)
+     1>MyForm.obj : error LNK2019: unresolved external symbol "public: __thiscall Entity::Entity(void)" (??0Entity@@$$FQAE@XZ) referenced in function "void __clrcall WinFormsProjectTemplate::`dynamic initializer for 'world''(void)" (???__Eworld@WinFormsProjectTemplate@@YMXXZ@?A0xf353f3e7@@$$FYMXXZ)
+     1>C:\Users\jverner\Documents\GitHub\CS114Project\Merge in progress\CS114Project\CS113 Windows Forms2\Debug\CS113 Windows Forms2.exe : fatal error LNK1120: 2 unresolved externals
+     1>Done Building Project "C:\Users\jverner\Documents\GitHub\CS114Project\Merge in progress\CS114Project\CS113 Windows Forms2\CS113 Windows Forms2\CS113 Windows Forms2.vcxproj" (Build target(s)) -- FAILED.
 
 Build FAILED.
 
-Time Elapsed 00:00:04.25
+Time Elapsed 00:00:01.82

@@ -1,4 +1,11 @@
 #pragma once
+#include "Entity.h"
+#include <fstream>
+#include <iostream>
+#include <string>
+#include <vector>
+
+
 
 namespace WinFormsProjectTemplate {
 
@@ -7,13 +14,20 @@ namespace WinFormsProjectTemplate {
 	using namespace System::Collections;
 	using namespace System::Windows::Forms;
 	using namespace System::Data;
+	using namespace System::Media;
 	using namespace System::Drawing;
+	Entity world[10][10];
+	//vector<vector<Entity>> world[10][10];
+	//vector<vector<Entity>> world;
 
 	/// <summary>
 	/// Summary for MyForm
 	/// </summary>
+
 	public ref class MyForm : public System::Windows::Forms::Form
 	{
+
+
 	public:
 		MyForm(void)
 		{
@@ -34,6 +48,14 @@ namespace WinFormsProjectTemplate {
 				delete components;
 			}
 		}
+	private: Graphics^ gbmp;
+	private: Graphics^ g;
+	private: Bitmap^ player;
+	private: Bitmap^ view;
+	private: Bitmap^ enemy;
+	private: Bitmap^ wall;
+	private: Bitmap^ door;
+	private: SoundPlayer^ musicplayer;
 	private: System::Windows::Forms::Label^  CurrentHealth;
 	protected:
 	private: System::Windows::Forms::Label^  seperator;
@@ -74,6 +96,7 @@ namespace WinFormsProjectTemplate {
 			// CurrentHealth
 			// 
 			this->CurrentHealth->AutoSize = true;
+			this->CurrentHealth->ForeColor = System::Drawing::Color::DarkRed;
 			this->CurrentHealth->Location = System::Drawing::Point(15, 19);
 			this->CurrentHealth->Name = L"CurrentHealth";
 			this->CurrentHealth->Size = System::Drawing::Size(35, 13);
@@ -83,6 +106,7 @@ namespace WinFormsProjectTemplate {
 			// seperator
 			// 
 			this->seperator->AutoSize = true;
+			this->seperator->ForeColor = System::Drawing::Color::DarkRed;
 			this->seperator->Location = System::Drawing::Point(57, 19);
 			this->seperator->Name = L"seperator";
 			this->seperator->Size = System::Drawing::Size(12, 13);
@@ -92,6 +116,7 @@ namespace WinFormsProjectTemplate {
 			// MaxHealth
 			// 
 			this->MaxHealth->AutoSize = true;
+			this->MaxHealth->ForeColor = System::Drawing::Color::DarkRed;
 			this->MaxHealth->Location = System::Drawing::Point(76, 19);
 			this->MaxHealth->Name = L"MaxHealth";
 			this->MaxHealth->Size = System::Drawing::Size(35, 13);
@@ -108,9 +133,10 @@ namespace WinFormsProjectTemplate {
 			// 
 			// GameBox
 			// 
+			this->GameBox->BackColor = System::Drawing::Color::White;
 			this->GameBox->Location = System::Drawing::Point(134, 12);
 			this->GameBox->Name = L"GameBox";
-			this->GameBox->Size = System::Drawing::Size(496, 341);
+			this->GameBox->Size = System::Drawing::Size(350, 350);
 			this->GameBox->TabIndex = 4;
 			this->GameBox->TabStop = false;
 			// 
@@ -158,7 +184,8 @@ namespace WinFormsProjectTemplate {
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(651, 368);
+			this->BackColor = System::Drawing::Color::Black;
+			this->ClientSize = System::Drawing::Size(510, 376);
 			this->Controls->Add(this->RightButton);
 			this->Controls->Add(this->LeftButton);
 			this->Controls->Add(this->BottomButton);
@@ -169,7 +196,8 @@ namespace WinFormsProjectTemplate {
 			this->Controls->Add(this->seperator);
 			this->Controls->Add(this->CurrentHealth);
 			this->Name = L"MyForm";
-			this->Text = L"MyForm";
+			this->Text = L"Find the Key";
+			this->Load += gcnew System::EventHandler(this, &MyForm::MyForm_Load);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->keyBox))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->GameBox))->EndInit();
 			this->ResumeLayout(false);
@@ -177,13 +205,104 @@ namespace WinFormsProjectTemplate {
 
 		}
 #pragma endregion
-	private: System::Void RightButton_Click(System::Object^  sender, System::EventArgs^  e) {
+		
+		void populate(int lvl, Entity world[][10])
+		{
+			ifstream myFile;
+			int level = lvl;
+			myFile.open("level" + to_string(level) + ".txt");
+			string line;
+			int row = 0;
+			while (getline(myFile, line)){
+				for (int column = 0; column < line.length(); column++){
+					char square = line[column];
+					switch (square){
+					case ' ':
+					{
+								Entity blank = Entity(0, 0, row, column, 0, false, false, true, false, false, false);
+								world[row][column] = blank;
+								break;
+					}
+					case '1':
+					{
+								Entity wall = Entity(0, 0, row, column, 0, false, false, false, false, false, false);
+								world[row][column] = wall;
+								break;
+					}
+					case '2':
+					{
+								Entity Player = Entity(12, 2, row, column, 0, false, true, false, true, false, false);
+								world[row][column] = Player;
+								break;
+					}
+					case '3':
+					{
+								Entity Enemy = Entity(1, 1, row, column, 0, false, true, false, false, false, false);
+								world[row][column] = Enemy;
+								break;
+					}
+					case '4':
+					{
+								Entity Door = Entity(0, 0, row, column, 0, false, false, false, false, false, true);
+								world[row][column] = Door;
+								break;
+					}
+
+					}
+				}
+				row++;
+				cout << endl;
+			}
+			myFile.close();
+		}
+		void draw(Entity world[][10])
+		{
+
+			for (int x = 0; x<10; x++)
+			{
+				for (int y = 0; y<10; y++)
+				{
+					if (world[x][y].isDoor() == true)
+					{
+						g->DrawImage(door, x * 36, y * 36);
+					}
+					if (world[x][y].isPlayer() == true)
+					{
+						g->DrawImage(player, x * 36, y * 36);
+					}
+					if (world[x][y].isActor() == true)
+					{
+						g->DrawImage(enemy, x * 36, y * 36);
+					}
+					if (world[x][y].isTraversable() == false && world[x][y].isActor() == false && world[x][y].isDoor()==false)
+					{
+						g->DrawImage(wall, x * 36, y * 36);
+					}
+				}
+			}
+
+		}
+private: System::Void RightButton_Click(System::Object^  sender, System::EventArgs^  e) {
 	}
 private: System::Void UpButton_Click(System::Object^  sender, System::EventArgs^  e) {
 }
 private: System::Void LeftButton_Click(System::Object^  sender, System::EventArgs^  e) {
 }
 private: System::Void BottomButton_Click(System::Object^  sender, System::EventArgs^  e) {
+}
+private: System::Void MyForm_Load(System::Object^  sender, System::EventArgs^  e) {
+			 g = GameBox->CreateGraphics();
+			 player = gcnew Bitmap("PlayerV4.png");
+			 enemy = gcnew Bitmap("EnemyV2.png");
+			 wall = gcnew Bitmap("wall.png");
+			 door = gcnew Bitmap("TrapDoor.png");
+			 musicplayer = gcnew System::Media::SoundPlayer();
+			 musicplayer->SoundLocation = "GuilesthemeWAV.wav";
+			 populate(1,world);
+			 draw(world);
+			 musicplayer->Play();
+			 musicplayer->PlayLooping();			 
+			
 }
 };
 }

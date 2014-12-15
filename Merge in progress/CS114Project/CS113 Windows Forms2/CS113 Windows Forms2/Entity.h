@@ -6,6 +6,7 @@ using namespace std;
 class Entity
 {
 private:
+	int maxHp;
 	int hp;
 	int atk;
 	int x;
@@ -23,9 +24,13 @@ public:
 	Entity(int, int, int, int, int, bool, bool, bool, bool, bool, bool);
 	//~Entity();
 	int gethp();
+	int getMaxHP()
 	int getatk();
 	int getx();
 	int gety();
+	bool isPlayer();
+	bool isActor();
+	bool isTraversable();
 	void update();
 	void sethp(int);
 	void setatk(int);

@@ -4,7 +4,7 @@ using namespace std;
 
 Entity::Entity(int h, int a, int cX, int cY, int AIAR, bool hasa, bool canA, bool trav, bool p, bool hasK, bool d)
 {
-	hp = h;
+	maxHp = hp = h;
 	atk = a;
 	x = cX;
 	y = cY;
@@ -21,6 +21,11 @@ int Entity::gethp()
 	return this->hp;
 
 }
+int Entity::getMaxHp()
+{
+	return this->maxHp;
+
+}
 int Entity::getatk()
 {
 	return this->atk;
@@ -33,6 +38,18 @@ int Entity::getx()
 int Entity::gety()
 {
 	return this->y;
+}
+bool Entity::isPlayer()
+{
+	return this->p;
+}
+bool Entity::isActor();
+{
+	return this->canAtk;
+}
+bool Entity::isTraversable();
+{
+	return this->traversable;
 }
 void Entity::update()
 {

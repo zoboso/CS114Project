@@ -220,27 +220,27 @@ namespace WinFormsProjectTemplate {
 					switch (square){
 					case ' ':
 					{
-								world[row][column] = Entity(0, 0, row, column, 0, false, false, true, false, false, false);
+								world[row,column] =gcnew Entity(0, 0, row, column, 0, false, false, true, false, false, false);
 								break;
 					}
 					case '1':
 					{
-								world[row][column] = Entity(0, 0, row, column, 0, false, false, false, false, false, false);
+								world[row,column] =gcnew Entity(0, 0, row, column, 0, false, false, false, false, false, false);
 								break;
 					}
 					case '2':
 					{
-								world[row][column] = Entity(12, 2, row, column, 0, false, true, false, true, false, false);
+								world[row,column] =gcnew Entity(12, 2, row, column, 0, false, true, false, true, false, false);
 								break;
 					}
 					case '3':
 					{
-								world[row][column] = Entity(1, 1, row, column, 0, false, true, false, false, false, false);
+								world[row,column] =gcnew Entity(1, 1, row, column, 0, false, true, false, false, false, false);
 								break;
 					}
 					case '4':
 					{
-								world[row][column] = Entity(0, 0, row, column, 0, false, false, false, false, false, true);
+								world[row,column] =gcnew Entity(0, 0, row, column, 0, false, false, false, false, false, true);
 								break;
 					}
 
@@ -258,19 +258,19 @@ namespace WinFormsProjectTemplate {
 			{
 				for (int y = 0; y<10; y++)
 				{
-					if (world[x][y].isDoor() == true)
+					if (world[x,y].isDoor() == true)
 					{
 						g->DrawImage(door, x * 36, y * 36);
 					}
-					if (world[x][y].isPlayer() == true)
+					if (world[x,y].isPlayer() == true)
 					{
 						g->DrawImage(player, x * 36, y * 36);
 					}
-					if (world[x][y].isActor() == true)
+					if (world[x,y].isActor() == true)
 					{
 						g->DrawImage(enemy, x * 36, y * 36);
 					}
-					if (world[x][y].isTraversable() == false && world[x][y].isActor() == false && world[x][y].isDoor()==false)
+					if (world[x,y].isTraversable() == false && world[x,y].isActor() == false && world[x,y].isDoor()==false)
 					{
 						g->DrawImage(wall, x * 36, y * 36);
 					}
@@ -294,8 +294,8 @@ private: System::Void MyForm_Load(System::Object^  sender, System::EventArgs^  e
 			 door = gcnew Bitmap("TrapDoor.png");
 			 musicplayer = gcnew System::Media::SoundPlayer();
 			 musicplayer->SoundLocation = "GuilesthemeWAV.wav";
-			 populate(1,world);
-			 draw(world);
+			 populate(1);
+			 draw();
 			 musicplayer->Play();
 			 musicplayer->PlayLooping();			 
 			

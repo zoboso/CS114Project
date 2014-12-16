@@ -1,5 +1,5 @@
-﻿Build started 12/16/2014 10:47:53 AM.
-     1>Project "C:\Users\jverner\Documents\GitHub\CS114Project\Merge in progress\CS114Project\CS113 Windows Forms2\CS113 Windows Forms2\CS113 Windows Forms2.vcxproj" on node 2 (Build target(s)).
+﻿Build started 12/16/2014 11:24:34 AM.
+     1>Project "C:\Users\jverner\Documents\GitHub\CS114Project\Merge in progress\CS114Project\CS113 Windows Forms2\CS113 Windows Forms2\CS113 Windows Forms2.vcxproj" on node 2 (Rebuild target(s)).
      1>C:\Program Files\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(381,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (WinFormsProjectTemplate.vcxproj).  This can lead to incorrect clean and rebuild behavior.
      1>ClCompile:
          C:\Program Files\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /AI"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\\" /AI"C:\Program Files\Windows Kits\8.1\References\CommonConfiguration\Neutral" /AI"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\\" /Zi /clr /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /TP /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\mscorlib.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Data.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Drawing.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Windows.Forms.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Xml.dll" /analyze- /errorReport:prompt /clr:nostdlib Entity.cpp MyForm.cpp
@@ -140,9 +140,7 @@
                  type is 'Entity ^'
                  did you intend to use '->' instead?
      1>Entity.cpp(150): error C2106: '=' : left operand must be l-value
-     1>Entity.cpp(151): error C2440: '=' : cannot convert from 'Entity' to 'Entity ^'
-                 No user-defined-conversion operator available, or
-                 No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
+     1>Entity.cpp(151): error C2106: '=' : left operand must be l-value
      1>Entity.cpp(158): error C2228: left of '.door' must have class/struct/union
                  type is 'Entity ^'
                  did you intend to use '->' instead?
@@ -166,9 +164,7 @@
                  type is 'Entity ^'
                  did you intend to use '->' instead?
      1>Entity.cpp(196): error C2106: '=' : left operand must be l-value
-     1>Entity.cpp(197): error C2440: '=' : cannot convert from 'Entity' to 'Entity ^'
-                 No user-defined-conversion operator available, or
-                 No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
+     1>Entity.cpp(197): error C2106: '=' : left operand must be l-value
      1>Entity.cpp(204): error C2228: left of '.door' must have class/struct/union
                  type is 'Entity ^'
                  did you intend to use '->' instead?
@@ -192,9 +188,7 @@
                  type is 'Entity ^'
                  did you intend to use '->' instead?
      1>Entity.cpp(242): error C2106: '=' : left operand must be l-value
-     1>Entity.cpp(243): error C2440: '=' : cannot convert from 'Entity' to 'Entity ^'
-                 No user-defined-conversion operator available, or
-                 No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
+     1>Entity.cpp(243): error C2106: '=' : left operand must be l-value
      1>Entity.cpp(250): error C2228: left of '.door' must have class/struct/union
                  type is 'Entity ^'
                  did you intend to use '->' instead?
@@ -218,54 +212,33 @@
                  type is 'Entity ^'
                  did you intend to use '->' instead?
      1>Entity.cpp(288): error C2106: '=' : left operand must be l-value
-     1>Entity.cpp(289): error C2440: '=' : cannot convert from 'Entity' to 'Entity ^'
-                 No user-defined-conversion operator available, or
-                 No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
+     1>Entity.cpp(289): error C2106: '=' : left operand must be l-value
      1>Entity.cpp(295): error C2228: left of '.door' must have class/struct/union
                  type is 'Entity ^'
                  did you intend to use '->' instead?
          MyForm.cpp
      1>c:\users\jverner\documents\github\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\MyForm.h(218): warning C4018: '<' : signed/unsigned mismatch
-     1>c:\users\jverner\documents\github\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\MyForm.h(223): error C3262: invalid array indexing: 1 dimension(s) specified for 2-dimensional 'cli::array<Entity ^,2> ^'
-     1>c:\users\jverner\documents\github\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\MyForm.h(223): error C3915: 'Entity' has no default indexed property (class indexer)
-                 c:\users\jverner\documents\github\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\Entity.h(7) : see declaration of 'Entity'
-     1>c:\users\jverner\documents\github\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\MyForm.h(228): error C3262: invalid array indexing: 1 dimension(s) specified for 2-dimensional 'cli::array<Entity ^,2> ^'
-     1>c:\users\jverner\documents\github\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\MyForm.h(228): error C3915: 'Entity' has no default indexed property (class indexer)
-                 c:\users\jverner\documents\github\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\Entity.h(7) : see declaration of 'Entity'
-     1>c:\users\jverner\documents\github\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\MyForm.h(233): error C3262: invalid array indexing: 1 dimension(s) specified for 2-dimensional 'cli::array<Entity ^,2> ^'
-     1>c:\users\jverner\documents\github\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\MyForm.h(233): error C3915: 'Entity' has no default indexed property (class indexer)
-                 c:\users\jverner\documents\github\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\Entity.h(7) : see declaration of 'Entity'
-     1>c:\users\jverner\documents\github\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\MyForm.h(238): error C3262: invalid array indexing: 1 dimension(s) specified for 2-dimensional 'cli::array<Entity ^,2> ^'
-     1>c:\users\jverner\documents\github\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\MyForm.h(238): error C3915: 'Entity' has no default indexed property (class indexer)
-                 c:\users\jverner\documents\github\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\Entity.h(7) : see declaration of 'Entity'
-     1>c:\users\jverner\documents\github\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\MyForm.h(243): error C3262: invalid array indexing: 1 dimension(s) specified for 2-dimensional 'cli::array<Entity ^,2> ^'
-     1>c:\users\jverner\documents\github\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\MyForm.h(243): error C3915: 'Entity' has no default indexed property (class indexer)
-                 c:\users\jverner\documents\github\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\Entity.h(7) : see declaration of 'Entity'
-     1>c:\users\jverner\documents\github\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\MyForm.h(261): error C3262: invalid array indexing: 1 dimension(s) specified for 2-dimensional 'cli::array<Entity ^,2> ^'
-     1>c:\users\jverner\documents\github\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\MyForm.h(261): error C3915: 'Entity' has no default indexed property (class indexer)
-                 c:\users\jverner\documents\github\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\Entity.h(7) : see declaration of 'Entity'
      1>c:\users\jverner\documents\github\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\MyForm.h(261): error C2228: left of '.isDoor' must have class/struct/union
-     1>c:\users\jverner\documents\github\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\MyForm.h(265): error C3262: invalid array indexing: 1 dimension(s) specified for 2-dimensional 'cli::array<Entity ^,2> ^'
-     1>c:\users\jverner\documents\github\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\MyForm.h(265): error C3915: 'Entity' has no default indexed property (class indexer)
-                 c:\users\jverner\documents\github\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\Entity.h(7) : see declaration of 'Entity'
+                 type is 'Entity ^'
+                 did you intend to use '->' instead?
      1>c:\users\jverner\documents\github\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\MyForm.h(265): error C2228: left of '.isPlayer' must have class/struct/union
-     1>c:\users\jverner\documents\github\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\MyForm.h(269): error C3262: invalid array indexing: 1 dimension(s) specified for 2-dimensional 'cli::array<Entity ^,2> ^'
-     1>c:\users\jverner\documents\github\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\MyForm.h(269): error C3915: 'Entity' has no default indexed property (class indexer)
-                 c:\users\jverner\documents\github\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\Entity.h(7) : see declaration of 'Entity'
+                 type is 'Entity ^'
+                 did you intend to use '->' instead?
      1>c:\users\jverner\documents\github\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\MyForm.h(269): error C2228: left of '.isActor' must have class/struct/union
-     1>c:\users\jverner\documents\github\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\MyForm.h(273): error C3262: invalid array indexing: 1 dimension(s) specified for 2-dimensional 'cli::array<Entity ^,2> ^'
-     1>c:\users\jverner\documents\github\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\MyForm.h(273): error C3915: 'Entity' has no default indexed property (class indexer)
-                 c:\users\jverner\documents\github\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\Entity.h(7) : see declaration of 'Entity'
+                 type is 'Entity ^'
+                 did you intend to use '->' instead?
      1>c:\users\jverner\documents\github\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\MyForm.h(273): error C2228: left of '.isTraversable' must have class/struct/union
-                 c:\users\jverner\documents\github\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\Entity.h(7) : see declaration of 'Entity'
+                 type is 'Entity ^'
+                 did you intend to use '->' instead?
      1>c:\users\jverner\documents\github\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\MyForm.h(273): error C2228: left of '.isActor' must have class/struct/union
-                 c:\users\jverner\documents\github\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\Entity.h(7) : see declaration of 'Entity'
+                 type is 'Entity ^'
+                 did you intend to use '->' instead?
      1>c:\users\jverner\documents\github\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\MyForm.h(273): error C2228: left of '.isDoor' must have class/struct/union
-     1>c:\users\jverner\documents\github\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\MyForm.h(297): error C2660: 'WinFormsProjectTemplate::MyForm::populate' : function does not take 2 arguments
-     1>c:\users\jverner\documents\github\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\MyForm.h(298): error C2660: 'WinFormsProjectTemplate::MyForm::draw' : function does not take 1 arguments
+                 type is 'Entity ^'
+                 did you intend to use '->' instead?
          Generating Code...
-     1>Done Building Project "C:\Users\jverner\Documents\GitHub\CS114Project\Merge in progress\CS114Project\CS113 Windows Forms2\CS113 Windows Forms2\CS113 Windows Forms2.vcxproj" (Build target(s)) -- FAILED.
+     1>Done Building Project "C:\Users\jverner\Documents\GitHub\CS114Project\Merge in progress\CS114Project\CS113 Windows Forms2\CS113 Windows Forms2\CS113 Windows Forms2.vcxproj" (Rebuild target(s)) -- FAILED.
 
 Build FAILED.
 
-Time Elapsed 00:00:01.27
+Time Elapsed 00:00:01.16

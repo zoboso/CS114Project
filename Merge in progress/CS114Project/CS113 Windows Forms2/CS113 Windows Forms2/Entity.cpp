@@ -148,7 +148,7 @@ void Entity::moveup(vector< vector<Entity> > &vec)
 				else if (vec[a - 1][b].gethp() <= 0)// checks to see if attacked object has died
 				{
 					vec[a - 1][b] = vec[a][b]; //updates location in array
-					vec[a][b] = Entity(1, 0, a, b,true, false, false, true, false, false, false);//replaces old location with blank tile
+					vec[a][b] = gcnew Entity(1, 0, a, b,true, false, false, true, false, false, false);//replaces old location with blank tile
 					this->setx(a - 1); //updates location for object
 					this->has = true;
 				}
@@ -194,7 +194,7 @@ void Entity::movedown(vector< vector<Entity> > &vec)
 				else if (vec[a + 1][b].gethp() <= 0)// checks to see if attacked object has died
 				{
 					vec[a + 1][b] = vec[a][b]; //updates location in array
-					vec[a][b] = Entity(1, 0, a, b,true, false, false, true, false, false, false);//replaces old location with blank tile
+					vec[a][b] =gcnew Entity(1, 0, a, b,true, false, false, true, false, false, false);//replaces old location with blank tile
 					this->setx(a + 1); //updates location for object
 					this->has = true;
 				}
@@ -240,7 +240,7 @@ void Entity::moveleft(vector< vector<Entity> > &vec)
 				else if (vec[a][b - 1].gethp() <= 0)// checks to see if attacked object has died
 				{
 					vec[a][b - 1] = vec[a][b]; //updates location in array
-					vec[a][b] = Entity(1, 0, a, b, true, false, false, true, false, false, false);//replaces old location with blank tile
+					vec[a][b] =gcnew Entity(1, 0, a, b, true, false, false, true, false, false, false);//replaces old location with blank tile
 					this->sety(b - 1); //updates location for object
 					this->has = true;
 				}
@@ -286,7 +286,7 @@ void Entity::moveright(vector< vector<Entity> > &vec)
 				else if (vec[a][b + 1].gethp() <= 0)// checks to see if attacked object has died
 				{
 					vec[a][b + 1] = vec[a][b]; //updates location in array
-					vec[a][b] = Entity(1, 0, a, b, true, false, false, true, false, false, false);//replaces old location with blank tile
+					vec[a][b] =gcnew Entity(1, 0, a, b, true, false, false, true, false, false, false);//replaces old location with blank tile
 					this->sety(b + 1); //updates location for object
 					this->has = true;
 				}

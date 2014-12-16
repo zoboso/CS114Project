@@ -1,21 +1,21 @@
-﻿Build started 12/15/2014 5:09:50 PM.
-     1>Project "C:\Users\tpollard\Documents\GitHub\CS114Project\project 6\Project 6\Project 6.vcxproj" on node 2 (Build target(s)).
+﻿Build started 12/16/2014 9:26:42 AM.
+     1>Project "K:\CS114\CS114Project\project 6\Project 6\Project 6.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
          C:\Program Files\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /AI"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\\" /AI"C:\Program Files\Windows Kits\8.1\References\CommonConfiguration\Neutral" /AI"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\\" /Zi /clr /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /TP /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\mscorlib.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Data.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Drawing.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Windows.Forms.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Xml.dll" /analyze- /errorReport:prompt /clr:nostdlib MyForm.cpp
          MyForm.cpp
-     1>c:\users\tpollard\documents\github\cs114project\project 6\project 6\MyForm2.h(284): warning C4244: 'argument' : conversion from 'time_t' to 'unsigned int', possible loss of data
-     1>c:\users\tpollard\documents\github\cs114project\project 6\project 6\MyForm2.h(1381): warning C4244: 'argument' : conversion from 'time_t' to 'unsigned int', possible loss of data
-     1>c:\users\tpollard\documents\github\cs114project\project 6\project 6\MyForm2.h(2657): warning C4244: 'argument' : conversion from 'time_t' to 'unsigned int', possible loss of data
-     1>c:\users\tpollard\documents\github\cs114project\project 6\project 6\MyForm2.h(3326): warning C4244: 'argument' : conversion from 'time_t' to 'unsigned int', possible loss of data
-     1>c:\users\tpollard\documents\github\cs114project\project 6\project 6\MyForm2.h(3962): warning C4244: 'argument' : conversion from 'time_t' to 'unsigned int', possible loss of data
-     1>c:\users\tpollard\documents\github\cs114project\project 6\project 6\MyForm2.h(4601): warning C4244: 'argument' : conversion from 'time_t' to 'unsigned int', possible loss of data
+     1>k:\cs114\cs114project\project 6\project 6\MyForm2.h(284): warning C4244: 'argument' : conversion from 'time_t' to 'unsigned int', possible loss of data
+     1>k:\cs114\cs114project\project 6\project 6\MyForm2.h(1381): warning C4244: 'argument' : conversion from 'time_t' to 'unsigned int', possible loss of data
+     1>k:\cs114\cs114project\project 6\project 6\MyForm2.h(2657): warning C4244: 'argument' : conversion from 'time_t' to 'unsigned int', possible loss of data
+     1>k:\cs114\cs114project\project 6\project 6\MyForm2.h(3328): warning C4244: 'argument' : conversion from 'time_t' to 'unsigned int', possible loss of data
+     1>k:\cs114\cs114project\project 6\project 6\MyForm2.h(3964): warning C4244: 'argument' : conversion from 'time_t' to 'unsigned int', possible loss of data
+     1>k:\cs114\cs114project\project 6\project 6\MyForm2.h(4603): warning C4244: 'argument' : conversion from 'time_t' to 'unsigned int', possible loss of data
        Link:
-         C:\Program Files\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\tpollard\Documents\GitHub\CS114Project\project 6\Debug\Project6.exe" /INCREMENTAL /NOLOGO /ASSEMBLYRESOURCE:Debug\Project6.MyForm2.resources /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\tpollard\Documents\GitHub\CS114Project\project 6\Debug\Project6.pdb" /ASSEMBLYDEBUG /SUBSYSTEM:WINDOWS /TLBID:1 /ENTRY:"main" /DYNAMICBASE /FIXED:NO /NXCOMPAT /MACHINE:X86 Debug\Project6.res
+         C:\Program Files\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"K:\CS114\CS114Project\project 6\Debug\Project6.exe" /INCREMENTAL /NOLOGO /ASSEMBLYRESOURCE:Debug\Project6.MyForm2.resources /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"K:\CS114\CS114Project\project 6\Debug\Project6.pdb" /ASSEMBLYDEBUG /SUBSYSTEM:WINDOWS /TLBID:1 /ENTRY:"main" /DYNAMICBASE /FIXED:NO /NXCOMPAT /MACHINE:X86 Debug\Project6.res
          Debug\MyForm.obj
          "Debug\.NETFramework,Version=v4.5.AssemblyAttributes.obj"
-         Project 6.vcxproj -> C:\Users\tpollard\Documents\GitHub\CS114Project\project 6\Debug\Project6.exe
-     1>Done Building Project "C:\Users\tpollard\Documents\GitHub\CS114Project\project 6\Project 6\Project 6.vcxproj" (Build target(s)).
+         Project 6.vcxproj -> K:\CS114\CS114Project\project 6\Debug\Project6.exe
+     1>Done Building Project "K:\CS114\CS114Project\project 6\Project 6\Project 6.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:01.46
+Time Elapsed 00:00:02.35

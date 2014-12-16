@@ -2644,7 +2644,6 @@ namespace Project6 {
 
 	}
 	private: System::Void panel1_Paint(System::Object^  sender, System::Windows::Forms::PaintEventArgs^  e) {
-
 				 if (px == 0 && py == 0 && ey == 4 && ex == 16 && level == 1)
 				 {
 					 g->DrawImage(door, 0 * 35, 0 * 35);
@@ -2652,6 +2651,7 @@ namespace Project6 {
 					 g->DrawImage(enemy, ex * 35, ey * 35);
 					 drawWallLevel1();
 				 }
+
 	}
 private: System::Void button3_Click(System::Object^  sender, System::EventArgs^  e) {
 			 srand(time(NULL));
@@ -2685,7 +2685,7 @@ private: System::Void button3_Click(System::Object^  sender, System::EventArgs^ 
 
 				 label2->Text = System::Convert::ToString(phealth);
 
-				 if (key == true)
+				 if (key == true && phealth > 0)
 				 {
 					 label5->Text = "Yes";
 				 }
@@ -2706,6 +2706,8 @@ private: System::Void button3_Click(System::Object^  sender, System::EventArgs^ 
 					 drawWallLevel1();
 					 g->DrawImage(enemy, ex * 35, ey * 35);
 					 label1->Text = "DEAD";
+					 label5->Text = "No";
+					 
 				 }
 
 				 if (py == 0 && px == 0 && key == true)
@@ -3007,7 +3009,7 @@ private: System::Void button3_Click(System::Object^  sender, System::EventArgs^ 
 
 				 label2->Text = System::Convert::ToString(phealth);
 
-				 if (key == true)
+				 if (key == true && phealth > 0)
 				 {
 					 label5->Text = "Yes";
 				 }
@@ -3354,7 +3356,7 @@ private: System::Void button4_Click(System::Object^  sender, System::EventArgs^ 
 
 				 label2->Text = System::Convert::ToString(phealth);
 
-				 if (key == true)
+				 if (key == true && phealth > 0)
 				 {
 					 label5->Text = "Yes";
 				 }
@@ -3676,7 +3678,7 @@ private: System::Void button4_Click(System::Object^  sender, System::EventArgs^ 
 
 				 label2->Text = System::Convert::ToString(phealth);
 
-				 if (key == true)
+				 if (key == true && phealth > 0)
 				 {
 					 label5->Text = "Yes";
 				 }
@@ -3991,7 +3993,7 @@ private: System::Void button2_Click(System::Object^  sender, System::EventArgs^ 
 
 				 label2->Text = System::Convert::ToString(phealth);
 
-				 if (key == true)
+				 if (key == true && phealth > 0)
 				 {
 					 label5->Text = "Yes";
 				 }
@@ -4314,7 +4316,7 @@ private: System::Void button2_Click(System::Object^  sender, System::EventArgs^ 
 
 				 label2->Text = System::Convert::ToString(phealth);
 
-				 if (key == true)
+				 if (key == true && phealth > 0)
 				 {
 					 label5->Text = "Yes";
 				 }
@@ -4631,7 +4633,7 @@ private: System::Void button1_Click(System::Object^  sender, System::EventArgs^ 
 
 				 label2->Text = System::Convert::ToString(phealth);
 
-				 if (key == true)
+				 if (key == true && phealth > 0)
 				 {
 					 label5->Text = "Yes";
 				 }
@@ -4953,7 +4955,7 @@ private: System::Void button1_Click(System::Object^  sender, System::EventArgs^ 
 
 				 label2->Text = System::Convert::ToString(phealth);
 
-				 if (key == true)
+				 if (key == true && phealth > 0)
 				 {
 					 label5->Text = "Yes";
 				 }

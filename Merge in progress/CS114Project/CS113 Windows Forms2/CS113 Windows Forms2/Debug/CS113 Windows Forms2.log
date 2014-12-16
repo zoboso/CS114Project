@@ -1,5 +1,5 @@
-﻿Build started 12/16/2014 10:13:26 AM.
-     1>Project "K:\CS114\CS114Project\Merge in progress\CS114Project\CS113 Windows Forms2\CS113 Windows Forms2\CS113 Windows Forms2.vcxproj" on node 2 (Build target(s)).
+﻿Build started 12/16/2014 10:47:53 AM.
+     1>Project "C:\Users\jverner\Documents\GitHub\CS114Project\Merge in progress\CS114Project\CS113 Windows Forms2\CS113 Windows Forms2\CS113 Windows Forms2.vcxproj" on node 2 (Build target(s)).
      1>C:\Program Files\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(381,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (WinFormsProjectTemplate.vcxproj).  This can lead to incorrect clean and rebuild behavior.
      1>ClCompile:
          C:\Program Files\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /AI"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\\" /AI"C:\Program Files\Windows Kits\8.1\References\CommonConfiguration\Neutral" /AI"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\\" /Zi /clr /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /TP /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\mscorlib.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Data.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Drawing.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Windows.Forms.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Xml.dll" /analyze- /errorReport:prompt /clr:nostdlib Entity.cpp MyForm.cpp
@@ -225,47 +225,47 @@
                  type is 'Entity ^'
                  did you intend to use '->' instead?
          MyForm.cpp
-     1>k:\cs114\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\MyForm.h(210): error C2728: 'Entity' : a native array cannot contain this type
-                 Did you mean 'array<Entity ^>'?
-     1>k:\cs114\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\MyForm.h(259): error C2728: 'Entity' : a native array cannot contain this type
-                 Did you mean 'array<Entity ^>'?
-     1>k:\cs114\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\MyForm.h(218): warning C4018: '<' : signed/unsigned mismatch
-     1>k:\cs114\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\MyForm.h(223): error C3673: 'Entity' : class does not have a copy-constructor
-     1>k:\cs114\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\MyForm.h(224): error C3915: 'Entity' has no default indexed property (class indexer)
-                 k:\cs114\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\Entity.h(7) : see declaration of 'Entity'
-     1>k:\cs114\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\MyForm.h(229): error C3673: 'Entity' : class does not have a copy-constructor
-     1>k:\cs114\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\MyForm.h(230): error C3915: 'Entity' has no default indexed property (class indexer)
-                 k:\cs114\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\Entity.h(7) : see declaration of 'Entity'
-     1>k:\cs114\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\MyForm.h(235): error C3673: 'Entity' : class does not have a copy-constructor
-     1>k:\cs114\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\MyForm.h(236): error C3915: 'Entity' has no default indexed property (class indexer)
-                 k:\cs114\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\Entity.h(7) : see declaration of 'Entity'
-     1>k:\cs114\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\MyForm.h(241): error C3673: 'Entity' : class does not have a copy-constructor
-     1>k:\cs114\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\MyForm.h(242): error C3915: 'Entity' has no default indexed property (class indexer)
-                 k:\cs114\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\Entity.h(7) : see declaration of 'Entity'
-     1>k:\cs114\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\MyForm.h(247): error C3673: 'Entity' : class does not have a copy-constructor
-     1>k:\cs114\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\MyForm.h(248): error C3915: 'Entity' has no default indexed property (class indexer)
-                 k:\cs114\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\Entity.h(7) : see declaration of 'Entity'
-     1>k:\cs114\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\MyForm.h(266): error C3915: 'Entity' has no default indexed property (class indexer)
-                 k:\cs114\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\Entity.h(7) : see declaration of 'Entity'
-     1>k:\cs114\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\MyForm.h(266): error C2228: left of '.isDoor' must have class/struct/union
-     1>k:\cs114\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\MyForm.h(270): error C3915: 'Entity' has no default indexed property (class indexer)
-                 k:\cs114\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\Entity.h(7) : see declaration of 'Entity'
-     1>k:\cs114\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\MyForm.h(270): error C2228: left of '.isPlayer' must have class/struct/union
-     1>k:\cs114\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\MyForm.h(274): error C3915: 'Entity' has no default indexed property (class indexer)
-                 k:\cs114\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\Entity.h(7) : see declaration of 'Entity'
-     1>k:\cs114\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\MyForm.h(274): error C2228: left of '.isActor' must have class/struct/union
-     1>k:\cs114\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\MyForm.h(278): error C3915: 'Entity' has no default indexed property (class indexer)
-                 k:\cs114\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\Entity.h(7) : see declaration of 'Entity'
-     1>k:\cs114\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\MyForm.h(278): error C2228: left of '.isTraversable' must have class/struct/union
-                 k:\cs114\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\Entity.h(7) : see declaration of 'Entity'
-     1>k:\cs114\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\MyForm.h(278): error C2228: left of '.isActor' must have class/struct/union
-                 k:\cs114\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\Entity.h(7) : see declaration of 'Entity'
-     1>k:\cs114\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\MyForm.h(278): error C2228: left of '.isDoor' must have class/struct/union
-     1>k:\cs114\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\MyForm.h(302): error C2664: 'void WinFormsProjectTemplate::MyForm::populate(int,Entity [][10])' : cannot convert argument 2 from 'cli::array<Entity ^,2> ^' to 'Entity [][10]'
-     1>k:\cs114\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\MyForm.h(303): error C2664: 'void WinFormsProjectTemplate::MyForm::draw(Entity [][10])' : cannot convert argument 1 from 'cli::array<Entity ^,2> ^' to 'Entity [][10]'
+     1>c:\users\jverner\documents\github\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\MyForm.h(218): warning C4018: '<' : signed/unsigned mismatch
+     1>c:\users\jverner\documents\github\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\MyForm.h(223): error C3262: invalid array indexing: 1 dimension(s) specified for 2-dimensional 'cli::array<Entity ^,2> ^'
+     1>c:\users\jverner\documents\github\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\MyForm.h(223): error C3915: 'Entity' has no default indexed property (class indexer)
+                 c:\users\jverner\documents\github\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\Entity.h(7) : see declaration of 'Entity'
+     1>c:\users\jverner\documents\github\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\MyForm.h(228): error C3262: invalid array indexing: 1 dimension(s) specified for 2-dimensional 'cli::array<Entity ^,2> ^'
+     1>c:\users\jverner\documents\github\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\MyForm.h(228): error C3915: 'Entity' has no default indexed property (class indexer)
+                 c:\users\jverner\documents\github\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\Entity.h(7) : see declaration of 'Entity'
+     1>c:\users\jverner\documents\github\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\MyForm.h(233): error C3262: invalid array indexing: 1 dimension(s) specified for 2-dimensional 'cli::array<Entity ^,2> ^'
+     1>c:\users\jverner\documents\github\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\MyForm.h(233): error C3915: 'Entity' has no default indexed property (class indexer)
+                 c:\users\jverner\documents\github\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\Entity.h(7) : see declaration of 'Entity'
+     1>c:\users\jverner\documents\github\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\MyForm.h(238): error C3262: invalid array indexing: 1 dimension(s) specified for 2-dimensional 'cli::array<Entity ^,2> ^'
+     1>c:\users\jverner\documents\github\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\MyForm.h(238): error C3915: 'Entity' has no default indexed property (class indexer)
+                 c:\users\jverner\documents\github\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\Entity.h(7) : see declaration of 'Entity'
+     1>c:\users\jverner\documents\github\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\MyForm.h(243): error C3262: invalid array indexing: 1 dimension(s) specified for 2-dimensional 'cli::array<Entity ^,2> ^'
+     1>c:\users\jverner\documents\github\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\MyForm.h(243): error C3915: 'Entity' has no default indexed property (class indexer)
+                 c:\users\jverner\documents\github\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\Entity.h(7) : see declaration of 'Entity'
+     1>c:\users\jverner\documents\github\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\MyForm.h(261): error C3262: invalid array indexing: 1 dimension(s) specified for 2-dimensional 'cli::array<Entity ^,2> ^'
+     1>c:\users\jverner\documents\github\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\MyForm.h(261): error C3915: 'Entity' has no default indexed property (class indexer)
+                 c:\users\jverner\documents\github\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\Entity.h(7) : see declaration of 'Entity'
+     1>c:\users\jverner\documents\github\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\MyForm.h(261): error C2228: left of '.isDoor' must have class/struct/union
+     1>c:\users\jverner\documents\github\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\MyForm.h(265): error C3262: invalid array indexing: 1 dimension(s) specified for 2-dimensional 'cli::array<Entity ^,2> ^'
+     1>c:\users\jverner\documents\github\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\MyForm.h(265): error C3915: 'Entity' has no default indexed property (class indexer)
+                 c:\users\jverner\documents\github\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\Entity.h(7) : see declaration of 'Entity'
+     1>c:\users\jverner\documents\github\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\MyForm.h(265): error C2228: left of '.isPlayer' must have class/struct/union
+     1>c:\users\jverner\documents\github\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\MyForm.h(269): error C3262: invalid array indexing: 1 dimension(s) specified for 2-dimensional 'cli::array<Entity ^,2> ^'
+     1>c:\users\jverner\documents\github\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\MyForm.h(269): error C3915: 'Entity' has no default indexed property (class indexer)
+                 c:\users\jverner\documents\github\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\Entity.h(7) : see declaration of 'Entity'
+     1>c:\users\jverner\documents\github\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\MyForm.h(269): error C2228: left of '.isActor' must have class/struct/union
+     1>c:\users\jverner\documents\github\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\MyForm.h(273): error C3262: invalid array indexing: 1 dimension(s) specified for 2-dimensional 'cli::array<Entity ^,2> ^'
+     1>c:\users\jverner\documents\github\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\MyForm.h(273): error C3915: 'Entity' has no default indexed property (class indexer)
+                 c:\users\jverner\documents\github\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\Entity.h(7) : see declaration of 'Entity'
+     1>c:\users\jverner\documents\github\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\MyForm.h(273): error C2228: left of '.isTraversable' must have class/struct/union
+                 c:\users\jverner\documents\github\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\Entity.h(7) : see declaration of 'Entity'
+     1>c:\users\jverner\documents\github\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\MyForm.h(273): error C2228: left of '.isActor' must have class/struct/union
+                 c:\users\jverner\documents\github\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\Entity.h(7) : see declaration of 'Entity'
+     1>c:\users\jverner\documents\github\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\MyForm.h(273): error C2228: left of '.isDoor' must have class/struct/union
+     1>c:\users\jverner\documents\github\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\MyForm.h(297): error C2660: 'WinFormsProjectTemplate::MyForm::populate' : function does not take 2 arguments
+     1>c:\users\jverner\documents\github\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\MyForm.h(298): error C2660: 'WinFormsProjectTemplate::MyForm::draw' : function does not take 1 arguments
          Generating Code...
-     1>Done Building Project "K:\CS114\CS114Project\Merge in progress\CS114Project\CS113 Windows Forms2\CS113 Windows Forms2\CS113 Windows Forms2.vcxproj" (Build target(s)) -- FAILED.
+     1>Done Building Project "C:\Users\jverner\Documents\GitHub\CS114Project\Merge in progress\CS114Project\CS113 Windows Forms2\CS113 Windows Forms2\CS113 Windows Forms2.vcxproj" (Build target(s)) -- FAILED.
 
 Build FAILED.
 
-Time Elapsed 00:00:02.27
+Time Elapsed 00:00:01.27

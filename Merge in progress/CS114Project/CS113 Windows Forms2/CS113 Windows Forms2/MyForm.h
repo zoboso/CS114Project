@@ -220,32 +220,27 @@ namespace WinFormsProjectTemplate {
 					switch (square){
 					case ' ':
 					{
-								Entity blank = Entity(0, 0, row, column, 0, false, false, true, false, false, false);
-								world[row][column] = blank;
+								world[row][column] = Entity(0, 0, row, column, 0, false, false, true, false, false, false);
 								break;
 					}
 					case '1':
 					{
-								Entity wall = Entity(0, 0, row, column, 0, false, false, false, false, false, false);
-								world[row][column] = wall;
+								world[row][column] = Entity(0, 0, row, column, 0, false, false, false, false, false, false);
 								break;
 					}
 					case '2':
 					{
-								Entity Player = Entity(12, 2, row, column, 0, false, true, false, true, false, false);
-								world[row][column] = Player;
+								world[row][column] = Entity(12, 2, row, column, 0, false, true, false, true, false, false);
 								break;
 					}
 					case '3':
 					{
-								Entity Enemy = Entity(1, 1, row, column, 0, false, true, false, false, false, false);
-								world[row][column] = Enemy;
+								world[row][column] = Entity(1, 1, row, column, 0, false, true, false, false, false, false);
 								break;
 					}
 					case '4':
 					{
-								Entity Door = Entity(0, 0, row, column, 0, false, false, false, false, false, true);
-								world[row][column] = Door;
+								world[row][column] = Entity(0, 0, row, column, 0, false, false, false, false, false, true);
 								break;
 					}
 

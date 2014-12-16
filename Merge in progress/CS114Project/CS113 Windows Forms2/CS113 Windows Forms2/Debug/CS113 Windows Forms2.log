@@ -1,19 +1,271 @@
-﻿Build started 12/15/2014 4:43:12 PM.
-     1>Project "C:\Users\jverner\Documents\GitHub\CS114Project\Merge in progress\CS114Project\CS113 Windows Forms2\CS113 Windows Forms2\CS113 Windows Forms2.vcxproj" on node 2 (Build target(s)).
+﻿Build started 12/16/2014 10:13:26 AM.
+     1>Project "K:\CS114\CS114Project\Merge in progress\CS114Project\CS113 Windows Forms2\CS113 Windows Forms2\CS113 Windows Forms2.vcxproj" on node 2 (Build target(s)).
      1>C:\Program Files\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(381,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (WinFormsProjectTemplate.vcxproj).  This can lead to incorrect clean and rebuild behavior.
      1>ClCompile:
-         C:\Program Files\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /AI"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\\" /AI"C:\Program Files\Windows Kits\8.1\References\CommonConfiguration\Neutral" /AI"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\\" /Zi /clr /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /TP /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\mscorlib.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Data.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Drawing.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Windows.Forms.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Xml.dll" /analyze- /errorReport:prompt /clr:nostdlib MyForm.cpp
+         C:\Program Files\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /AI"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\\" /AI"C:\Program Files\Windows Kits\8.1\References\CommonConfiguration\Neutral" /AI"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\\" /Zi /clr /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /TP /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\mscorlib.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Data.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Drawing.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Windows.Forms.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Xml.dll" /analyze- /errorReport:prompt /clr:nostdlib Entity.cpp MyForm.cpp
+         Entity.cpp
+     1>C:\Program Files\Microsoft Visual Studio 12.0\VC\include\xmemory0(516): error C3699: '*' : cannot use this indirection on type 'Entity'
+                 compiler replacing '*' with '^' to continue parsing
+                 C:\Program Files\Microsoft Visual Studio 12.0\VC\include\type_traits(572) : see reference to class template instantiation 'std::allocator<_Ty>' being compiled
+                 with
+                 [
+                     _Ty=Entity
+                 ]
+                 C:\Program Files\Microsoft Visual Studio 12.0\VC\include\vector(650) : see reference to class template instantiation 'std::is_empty<_Alloc>' being compiled
+                 with
+                 [
+                     _Alloc=std::allocator<Entity>
+                 ]
+                 Entity.cpp(127) : see reference to class template instantiation 'std::vector<Entity,std::allocator<_Ty>>' being compiled
+                 with
+                 [
+                     _Ty=Entity
+                 ]
+     1>C:\Program Files\Microsoft Visual Studio 12.0\VC\include\xmemory0(517): error C3699: '*' : cannot use this indirection on type 'const Entity'
+                 compiler replacing '*' with '^' to continue parsing
+     1>C:\Program Files\Microsoft Visual Studio 12.0\VC\include\xmemory0(521): error C3699: '&' : cannot use this indirection on type 'Entity'
+                 compiler replacing '&' with '^' to continue parsing
+     1>C:\Program Files\Microsoft Visual Studio 12.0\VC\include\xmemory0(522): error C3699: '&' : cannot use this indirection on type 'const Entity'
+                 compiler replacing '&' with '^' to continue parsing
+     1>C:\Program Files\Microsoft Visual Studio 12.0\VC\include\xmemory0(586): error C3699: '*' : cannot use this indirection on type 'Entity'
+                 compiler replacing '*' with '^' to continue parsing
+     1>C:\Program Files\Microsoft Visual Studio 12.0\VC\include\xmemory0(591): error C3699: '*' : cannot use this indirection on type 'Entity'
+                 compiler replacing '*' with '^' to continue parsing
+     1>C:\Program Files\Microsoft Visual Studio 12.0\VC\include\xmemory0(591): error C3699: '&' : cannot use this indirection on type 'const Entity'
+                 compiler replacing '&' with '^' to continue parsing
+     1>C:\Program Files\Microsoft Visual Studio 12.0\VC\include\xmemory0(683): error C3699: '*' : cannot use this indirection on type 'Entity'
+                 compiler replacing '*' with '^' to continue parsing
+                 C:\Program Files\Microsoft Visual Studio 12.0\VC\include\xmemory0(755) : see reference to class template instantiation 'std::allocator_traits<_Alloc>' being compiled
+                 with
+                 [
+                     _Alloc=std::allocator<Entity>
+                 ]
+                 C:\Program Files\Microsoft Visual Studio 12.0\VC\include\vector(443) : see reference to class template instantiation 'std::_Wrap_alloc<std::allocator<_Ty>>' being compiled
+                 with
+                 [
+                     _Ty=Entity
+                 ]
+                 C:\Program Files\Microsoft Visual Studio 12.0\VC\include\vector(579) : see reference to class template instantiation 'std::_Vec_base_types<_Ty,_Alloc>' being compiled
+                 with
+                 [
+                     _Ty=Entity
+         ,            _Alloc=std::allocator<Entity>
+                 ]
+                 C:\Program Files\Microsoft Visual Studio 12.0\VC\include\vector(652) : see reference to class template instantiation 'std::_Vector_alloc<false,std::_Vec_base_types<_Ty,_Alloc>>' being compiled
+                 with
+                 [
+                     _Ty=Entity
+         ,            _Alloc=std::allocator<Entity>
+                 ]
+     1>C:\Program Files\Microsoft Visual Studio 12.0\VC\include\xmemory0(684): error C3699: '*' : cannot use this indirection on type 'const Entity'
+                 compiler replacing '*' with '^' to continue parsing
+     1>C:\Program Files\Microsoft Visual Studio 12.0\VC\include\xmemory0(763): error C3699: '&' : cannot use this indirection on type 'Entity'
+                 compiler replacing '&' with '^' to continue parsing
+     1>C:\Program Files\Microsoft Visual Studio 12.0\VC\include\xmemory0(765): error C3699: '&' : cannot use this indirection on type 'const Entity'
+                 compiler replacing '&' with '^' to continue parsing
+     1>C:\Program Files\Microsoft Visual Studio 12.0\VC\include\xmemory0(861): error C3699: '*' : cannot use this indirection on type 'Entity'
+                 compiler replacing '*' with '^' to continue parsing
+     1>C:\Program Files\Microsoft Visual Studio 12.0\VC\include\xmemory0(105): error C3699: '*' : cannot use this indirection on type 'Entity'
+                 compiler replacing '*' with '^' to continue parsing
+                 C:\Program Files\Microsoft Visual Studio 12.0\VC\include\vector(449) : see reference to class template instantiation 'std::_Is_simple_alloc<std::_Wrap_alloc<std::allocator<_Ty>>>' being compiled
+                 with
+                 [
+                     _Ty=Entity
+                 ]
+     1>C:\Program Files\Microsoft Visual Studio 12.0\VC\include\xmemory0(107): error C3699: '*' : cannot use this indirection on type 'const Entity'
+                 compiler replacing '*' with '^' to continue parsing
+     1>C:\Program Files\Microsoft Visual Studio 12.0\VC\include\xmemory0(109): error C3699: '&' : cannot use this indirection on type 'Entity'
+                 compiler replacing '&' with '^' to continue parsing
+     1>C:\Program Files\Microsoft Visual Studio 12.0\VC\include\xmemory0(111): error C3699: '&' : cannot use this indirection on type 'const Entity'
+                 compiler replacing '&' with '^' to continue parsing
+     1>C:\Program Files\Microsoft Visual Studio 12.0\VC\include\xmemory0(122): error C3699: '*' : cannot use this indirection on type 'Entity'
+                 compiler replacing '*' with '^' to continue parsing
+                 C:\Program Files\Microsoft Visual Studio 12.0\VC\include\vector(469) : see reference to class template instantiation 'std::_Simple_types<Entity>' being compiled
+                 C:\Program Files\Microsoft Visual Studio 12.0\VC\include\vector(580) : see reference to class template instantiation 'std::_Vector_val<std::_Simple_types<Entity>>' being compiled
+     1>C:\Program Files\Microsoft Visual Studio 12.0\VC\include\xmemory0(123): error C3699: '*' : cannot use this indirection on type 'const Entity'
+                 compiler replacing '*' with '^' to continue parsing
+     1>C:\Program Files\Microsoft Visual Studio 12.0\VC\include\xmemory0(124): error C3699: '&' : cannot use this indirection on type 'Entity'
+                 compiler replacing '&' with '^' to continue parsing
+     1>C:\Program Files\Microsoft Visual Studio 12.0\VC\include\xmemory0(125): error C3699: '&' : cannot use this indirection on type 'const Entity'
+                 compiler replacing '&' with '^' to continue parsing
+     1>C:\Program Files\Microsoft Visual Studio 12.0\VC\include\vector(487): error C3265: cannot declare a managed '_Myfirst' in an unmanaged 'std::_Vector_val<std::_Simple_types<Entity>>'
+                 may not declare a global or static variable, or a member of a native type that refers to objects in the gc heap
+     1>C:\Program Files\Microsoft Visual Studio 12.0\VC\include\vector(488): error C3265: cannot declare a managed '_Mylast' in an unmanaged 'std::_Vector_val<std::_Simple_types<Entity>>'
+                 may not declare a global or static variable, or a member of a native type that refers to objects in the gc heap
+     1>C:\Program Files\Microsoft Visual Studio 12.0\VC\include\vector(489): error C3265: cannot declare a managed '_Myend' in an unmanaged 'std::_Vector_val<std::_Simple_types<Entity>>'
+                 may not declare a global or static variable, or a member of a native type that refers to objects in the gc heap
+     1>C:\Program Files\Microsoft Visual Studio 12.0\VC\include\vector(704): error C3699: '&' : cannot use this indirection on type 'const Entity'
+                 compiler replacing '&' with '^' to continue parsing
+     1>C:\Program Files\Microsoft Visual Studio 12.0\VC\include\vector(710): error C3699: '&' : cannot use this indirection on type 'const Entity'
+                 compiler replacing '&' with '^' to continue parsing
+     1>C:\Program Files\Microsoft Visual Studio 12.0\VC\include\vector(797): error C3699: '*' : cannot use this indirection on type 'const Entity'
+                 compiler replacing '*' with '^' to continue parsing
+     1>C:\Program Files\Microsoft Visual Studio 12.0\VC\include\vector(864): error C3699: '&&' : cannot use this indirection on type 'Entity'
+                 compiler replacing '&&' with '^' to continue parsing
+     1>C:\Program Files\Microsoft Visual Studio 12.0\VC\include\vector(887): error C3699: '&&' : cannot use this indirection on type 'Entity'
+                 compiler replacing '&&' with '^' to continue parsing
+     1>C:\Program Files\Microsoft Visual Studio 12.0\VC\include\vector(1118): error C3699: '&' : cannot use this indirection on type 'const Entity'
+                 compiler replacing '&' with '^' to continue parsing
+     1>C:\Program Files\Microsoft Visual Studio 12.0\VC\include\vector(1242): error C3699: '&' : cannot use this indirection on type 'const Entity'
+                 compiler replacing '&' with '^' to continue parsing
+     1>C:\Program Files\Microsoft Visual Studio 12.0\VC\include\vector(1320): error C3699: '&' : cannot use this indirection on type 'const Entity'
+                 compiler replacing '&' with '^' to continue parsing
+     1>C:\Program Files\Microsoft Visual Studio 12.0\VC\include\vector(1326): error C3699: '&' : cannot use this indirection on type 'const Entity'
+                 compiler replacing '&' with '^' to continue parsing
+     1>C:\Program Files\Microsoft Visual Studio 12.0\VC\include\vector(1332): error C3699: '&' : cannot use this indirection on type 'const Entity'
+                 compiler replacing '&' with '^' to continue parsing
+     1>C:\Program Files\Microsoft Visual Studio 12.0\VC\include\vector(1581): error C3699: '*' : cannot use this indirection on type 'const Entity'
+                 compiler replacing '*' with '^' to continue parsing
+     1>C:\Program Files\Microsoft Visual Studio 12.0\VC\include\vector(1652): error C3699: '&' : cannot use this indirection on type 'const Entity'
+                 compiler replacing '&' with '^' to continue parsing
+     1>C:\Program Files\Microsoft Visual Studio 12.0\VC\include\vector(1745): error C3699: '*' : cannot use this indirection on type 'const Entity'
+                 compiler replacing '*' with '^' to continue parsing
+     1>Entity.cpp(127): error C2228: left of '.traversable' must have class/struct/union
+                 type is 'Entity ^'
+                 did you intend to use '->' instead?
+     1>Entity.cpp(129): error C2106: '=' : left operand must be l-value
+     1>Entity.cpp(134): error C2228: left of '.canAtk' must have class/struct/union
+                 type is 'Entity ^'
+                 did you intend to use '->' instead?
+     1>Entity.cpp(136): error C2228: left of '.getatk' must have class/struct/union
+                 type is 'Entity ^'
+                 did you intend to use '->' instead?
+     1>Entity.cpp(137): error C2228: left of '.sethp' must have class/struct/union
+                 type is 'Entity ^'
+                 did you intend to use '->' instead?
+     1>Entity.cpp(137): error C2228: left of '.gethp' must have class/struct/union
+                 type is 'Entity ^'
+                 did you intend to use '->' instead?
+     1>Entity.cpp(148): error C2228: left of '.gethp' must have class/struct/union
+                 type is 'Entity ^'
+                 did you intend to use '->' instead?
+     1>Entity.cpp(150): error C2106: '=' : left operand must be l-value
+     1>Entity.cpp(151): error C2440: '=' : cannot convert from 'Entity' to 'Entity ^'
+                 No user-defined-conversion operator available, or
+                 No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
+     1>Entity.cpp(158): error C2228: left of '.door' must have class/struct/union
+                 type is 'Entity ^'
+                 did you intend to use '->' instead?
+     1>Entity.cpp(174): error C2228: left of '.traversable' must have class/struct/union
+                 type is 'Entity ^'
+                 did you intend to use '->' instead?
+     1>Entity.cpp(176): error C2106: '=' : left operand must be l-value
+     1>Entity.cpp(181): error C2228: left of '.canAtk' must have class/struct/union
+                 type is 'Entity ^'
+                 did you intend to use '->' instead?
+     1>Entity.cpp(183): error C2228: left of '.getatk' must have class/struct/union
+                 type is 'Entity ^'
+                 did you intend to use '->' instead?
+     1>Entity.cpp(184): error C2228: left of '.sethp' must have class/struct/union
+                 type is 'Entity ^'
+                 did you intend to use '->' instead?
+     1>Entity.cpp(184): error C2228: left of '.gethp' must have class/struct/union
+                 type is 'Entity ^'
+                 did you intend to use '->' instead?
+     1>Entity.cpp(194): error C2228: left of '.gethp' must have class/struct/union
+                 type is 'Entity ^'
+                 did you intend to use '->' instead?
+     1>Entity.cpp(196): error C2106: '=' : left operand must be l-value
+     1>Entity.cpp(197): error C2440: '=' : cannot convert from 'Entity' to 'Entity ^'
+                 No user-defined-conversion operator available, or
+                 No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
+     1>Entity.cpp(204): error C2228: left of '.door' must have class/struct/union
+                 type is 'Entity ^'
+                 did you intend to use '->' instead?
+     1>Entity.cpp(219): error C2228: left of '.traversable' must have class/struct/union
+                 type is 'Entity ^'
+                 did you intend to use '->' instead?
+     1>Entity.cpp(221): error C2106: '=' : left operand must be l-value
+     1>Entity.cpp(226): error C2228: left of '.canAtk' must have class/struct/union
+                 type is 'Entity ^'
+                 did you intend to use '->' instead?
+     1>Entity.cpp(228): error C2228: left of '.getatk' must have class/struct/union
+                 type is 'Entity ^'
+                 did you intend to use '->' instead?
+     1>Entity.cpp(229): error C2228: left of '.sethp' must have class/struct/union
+                 type is 'Entity ^'
+                 did you intend to use '->' instead?
+     1>Entity.cpp(229): error C2228: left of '.gethp' must have class/struct/union
+                 type is 'Entity ^'
+                 did you intend to use '->' instead?
+     1>Entity.cpp(240): error C2228: left of '.gethp' must have class/struct/union
+                 type is 'Entity ^'
+                 did you intend to use '->' instead?
+     1>Entity.cpp(242): error C2106: '=' : left operand must be l-value
+     1>Entity.cpp(243): error C2440: '=' : cannot convert from 'Entity' to 'Entity ^'
+                 No user-defined-conversion operator available, or
+                 No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
+     1>Entity.cpp(250): error C2228: left of '.door' must have class/struct/union
+                 type is 'Entity ^'
+                 did you intend to use '->' instead?
+     1>Entity.cpp(265): error C2228: left of '.traversable' must have class/struct/union
+                 type is 'Entity ^'
+                 did you intend to use '->' instead?
+     1>Entity.cpp(267): error C2106: '=' : left operand must be l-value
+     1>Entity.cpp(272): error C2228: left of '.canAtk' must have class/struct/union
+                 type is 'Entity ^'
+                 did you intend to use '->' instead?
+     1>Entity.cpp(274): error C2228: left of '.getatk' must have class/struct/union
+                 type is 'Entity ^'
+                 did you intend to use '->' instead?
+     1>Entity.cpp(275): error C2228: left of '.sethp' must have class/struct/union
+                 type is 'Entity ^'
+                 did you intend to use '->' instead?
+     1>Entity.cpp(275): error C2228: left of '.gethp' must have class/struct/union
+                 type is 'Entity ^'
+                 did you intend to use '->' instead?
+     1>Entity.cpp(286): error C2228: left of '.gethp' must have class/struct/union
+                 type is 'Entity ^'
+                 did you intend to use '->' instead?
+     1>Entity.cpp(288): error C2106: '=' : left operand must be l-value
+     1>Entity.cpp(289): error C2440: '=' : cannot convert from 'Entity' to 'Entity ^'
+                 No user-defined-conversion operator available, or
+                 No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
+     1>Entity.cpp(295): error C2228: left of '.door' must have class/struct/union
+                 type is 'Entity ^'
+                 did you intend to use '->' instead?
          MyForm.cpp
-     1>c:\users\jverner\documents\github\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\MyForm.h(217): warning C4018: '<' : signed/unsigned mismatch
-       Link:
-         C:\Program Files\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\jverner\Documents\GitHub\CS114Project\Merge in progress\CS114Project\CS113 Windows Forms2\Debug\CS113 Windows Forms2.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /ASSEMBLYRESOURCE:"Debug\CS113 Windows Forms2.MyForm.resources" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\jverner\Documents\GitHub\CS114Project\Merge in progress\CS114Project\CS113 Windows Forms2\Debug\CS113 Windows Forms2.pdb" /ASSEMBLYDEBUG /SUBSYSTEM:WINDOWS /TLBID:1 /ENTRY:"main" /DYNAMICBASE /FIXED:NO /NXCOMPAT /MACHINE:X86 Debug\Entity.obj
-         Debug\MyForm.obj
-         "Debug\.NETFramework,Version=v4.5.AssemblyAttributes.obj"
-     1>MyForm.obj : error LNK2028: unresolved token (0A0004FE) "public: __thiscall Entity::Entity(void)" (??0Entity@@$$FQAE@XZ) referenced in function "void __clrcall WinFormsProjectTemplate::`dynamic initializer for 'world''(void)" (???__Eworld@WinFormsProjectTemplate@@YMXXZ@?A0xf353f3e7@@$$FYMXXZ)
-     1>MyForm.obj : error LNK2019: unresolved external symbol "public: __thiscall Entity::Entity(void)" (??0Entity@@$$FQAE@XZ) referenced in function "void __clrcall WinFormsProjectTemplate::`dynamic initializer for 'world''(void)" (???__Eworld@WinFormsProjectTemplate@@YMXXZ@?A0xf353f3e7@@$$FYMXXZ)
-     1>C:\Users\jverner\Documents\GitHub\CS114Project\Merge in progress\CS114Project\CS113 Windows Forms2\Debug\CS113 Windows Forms2.exe : fatal error LNK1120: 2 unresolved externals
-     1>Done Building Project "C:\Users\jverner\Documents\GitHub\CS114Project\Merge in progress\CS114Project\CS113 Windows Forms2\CS113 Windows Forms2\CS113 Windows Forms2.vcxproj" (Build target(s)) -- FAILED.
+     1>k:\cs114\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\MyForm.h(210): error C2728: 'Entity' : a native array cannot contain this type
+                 Did you mean 'array<Entity ^>'?
+     1>k:\cs114\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\MyForm.h(259): error C2728: 'Entity' : a native array cannot contain this type
+                 Did you mean 'array<Entity ^>'?
+     1>k:\cs114\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\MyForm.h(218): warning C4018: '<' : signed/unsigned mismatch
+     1>k:\cs114\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\MyForm.h(223): error C3673: 'Entity' : class does not have a copy-constructor
+     1>k:\cs114\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\MyForm.h(224): error C3915: 'Entity' has no default indexed property (class indexer)
+                 k:\cs114\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\Entity.h(7) : see declaration of 'Entity'
+     1>k:\cs114\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\MyForm.h(229): error C3673: 'Entity' : class does not have a copy-constructor
+     1>k:\cs114\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\MyForm.h(230): error C3915: 'Entity' has no default indexed property (class indexer)
+                 k:\cs114\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\Entity.h(7) : see declaration of 'Entity'
+     1>k:\cs114\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\MyForm.h(235): error C3673: 'Entity' : class does not have a copy-constructor
+     1>k:\cs114\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\MyForm.h(236): error C3915: 'Entity' has no default indexed property (class indexer)
+                 k:\cs114\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\Entity.h(7) : see declaration of 'Entity'
+     1>k:\cs114\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\MyForm.h(241): error C3673: 'Entity' : class does not have a copy-constructor
+     1>k:\cs114\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\MyForm.h(242): error C3915: 'Entity' has no default indexed property (class indexer)
+                 k:\cs114\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\Entity.h(7) : see declaration of 'Entity'
+     1>k:\cs114\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\MyForm.h(247): error C3673: 'Entity' : class does not have a copy-constructor
+     1>k:\cs114\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\MyForm.h(248): error C3915: 'Entity' has no default indexed property (class indexer)
+                 k:\cs114\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\Entity.h(7) : see declaration of 'Entity'
+     1>k:\cs114\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\MyForm.h(266): error C3915: 'Entity' has no default indexed property (class indexer)
+                 k:\cs114\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\Entity.h(7) : see declaration of 'Entity'
+     1>k:\cs114\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\MyForm.h(266): error C2228: left of '.isDoor' must have class/struct/union
+     1>k:\cs114\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\MyForm.h(270): error C3915: 'Entity' has no default indexed property (class indexer)
+                 k:\cs114\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\Entity.h(7) : see declaration of 'Entity'
+     1>k:\cs114\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\MyForm.h(270): error C2228: left of '.isPlayer' must have class/struct/union
+     1>k:\cs114\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\MyForm.h(274): error C3915: 'Entity' has no default indexed property (class indexer)
+                 k:\cs114\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\Entity.h(7) : see declaration of 'Entity'
+     1>k:\cs114\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\MyForm.h(274): error C2228: left of '.isActor' must have class/struct/union
+     1>k:\cs114\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\MyForm.h(278): error C3915: 'Entity' has no default indexed property (class indexer)
+                 k:\cs114\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\Entity.h(7) : see declaration of 'Entity'
+     1>k:\cs114\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\MyForm.h(278): error C2228: left of '.isTraversable' must have class/struct/union
+                 k:\cs114\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\Entity.h(7) : see declaration of 'Entity'
+     1>k:\cs114\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\MyForm.h(278): error C2228: left of '.isActor' must have class/struct/union
+                 k:\cs114\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\Entity.h(7) : see declaration of 'Entity'
+     1>k:\cs114\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\MyForm.h(278): error C2228: left of '.isDoor' must have class/struct/union
+     1>k:\cs114\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\MyForm.h(302): error C2664: 'void WinFormsProjectTemplate::MyForm::populate(int,Entity [][10])' : cannot convert argument 2 from 'cli::array<Entity ^,2> ^' to 'Entity [][10]'
+     1>k:\cs114\cs114project\merge in progress\cs114project\cs113 windows forms2\cs113 windows forms2\MyForm.h(303): error C2664: 'void WinFormsProjectTemplate::MyForm::draw(Entity [][10])' : cannot convert argument 1 from 'cli::array<Entity ^,2> ^' to 'Entity [][10]'
+         Generating Code...
+     1>Done Building Project "K:\CS114\CS114Project\Merge in progress\CS114Project\CS113 Windows Forms2\CS113 Windows Forms2\CS113 Windows Forms2.vcxproj" (Build target(s)) -- FAILED.
 
 Build FAILED.
 
-Time Elapsed 00:00:01.82
+Time Elapsed 00:00:02.27

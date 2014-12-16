@@ -3,7 +3,7 @@
 #include <vector>
 using namespace std;
 
-class Entity
+ref class Entity
 {
 private:
 	int maxHp;

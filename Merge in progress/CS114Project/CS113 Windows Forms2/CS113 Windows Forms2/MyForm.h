@@ -16,7 +16,7 @@ namespace WinFormsProjectTemplate {
 	using namespace System::Data;
 	using namespace System::Media;
 	using namespace System::Drawing;
-	Entity world[10][10];
+	
 	//vector<vector<Entity>> world[10][10];
 	//vector<vector<Entity>> world;
 
@@ -205,8 +205,9 @@ namespace WinFormsProjectTemplate {
 
 		}
 #pragma endregion
-		
-		void populate(int lvl, Entity world[][10])
+		array < Entity^, 2 >^ world = gcnew array<Entity^,2>(10, 10);
+
+		void populate(int lvl)
 		{
 			ifstream myFile;
 			int level = lvl;
@@ -255,7 +256,7 @@ namespace WinFormsProjectTemplate {
 			}
 			myFile.close();
 		}
-		void draw(Entity world[][10])
+		void draw()
 		{
 
 			for (int x = 0; x<10; x++)

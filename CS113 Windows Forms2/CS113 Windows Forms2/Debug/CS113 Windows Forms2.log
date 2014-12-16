@@ -1,0 +1,14 @@
+﻿Build started 12/16/2014 9:38:43 AM.
+     1>Project "K:\CS114\CS114Project\CS113 Windows Forms2\CS113 Windows Forms2\CS113 Windows Forms2.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /AI"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\\" /AI"C:\Program Files\Windows Kits\8.1\References\CommonConfiguration\Neutral" /AI"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\\" /Zi /clr /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _UNICODE /D UNICODE /EHa /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /TP /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\mscorlib.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Data.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Drawing.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Windows.Forms.dll" /FU"C:\Program Files\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\System.Xml.dll" /analyze- /errorReport:prompt /clr:nostdlib MyForm.cpp Input.cpp
+         MyForm.cpp
+     1>MyForm.cpp(3): fatal error C1083: Cannot open include file: 'C:\Users\Joseph\Documents\GitHub\CS114Project\Controller\Controller\Entity.h': No such file or directory
+         Input.cpp
+     1>Input.cpp(11): fatal error C1083: Cannot open include file: 'C:\Users\Joseph\Documents\GitHub\CS114Project\Controller\Controller\Entity.h': No such file or directory
+         Generating Code...
+     1>Done Building Project "K:\CS114\CS114Project\CS113 Windows Forms2\CS113 Windows Forms2\CS113 Windows Forms2.vcxproj" (Build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:01.26
